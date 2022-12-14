@@ -3,7 +3,7 @@ import Footer from '../footer'
 
 export default function News() {
   return (
-    <div>
+    <div className="bggradient">
           <title>Libera Awards - NEWS</title>
           <div className="relative grow shrink content-center">
 <h1 className="pt-20 grow font-bold align-middle text-center leading-tight">

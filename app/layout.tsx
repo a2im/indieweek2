@@ -21,7 +21,7 @@ export default function RootLayout({
       <head>
         <MyHead></MyHead>
         </head>
-      <body className="min-h-screen z-0">
+      <body className="min-h-screen z-0 bg-iwtexture">
       <Providers>
       <MyNavbar />
       {children}

@@ -107,12 +107,6 @@ export default function SponsorFooter () {
   return (
     <div className="relative">
     <div className="relative z-99 flex flex-col mx-auto">
-      <div className="absolute h-[190px] w-[640px] bottom-0 right-10">
-  <Image fill={true} sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
-  src="/images/stairs.png" alt="Libera Awards stairs" priority={true} />
-  </div>
     <div className="flex flex-col md:flex-row max-w-6xl mx-auto">
       <div className="w-[200px] pt-10">
       <h3>Thanks to our Sponsors:</h3>

@@ -87,7 +87,7 @@ export default function Contact() {
      console.log(fullname, email, subject, message);
    };
   return (
-    <div>
+    <div className="bggradient">
           <title>Libera Awards - Contact Us</title>
           <div className="grow shrink content-center">
 <h1 className="pt-20 grow font-bold align-middle text-center leading-tight">
@@ -98,11 +98,11 @@ export default function Contact() {
           initial="initial"
           animate="animate"
           exit="exit"
-          className="bg-sky-50 px-8 py-20 mx-auto">
+          className="px-8 py-20 mx-auto">
             <div className="max-w-4xl mx-auto">
             <section className='max-w-4xl mb-10 mx-auto gap-10'> 
             <form
-            className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white">
+            className="rounded-lg shadow-xl flex flex-col px-8 py-8 iwborder">
       <h2 className="text-center pb-10">
         Send us a message
         </h2>

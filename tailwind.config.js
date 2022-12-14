@@ -13,6 +13,10 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-NinetiesDisplay)']
       },
+      backgroundImage: {
+        'iwtexture': "url('/Background/background.jpg')",
+        'footer': "url('/images/waves.png')",
+      },
     },
     screens: {
       sm: '640px',
@@ -50,6 +54,7 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
+      'iwred': '#FF1827',
     }),
     columns: {
       auto: 'auto',

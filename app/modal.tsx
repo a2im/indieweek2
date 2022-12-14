@@ -4,6 +4,7 @@ import React from "react"
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 
 
 export default function MyModal (){
@@ -36,48 +37,46 @@ export default function MyModal (){
 
     return (
         <>
-            <div className="flex fixed ladymodalbg bottom-5 right-5">
+            <div className="flex fixed bottom-5 right-5">
             {isModalOpen ? (
                 <AnimatePresence>
                 <motion.div
                 ref={ref}
                 onClick={(e) => e.stopPropagation()}
-                className="fixed Borderswap5 p-5 ladymodal w-96"
+                className="fixed iwborder p-5 modalinfo w-96"
                 variants={dropIn}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
                 >
-                    <div className="grid grid-cols-0">
-                    <h2 className="text-white text-3xl">LIBERA AWARDS 2023 TIMELINE</h2>
-                    <h4 className="text-white font-medium text-xl">
-                    SEP 27, 2022 - SUBMISSIONS OPEN<br></br>
-                    DEC 05, 2022 - SUBMISSIONS CLOSE<br></br>
-                    JAN 18, 2023 - 1ST ROUND VOTING BEGINS<br></br>
-                    JAN 31, 2023 - 1ST ROUND VOTING ENDS<br></br>
-                    MAR 23, 2023 - NOMINEES ANNOUNCEMENT & FINAL ROUND VOTING BEGINS<br></br>
-                    APR 05, 2023 - FINAL ROUND VOTING ENDS<br></br>
-                    JUN 15, 2023 - 2022 LIBERA AWARDS CEREMONY<br></br><br></br>
-        
-                    If you need help or are stuck somewhere, click below to view our submissions guide
-                    </h4>
-                        <Link href="/submissions" legacyBehavior>
-                            <motion.button
-                            onClick={close}
-                            whileHover={{scale: 1.1}}
-                            whileTap={{scale: 0.95}}
-                            className="bg-black mx-auto px-5 rounded">
-                                click here!
-                            </motion.button>
-                        </Link> 
-                    </div>
+                    <div className="grid grid-cols-0 p-5 relative">
+<h3 className="text-white text-xl font-bold">INDIE WEEK INFO</h3>
+<p className="text-white">
+A2IM Indie Week is a four-day international conference and networking event aimed at maximizing the global impact of Independent music. Featuring keynotes, panels, exclusive networking sessions, and more, Indie Week has historically drawn an attendance of over 1200 participants from over 30 countries.
+
+ 
+<br></br><br></br>
+In response to COVID-19, we took Indie Week online in 2020 and 2021. We returned to an in-person Indie Week in 2022 and will return in 2023! For those still uncertain about travel, a virtual option will also be available.
+
+
+</p></div>
                 </motion.div>
                 </AnimatePresence> ) : (
                 <motion.button 
                 whileTap={{scale: 0.95}}
                 className="save-button"
                 onClick={() => (setModalOpen(true))}>
-                <h2 className="text-7xl ml-4 mt-2 hover:text-libera-pink text-white text-center font-black">   ?   </h2>
+                <Image
+                src="/logos/A2IM-logos/A2IM-button-white.png"
+                alt="a2im button"
+                width={75}
+                height={75}
+                layout={'fixed'}
+                objectFit={'contain'}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </motion.button>
                 )}
             </div>

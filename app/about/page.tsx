@@ -1,18 +1,16 @@
-import { About1, About2, About3 } from '../about-us'
+import AboutUS from '../about-us'
 import Footer from '../footer'
 
 export default function About() {
   return (
-    <div>
+    <div className="bggradient">
           <title>Libera Awards - About Us</title>
           <div className="grow shrink content-center">
-<h1 className="pt-20 grow font-bold align-middle text-center leading-tight">
+<h2 className="pt-20 grow font-bold align-middle text-center leading-tight">
   About
-  </h1>
+  </h2>
   </div>
-          <About1 />
-          <About2 />
-          <About3 />
+          <AboutUS/>
           <Footer />
     </div>
   )

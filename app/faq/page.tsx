@@ -1,7 +1,5 @@
 
-
 import LiberaQualifications from '../qualifications'
-import { LiberaButtonExternal } from '../button'
 import Footer from '../footer'
 
 export default function FAQ() {
@@ -9,9 +7,9 @@ export default function FAQ() {
     <>
           <title>Libera Awards - Frequently Asked Questions</title>
           <div className="grow shrink content-center">
-<h1 className="pt-20 grow font-bold align-middle text-center leading-tight">
+<h2 className="pt-20 grow font-bold align-middle text-center leading-tight">
   FAQ
-  </h1>
+  </h2>
   </div>
           <LiberaQualifications/>
           <Footer/>

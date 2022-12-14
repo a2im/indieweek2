@@ -1,101 +1,102 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-.adbannercontainer{
-    height: 120px;
-    width: 728px;
+.bggradient {
+  background: linear-gradient(to bottom, #ff1827, transparent 50% );
+}
+.bggradient2 {
+  background: linear-gradient(to bottom, #ff1827 40%, transparent  );
 }
 
-.ladyinfobg {
+.four-point-star::after,
+.four-point-star::before {
+    position: absolute;
+    content: "\2726";
+    font-size: 10rem;
+}
+
+.four-point-star::after { /* The foreground star */
+    background: #ff1827;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.four-point-star {
+    position: relative;
+}
+
+
+.modalinfobg {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   display: flex;
-
+  justify-content: flex-end;
 }
- .ladymodal {
+ .modalinfo {
   position: absolute;
-  background: linear-gradient(to bottom, #F669A6, #7D45BC);
+	background: black;
+	background-size: 400% 400%;
+  border-radius: 50px; 
+	animation: gradient 15s ease infinite;
+  padding: 8px;
   margin: auto;
   align-items: stretch;
   display: flex;
-  z-index: 99;
+  z-index: 90;
  }
 
- .ladymodalbg {
-  background: black;
-  border-top-right-radius: 50px;
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-  border: 3px solid white;
-  width: 80px;
-  height: 80px;
+ .modalbuttonbg {
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
  } 
 
- .ladymodalbg:hover {
-  border:3px solid #F669A6;
- }
-
 /* Write your own custom base styles here */
-.accordion__heading {
-  background-color: rgb(240 249 255);
-  color: black;
-  transition: all .2s ease-in-out; 
-}
-
-.accordion__item {
-  background: linear-gradient(-25deg, #F669A6,#f0f9ff, #7D45BC, #F669A6, #f0f9ff, #F669A6);
-  color:black;
-  font-family: bebas-neue-pro-expanded, sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  letter-spacing: 1.5px;
-  line-height: 1;
-  padding: 5px;
-  background-size: 500% 500%;
-  animation: gradient 20s ease infinite;
-}
-.accordion__item:hover {
-  color: white;
-  background: linear-gradient(185deg, #F669A6, #7D45BC, #F669A6);
-  transform: scale(1.05);
-  transform-origin: center; 
-  background-size: 300% 300%;
-  animation: gradient 20s ease infinite;
-}
-
 .accordion {
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
   padding: 20px;
-  border: 2px rgb(240 249 255);
+  border: 1px solid transparent;
+}
+
+.accordion__item + .accordion__item {
+  border-top: 1px solid transparent;
 }
 
 .accordion__button {
-  background-color: #7D45BC;
-  color: white;
+  background-color: rgba(255, 251, 235, 0.8);
+  color: #ffffff;
   cursor: pointer;
   padding: 18px;
   width: 100%;
   text-align: left;
-  font-size: 1.75rem;
-  text-transform: uppercase;
-  font-size: 1.75rem;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .accordion__button:hover {
-  background-color: #7D45BC;
+  background-color: #ddd;
 }
 
 .accordion__button:before {
-  background-color: rgb(240 249 255);
   display: inline-block;
   content: '';
   height: 10px;
   width: 10px;
   margin-right: 12px;
+  border-bottom: 2px solid currentColor;
+  border-right: 2px solid currentColor;
   transform: rotate(-45deg);
 }
 
@@ -131,176 +132,82 @@
 
 @layer base {
   html {
-      font-family: BebasNeue-Regular, NinetiesDisplay, sans-serif, system-ui;
+      font-family: Inter, Manrope, sans-serif, system-ui;
       -ms-overflow-style: none;  /* IE and Edge */
       scrollbar-width: none;  /* Firefox */
+      color: #ffffff;
     }
-  h1 {
-    font-family: NinetiesDisplay;
-    letter-spacing: 2px;
-    font-size: 4rem; 
-    line-height: 1;
-  }
   h2 {
-    font-family: NinetiesDisplay;
-    letter-spacing: 2px;
-    font-size: 3rem; /* 48px */
-    line-height: 1;
+      font-family: Inter;
+      letter-spacing: 2px;
+      line-height: 1.2em;
+      font-size: 3rem;
+      font-weight: 600;
+      text-transform: uppercase;
   }
   h3 {
-    font-family: bebas-neue-pro-expanded, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    letter-spacing: 1.5px;
-    font-size: 2.5rem;
-    line-height: 1;
+    font-family: Inter;
+    letter-spacing: 2px;
+    line-height: 1.2em;
+    font-size: 3rem;
+    font-weight: 300;
     text-transform: uppercase;
   }
   h4 {
-    font-family: bebas-neue-pro-semiexpanded, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size:1.75rem;
+      font-family: Manrope;
+      font-size: 1.5rem;
   }
   p {
-      font-family: sans-serif, system-ui;
+      font-family: Manrope;
     }
+  li {
+      color: white;
+      font-size: 1.0rem;
+      margin: auto;
+      border: 2px solid transparent;
+      border-radius: 50px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  li:hover {
+    border: 2px solid white;
+    border-radius: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   html::-webkit-scrollbar {
     display: none;
   }
-  li.wp-block-button {
-    font-family: bebas-neue-pro-semiexpanded, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size:1.75rem;
-  }
 }
 
-.postMeta {
-  font-family: bebas-neue-pro-expanded, sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  letter-spacing: 1.5px;
-  font-size: 2.5rem;
-  line-height: 1;
-  text-transform: uppercase;
-}
 @font-face {
-  font-family: 'NinetiesDisplay';
-  src: local('NinetiesDisplay'), url(/fonts/NinetiesDisplay.otf) format('opentype');
+  font-family: 'Inter';
+  src: url(/fonts/Inter/Inter-VariableFont_slnt,wght.ttf) format('truetype');
   /* other formats include: 'woff2', 'truetype, 'opentype',
                             'embedded-opentype', and 'svg' */
 }
 @font-face {
-  font-family: 'BebasNeue-Regular';
-  src: local('BebasNeue-Regular'), url(/fonts/BebasNeue-Regular.ttf) format('truetype');
+  font-family: 'Manrope';
+  src: url(/fonts/Manrope/Manrope-VariableFont_wght.ttf) format('truetype');
   /* other formats include: 'woff2', 'truetype, 'opentype',
                             'embedded-opentype', and 'svg' */
 }
-
-@font-face {
-  font-family: 'Bebas+Neue';
-  src: url(https://fonts.googleapis.com/css2?family=Bebas+Neue) format('opentype');
-  /* other formats include: 'woff2', 'truetype, 'opentype',
-                            'embedded-opentype', and 'svg' */
-}
-
-@import url("https://p.typekit.net/p.css?s=1&k=voo3frb&ht=tk&f=44426.44427.44428.44429.45061.45065.45066.45069.45070.45079.45080.45081.45083.45084&a=44410267&app=typekit&e=css");
-
-@font-face {
-font-family:"bebas-neue-pro";
-src:url("https://use.typekit.net/af/1c26fd/00000000000000007735c8b3/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/1c26fd/00000000000000007735c8b3/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/1c26fd/00000000000000007735c8b3/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
-font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
-}
-
-@font-face {
-font-family:"bebas-neue-pro";
-src:url("https://use.typekit.net/af/2ba20d/00000000000000007735c8b6/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/2ba20d/00000000000000007735c8b6/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/2ba20d/00000000000000007735c8b6/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
-font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
-}
-
-@font-face {
-font-family:"bebas-neue-pro";
-src:url("https://use.typekit.net/af/6fab65/00000000000000007735c8b9/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/6fab65/00000000000000007735c8b9/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/6fab65/00000000000000007735c8b9/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
-font-display:auto;font-style:normal;font-weight:600;font-stretch:normal;
-}
-
-@font-face {
-font-family:"bebas-neue-pro";
-src:url("https://use.typekit.net/af/92adad/00000000000000007735c8bc/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("woff2"),url("https://use.typekit.net/af/92adad/00000000000000007735c8bc/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("woff"),url("https://use.typekit.net/af/92adad/00000000000000007735c8bc/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("opentype");
-font-display:auto;font-style:italic;font-weight:600;font-stretch:normal;
-}
-
-@font-face {
-font-family:"bebas-neue-pro-semiexpanded";
-src:url("https://use.typekit.net/af/16a71d/00000000000000007735c8a7/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/16a71d/00000000000000007735c8a7/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/16a71d/00000000000000007735c8a7/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
-font-display:auto;font-style:normal;font-weight:300;font-stretch:normal;
-}
-
-@font-face {
-font-family:"bebas-neue-pro-semiexpanded";
-src:url("https://use.typekit.net/af/6c0184/00000000000000007735c8b4/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/6c0184/00000000000000007735c8b4/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/6c0184/00000000000000007735c8b4/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
-font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
-}
-
-@font-face {
-font-family:"bebas-neue-pro-semiexpanded";
-src:url("https://use.typekit.net/af/cfa039/00000000000000007735c8b7/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/cfa039/00000000000000007735c8b7/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/cfa039/00000000000000007735c8b7/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
-font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
-}
-
-@font-face {
-font-family:"bebas-neue-pro-semiexpanded";
-src:url("https://use.typekit.net/af/9f96bc/00000000000000007735c8bf/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/9f96bc/00000000000000007735c8bf/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/9f96bc/00000000000000007735c8bf/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
-font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
-}
-
-@font-face {
-font-family:"bebas-neue-pro-semiexpanded";
-src:url("https://use.typekit.net/af/738551/00000000000000007735c8c1/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/738551/00000000000000007735c8c1/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/738551/00000000000000007735c8c1/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
-font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
-}
-
-@font-face {
-font-family:"bebas-neue-pro-expanded";
-src:url("https://use.typekit.net/af/6106bf/00000000000000007735c8b5/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/6106bf/00000000000000007735c8b5/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/6106bf/00000000000000007735c8b5/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
-font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
-}
-
-@font-face {
-font-family:"bebas-neue-pro-expanded";
-src:url("https://use.typekit.net/af/94f2fe/00000000000000007735c8b8/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/94f2fe/00000000000000007735c8b8/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/94f2fe/00000000000000007735c8b8/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
-font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
-}
-
-@font-face {
-font-family:"bebas-neue-pro-expanded";
-src:url("https://use.typekit.net/af/a4f125/00000000000000007735c8bb/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/a4f125/00000000000000007735c8bb/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/a4f125/00000000000000007735c8bb/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
-font-display:auto;font-style:normal;font-weight:600;font-stretch:normal;
-}
-
-@font-face {
-font-family:"bebas-neue-pro-expanded";
-src:url("https://use.typekit.net/af/7ea0dd/00000000000000007735c8c0/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/7ea0dd/00000000000000007735c8c0/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/7ea0dd/00000000000000007735c8c0/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
-font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
-}
-
-@font-face {
-font-family:"bebas-neue-pro-expanded";
-src:url("https://use.typekit.net/af/7f7bf7/00000000000000007735c8c2/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/7f7bf7/00000000000000007735c8c2/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/7f7bf7/00000000000000007735c8c2/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
-font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
-}
-
-.tk-bebas-neue-pro { font-family: "bebas-neue-pro",sans-serif; }
-.tk-bebas-neue-pro-semiexpanded { font-family: "bebas-neue-pro-semiexpanded",sans-serif; }
-.tk-bebas-neue-pro-expanded { font-family: "bebas-neue-pro-expanded",sans-serif; }
-
 
 /* Start purging... */
-
+@tailwind components;
 /* Stop purging. */
 
 /* Write you own custom component styles here */
+.iwbuttonsolid {
+  border-radius: 30px;
+  background-color: #ffffff;
+  color: black;
+  font-size: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  text-transform: uppercase;
+}
+
 .image-cropper {
   position: relative;
   overflow: hidden;
@@ -311,18 +218,12 @@ font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
   display: inline;
   margin: 0 auto;
 }
-
-.liberaCarousel {
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  z-index: 80;
-}
-.react-multiple-carousel__arrow {
-  z-index: 30;
+.waves {
+  z-index: 0;
+  bottom: 0px;
   position: relative;
 }
+
 .sparkler {
   max-width: 10%;
   max-height: 10%;
@@ -335,10 +236,6 @@ font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
   max-height: 40%;
   display:block;
   margin:auto;
-}
-
-.liberanav {
-  background-color: #7D45BC;
 }
 
 .a2imLogo {
@@ -358,155 +255,45 @@ font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
   border-color: white;
 }
 
-.LiberaBorder {
-  border: 50px;
-  padding: 10px;
+.iwborder {
+  position: relative;
+}
+.iwborder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50px; 
+  border-style: groove;
+  padding: 6px; 
+  background: white;
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
+}
+.iwborder2 {
+  position: relative;
+}
+.iwborder2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50px; 
+  border-style: groove;
+  padding: 6px; 
+  background: white;
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
 }
 
-.LiberaBorder2 {
-  border-radius: 40px;
-  padding: 10px;
-}
-
-.Borderswap1 {
-  background: linear-gradient(-45deg, #F669A6, #7D45BC);
-  border-radius: 50px;
-  padding: 10px;
-  background-size: 300% 300%;
-  animation: gradient 7s ease infinite;
-}
-
-.Borderswap1:hover {
-  scale: 110%;
-  background: linear-gradient(-90deg, #F669A6, #7D45BC);
-  border-radius: 50px;
-  background-size: 300% 300%;
-  animation: gradient 3s ease infinite;
-  color: white;
-}
-
-.Borderswap1nav {
-  color: white;
-}
-
-.Borderswap1nav:hover {
-  scale: 110%;
-  background: linear-gradient(-90deg, #F669A6, #7D45BC);
-  border-top-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  background-size: 300% 300%;
-  animation: gradient 3s ease infinite;
-  color: white;
-}
-
-.Borderswap2 {
-  background: linear-gradient(-90deg, #F669A6, #7D45BC);
-  border-radius: 50px;
-  padding: 10px;
-  background-size: 300% 300%;
-  animation: gradient 7s ease infinite;
-}
-
-.Borderswap2:hover {
-  scale: 110%;
-  background: linear-gradient(-120deg, #F669A6, #7D45BC);
-  border-radius: 50px;
-  background-size: 300% 300%;
-  animation: gradient 3s ease infinite;
-  color: white;
-}
-
-.Borderswap2nav {
-  color: white;
-}
-.Borderswap2nav:hover{
-  scale: 110%;
-  background: linear-gradient(-120deg, #F669A6, #7D45BC);
-  border-top-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  background-size: 300% 300%;
-  animation: gradient 3s ease infinite;
-  color: white;
-}
-
-.Borderswap3 {
-  background: linear-gradient(45deg, #F669A6, #7D45BC);
-  border-radius: 50px;
-  padding: 10px;
-  background-size: 300% 300%;
-  animation: gradient 7s ease infinite;
-}
-
-.Borderswap3:hover {
-  scale: 102%;
-  background: linear-gradient(90deg, #F669A6, #7D45BC);
-  border-radius: 50px;
-  background-size: 300% 300%;
-  animation: gradient 3s ease infinite;
-  color: white;
-}
-
-.Borderswap3nav {
-  color:white;
-}
-
-.Borderswap3nav:hover {
-  scale: 110%;
-  background: linear-gradient(90deg, #F669A6, #7D45BC);
-  border-top-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  background-size: 300% 300%;
-  animation: gradient 3s ease infinite;
-  color: white;
-}
-
-.Borderswap4 {
-  background: linear-gradient(90deg, #F669A6, #7D45BC);
-  border-radius: 50px;
-  padding: 10px;
-  background-size: 300% 300%;
-  animation: gradient 7s ease infinite;
-}
-
-.Borderswap4:hover {
-  scale: 110%;
-  background: linear-gradient(145deg, #F669A6, #7D45BC);
-  border-radius: 50px;
-  background-size: 300% 300%;
-  animation: gradient 3s ease infinite;
-  color: white;
-}
-
-.Borderswap4nav {
-  color:white;
-}
-
-.Borderswap4nav:hover {
-  scale: 110%;
-  background: linear-gradient(145deg, #F669A6, #7D45BC);
-  border-top-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  background-size: 300% 300%;
-  animation: gradient 3s ease infinite;
-  color: white;
-}
-
-.Borderswap5 {
-  background: linear-gradient(90deg, #F669A6, #7D45BC);
-  border-radius: 50px;
-  padding: 20px;
-  animation: gradient 7s ease infinite;
-  background-size: 300% 300%;
-  color: white;
-  z-index: 99;
+.iwnavbar {
+	background: linear-gradient(-90deg, rgba(255, 24, 39, 1), black, rgba(255, 24, 39, 1));
+	background-size: 200% 200%;
+	animation: gradient 13s ease infinite;
 }
 
 @keyframes gradient {
@@ -526,71 +313,35 @@ font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
   margin: auto;
   justify-content: center;
   width: 50%;
-  font-family: bebas-neue-pro-expanded, sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  letter-spacing: 1.5px;
-  font-size: 2.5rem;
-  line-height: 1;
-  text-transform: uppercase;
 }
-
-
 .wp-block-button {
-  background: linear-gradient(45deg, #F669A6, #7D45BC);
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  padding: 30px;
-  background-size: 300% 300%;
-  animation: gradient 7s ease infinite;
-  color:white;
-  text-decoration: none;
-  margin: auto;
-}
-
-.wp-block-button:hover {
-  scale: 110%;
-  background: linear-gradient(90deg, #F669A6, #7D45BC);
+  margin-left: 30px;
+  margin-right: 30px;
+  background:rgba(255, 251, 235, 0.9);
   border-top-left-radius: 50px;
   border-bottom-right-radius: 50px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  background-size: 300% 300%;
-  animation: gradient 3s ease infinite;
-  color: white;
+  padding: 10px;
+  transition: all .2s ease-in-out;
+  filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+  font-style: bold;
+  align-items: middle;
+  flex-basis:  auto;
+}
+.wp-block-button:hover {
+  background-color: rgb(232 121 249);
+  transform: scale(1.02);
+  transform-origin: center; 
 }
 .wp-block-button__link {
   text-decoration: none;
 }
-
-.wp-block-table{
-  font-family: bebas-neue-pro-semiexpanded, sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size:1.75rem;
-  border: 2px solid black;
-  padding: 5px;
-}
-
 th.wp-block-table {
   border: 1px solid black;
 }
-
-figure.wp-block-table {
-  border: 1px solid black;
-  border-bottom: 2px solid black;
-}
-
-tr.wp-block-table {
-  border: 1px solid black;
-  border-bottom: 2px solid black;
-}
-
 td.wp-block-table {
   border: 1px solid black;
-  border-bottom: 2px solid black;
 }
 .wp-block-image {
   padding: 10px;
@@ -604,19 +355,6 @@ td.wp-block-table {
   transform-origin: center; 
 }
 
-.bggradient {
-  background-image: 
-  url('/Background/1x/Background.png');
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-color: #f8f8f8;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-attachment: fixed;
-  background-size:cover;
-  height: 100%;
-  overflow: auto;
-}
 
 @-webkit-keyframes Animation {
   0%{background-position:10% 10%}
@@ -642,9 +380,6 @@ td.wp-block-table {
   100%{background-position:20% 20%}
 }
 
-.LiberaTextbox {
-  max-width: 50%;
-}
 
 .archivebutton {
   transition: all .2s ease-in-out; 
@@ -661,20 +396,18 @@ td.wp-block-table {
   font-weight: bold; 
   letter-spacing: -0.05em;
   line-height: 1.25;
-  text-align: center;
-}
-
-.category {
-  border: 50px;
-  padding: 20px;
-  background-color: #f0f9ff;
 }
 
 /* Start purging... */
-
+@tailwind utilities;
 /* Stop purging. */
 
 /* Your own custom utilities */
+
+
+
+
+
 
 .preload {
   display: none;
@@ -693,4 +426,29 @@ td.wp-block-table {
   height: 100%;
   width: 100%;
   position: absolute;
+}
+
+.social-container {
+  background: transparent;
+  padding: 15px 40px;
+  position: relative;
+  border: 4px solid transparent;
+  padding: 15px 40px;
+}
+
+.social-container:hover {
+  border-radius: 50px; 
+  border: 4px solid white;
+  padding: 15px 40px;
+}
+
+a.social:hover {
+  transform: translateY(-2px);
+}
+
+.footer-shadow {
+  background-color: transparent;
+}
+.footer-shadow:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }

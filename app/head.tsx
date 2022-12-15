@@ -61,7 +61,7 @@ export default function MyHead() {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content={`The Libera Awards is the Largest Independent Music Awards show in the World.`}
+        content={`Founded by independents, for independents, A2IM Indie Week is a four-day conference for the independent music community in the United States.`}
       />
       <meta property="og:image" content={HOME_OG_IMAGE_URL} />
       <meta content="width=device-width, initial-scale=1" name="viewport" />

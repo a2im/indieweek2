@@ -30,13 +30,13 @@ export default function AdBanner(){
   const { loading, error, data } = useQuery(GET_ALL_ADS, { 
     variables: {
       isActive: true,
-      Name: "Libera Awards"
+      Name: "Indie Week"
     }});
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error</p>
     
 return(
-<div className="mx-auto justify-center items-center">
+<div className="max-w-4xl mx-auto justify-center items-center py-10">
 <Carousel
   swipeable={false}
   draggable={false}
@@ -50,11 +50,12 @@ return(
   transitionDuration={2000}
   arrows={false}
   showDots={false}
+  className="mx-auto"
 >
         {/* Map through the data */}
         {data.ads.data.map(ads => (
                 <div key={ads.id} className="mx-auto">
-                  <Link href={ads.attributes?.URL} target="_blank" rel="noopener noreferrer">
+                  <Link href={ads.attributes?.URL} target="_blank" rel="noopener noreferrer" className="mx-auto">
                   <Image 
                     src={ads.attributes.Asset.data.attributes.url}
                     height={ads.attributes.Asset.data.attributes.height} 
@@ -67,7 +68,7 @@ return(
                 
               )
             )}
-            </Carousel>;
+            </Carousel>
         </div>
 )
-} 
+};

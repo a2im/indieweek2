@@ -33,7 +33,7 @@ async function sendEmail(req, res) {
               <br>
               </div>
               <img src="https://a2im.org/wp-content/uploads/2021/05/A2IM-Stamp-Logo_BLACK.png" class="logo-image" style="height: 50px;width: 50px;border-radius: 5px;overflow: hidden;">
-              <p class="footer" style="font-size: 16px;padding-bottom: 20px;border-bottom: 1px solid #D1D5DB;">Regards<br>Ross Ford<br>Operations Manager<br>+1 8139448200</p>
+              <p class="footer" style="font-size: 16px;padding-bottom: 20px;border-bottom: 1px solid #D1D5DB;">A2IM System Generated Message</p>
               <div class="footer-links" style="display: flex;justify-content: center;align-items: center;">
                 <a href="https://a2im.org/" style="text-decoration: none;margin: 8px;color: #9CA3AF;">Website</a>
                 <a href="https://instagram.com/a2im/" style="text-decoration: none;margin: 8px;color: #9CA3AF;">Instagram</a>

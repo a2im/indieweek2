@@ -3,8 +3,8 @@ import MyIntro from './intro'
 
 export default function Home() {
   return (
-    <div className="bggradient">
-      <title>Libera Awards - Home</title>
+    <div className="bggradient2">
+      <title>Indie Week - Home</title>
           <MyIntro/>
         <Footer/>
     </div>

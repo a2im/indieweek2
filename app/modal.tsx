@@ -20,7 +20,7 @@ export default function MyModal (){
         },
         visible: {
             x: -360,
-            y: -410,
+            y: -510,
             opacity: 1,
             transition: {
                 duration: 0.1,
@@ -71,11 +71,10 @@ In response to COVID-19, we took Indie Week online in 2020 and 2021. We returned
                 alt="a2im button"
                 width={75}
                 height={75}
-                layout={'fixed'}
-                objectFit={'contain'}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
+                  height: "auto",
+                  objectFit: "contain"
                 }} />
             </motion.button>
                 )}

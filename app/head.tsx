@@ -7,27 +7,54 @@ export default function MyHead() {
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="/favicon/apple-touch-icon.png"
+        href="/favicon/apple-touch-icon-light.png"
+        media="(prefers-color-scheme: light)"
+      />
+            <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/favicon/apple-touch-icon-dark.png"
+        media="(prefers-color-scheme: dark)"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="32x32"
-        href="/favicon/favicon-32x32.png"
+        href="/favicon/A2IM-button-32x32-light.png"
+        media="(prefers-color-scheme: light)"
+      />
+            <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon/A2IM-button-32x32-dark.png"
+        media="(prefers-color-scheme: dark)"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="16x16"
-        href="/favicon/favicon-16x16.png"
+        href="/favicon/A2IM-button-16x16-light.png"
+        media="(prefers-color-scheme: light)"
       />
-      <link rel="icon" href="/favicon/favicon.ico" />
-      <link rel="manifest" href="/favicon/site.webmanifest" />
       <link
-        rel="mask-icon"
-        href="/favicon/safari-pinned-tab.svg"
-        color="#000000"
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon/A2IM-button-16x16-dark.png"
+        media="(prefers-color-scheme: dark)"
       />
+      <link 
+        rel="icon" 
+        href="/favicon/a2im-favicon-dark.ico" 
+        media="(prefers-color-scheme: dark)"
+        />
+        <link 
+        rel="icon" 
+        href="/favicon/a2im-favicon-light.ico" 
+        media="(prefers-color-scheme: light)"
+        />
+      <link rel="manifest" href="/favicon/site.webmanifest" />
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />

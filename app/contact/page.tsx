@@ -88,25 +88,24 @@ export default function Contact() {
    };
   return (
     <div className="bggradient">
-          <title>Libera Awards - Contact Us</title>
+          <title>Indie Week - Contact Us</title>
           <div className="grow shrink content-center">
-<h1 className="pt-20 grow font-bold align-middle text-center leading-tight">
+<h2 className="pt-20 grow font-bold align-middle text-center leading-tight">
   Contact
-  </h1>
+  </h2>
   </div>
           <motion.div
           initial="initial"
           animate="animate"
           exit="exit"
-          className="px-8 py-20 mx-auto">
+          className="px-8 pt-20 mx-auto">
             <div className="max-w-4xl mx-auto">
             <section className='max-w-4xl mb-10 mx-auto gap-10'> 
             <form
-            className="rounded-lg shadow-xl flex flex-col px-8 py-8 iwborder">
+            className="rounded-3xl shadow-xl border-4 flex flex-col px-8 py-8 ">
       <h2 className="text-center pb-10">
         Send us a message
         </h2>
-
       <label 
       htmlFor="fullname" 
       className="text-2xl">
@@ -118,13 +117,10 @@ export default function Contact() {
       type="text" 
       value={fullname} 
       onChange={e => setFullname(e.target.value)} name="fullname" className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500" />
-
       <label htmlFor="email" className="text-2xl">E-mail<span className="text-red-500">*</span></label>
       <input id={id} type="email" value={email} onChange={e => setEmail(e.target.value)} name="email" className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500" />
-
       <label htmlFor="subject" className="text-2xl">Subject<span className="text-red-500">*</span></label>
       <input id={id} type="text" value={subject} onChange={e => setSubject(e.target.value)} name="subject" className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500" />
-
       <label htmlFor="message" className="text-2xl">Message<span className="text-red-500">*</span></label>
       <textarea id={id} value={message} onChange={e => setMessage(e.target.value)} name="message" className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"></textarea>
       <div className="flex flex-row items-center justify-start">

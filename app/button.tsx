@@ -10,9 +10,9 @@ export function IWButtonExternal ({ children, href }) {
           <div className="p-7 drop-shadow-2xl max-h-21 min-w-20 justify-center leading-tight mx-auto">
               <button 
               className="hover:scale-105 iwbuttonsolid">
-                <h3 className="align-middle grow p-2 shrink font-normal leading-tight">
+                <h4 className="align-middle grow p-2 shrink font-normal leading-tight">
                 {children}
-                </h3>
+                </h4>
               </button>
           </div>
 
@@ -25,10 +25,10 @@ export function IWButtonInternal ({ children, href}) {
         <Link href={href}>
         <div className="drop-shadow-2xl max-h-21 min-w-20 justify-center leading-tight mx-auto">
             <button 
-            className="Borderswap3 hover:scale-105 iwbuttonsolid">
-              <h3 className="align-middle p-2 shrink font-normal leading-tight">
+            className="hover:scale-105 iwbuttonsolid">
+              <h4 className="align-middle p-2 shrink font-normal leading-tight">
               {children}
-              </h3>
+              </h4>
             </button>
         </div>
         </Link>

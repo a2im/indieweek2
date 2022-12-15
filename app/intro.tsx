@@ -189,7 +189,7 @@ fruitful networking.</h4>
 
 export function Intro3 () {
 return (
-  <div className="mx-auto max-w-6xl pb-48 md:pb-0 z-30 relative">
+  <div className="mx-auto max-w-6xl md:pb-0 z-30 relative">
     <div className="mx-auto">
     <motion.div
     key="two"

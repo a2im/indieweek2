@@ -4,7 +4,7 @@ import Footer from '../footer'
 export default function About() {
   return (
     <div className="bggradient">
-          <title>Libera Awards - About Us</title>
+          <title>Indie Week - About Us</title>
           <div className="grow shrink content-center">
 <h2 className="pt-20 grow font-bold align-middle text-center leading-tight">
   About

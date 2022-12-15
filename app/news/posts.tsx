@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/client';
 import Link from "next/link";
 import Image from "next/image";
 
-export function LiberaPostsList() {
+export function IWPostsList() {
   const router = useRouter()
   const { loading, error, data } = useQuery(GET_ALL_POSTS, { 
     variables: {

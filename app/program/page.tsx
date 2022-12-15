@@ -4,7 +4,7 @@ import Footer from '../footer'
 export default function Program() {
   return (
     <div className="bggradient">
-          <title>Libera Awards - Program</title>
+          <title>Indie Week - Program</title>
           <div className="grow shrink content-center">
 <h2 className="pt-20 grow font-bold align-middle text-center leading-tight">
 Program

@@ -3,7 +3,7 @@
 import {gql} from '@apollo/client'
 
 export const GET_ALL_SPONSORS = gql`
-query getLiberaSponsorsList($Level: String!, $Title: String!) {
+query getIWSponsorsList($Level: String!, $Title: String!) {
     sponsors(filters: { sponsor_packages: { Level: { contains: $Level }, event: { Title: { contains: $Title }}}}) {
       data {
         id
@@ -25,7 +25,7 @@ query getLiberaSponsorsList($Level: String!, $Title: String!) {
   `; 
 
 export const GET_ALL_ADS = gql`
-query getLiberaAds($isActive: Boolean, $Name: String!) {
+query getIWAds($isActive: Boolean, $Name: String!) {
   ads(filters: { isActive: { eq: $isActive }, apps: { Name: {eq: $Name}}}) {
     data{
       id

@@ -9,7 +9,7 @@ export function SponsorTier1() {
     const { loading, error, data } = useQuery(GET_ALL_SPONSORS, { 
       variables: {
         Level: "Tier 1", 
-        Title: "2023 Libera Awards"
+        Title: "2023 Indie Week"
       }});
       if (loading) return <p>Loading...</p>
       if (error) return <p>Error</p>
@@ -42,7 +42,7 @@ export function SponsorTier2() {
     const { loading, error, data } = useQuery(GET_ALL_SPONSORS, { 
       variables: {
         Level: "Tier 2", 
-        Title: "2023 Libera Awards"
+        Title: "2023 Indie Week"
       }});
       if (loading) return <p>Loading...</p>
       if (error) return <p>Error</p>
@@ -74,7 +74,7 @@ export function SponsorTier3() {
     const { loading, error, data } = useQuery(GET_ALL_SPONSORS, { 
       variables: {
         Level: "Tier 3", 
-        Title: "2023 Libera Awards"
+        Title: "2023 Indie Week"
       }});
       if (loading) return <p>Loading...</p>
       if (error) return <p>Error</p>

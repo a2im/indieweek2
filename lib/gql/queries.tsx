@@ -3,7 +3,7 @@
 import {gql} from '@apollo/client'
 
 export const GET_ALL_SPONSORS = gql`
-query getIWSponsorsList($Level: String!, $Title: String!) {
+query getLiberaSponsorsList($Level: String!, $Title: String!) {
     sponsors(filters: { sponsor_packages: { Level: { contains: $Level }, event: { Title: { contains: $Title }}}}) {
       data {
         id
@@ -25,7 +25,7 @@ query getIWSponsorsList($Level: String!, $Title: String!) {
   `; 
 
 export const GET_ALL_ADS = gql`
-query getIWAds($isActive: Boolean, $Name: String!) {
+query getLiberaAds($isActive: Boolean, $Name: String!) {
   ads(filters: { isActive: { eq: $isActive }, apps: { Name: {eq: $Name}}}) {
     data{
       id
@@ -50,8 +50,8 @@ query getIWAds($isActive: Boolean, $Name: String!) {
 `;
 
 export const GET_ALL_POSTS = gql`
-query AllPosts($PublicationState: PublicationState){
-  posts(publicationState: $PublicationState, sort: "id:DESC"){
+query AllPosts($PublicationState: PublicationState, $Name: String! ){
+  posts(filters: { app: { Name: { eq: $Name }}},publicationState: $PublicationState, sort: "id:DESC"){
     data {
       id
       attributes {
@@ -68,7 +68,7 @@ query AllPosts($PublicationState: PublicationState){
           }
         }
         Date
-        Slug
+        slug
         Body
         Excerpt
       }
@@ -79,7 +79,7 @@ query AllPosts($PublicationState: PublicationState){
 
 export const GET_MY_POST = gql`
 query MyPostBySlug($slug: String!) {
-  posts(filters: { Slug: { eq: $slug }}) {
+  posts(filters: { slug: { eq: $slug }}) {
     data {
       id
       attributes {
@@ -96,7 +96,7 @@ query MyPostBySlug($slug: String!) {
           }
         }
         Excerpt
-        Slug
+        slug
         Body
       }
     }
@@ -108,7 +108,7 @@ export const GET_POST_AND_MOREPOSTS = gql`
 fragment PostFields on Post {
   Title
   Excerpt
-  Slug
+  slug
   Date
   coverImage {
     data {
@@ -142,7 +142,7 @@ fragment PostFields on Post {
   }
 }
 query PostBySlug($slug: String!) {
-  posts(filters: { Slug: { eq: $slug }}) {
+  posts(filters: { slug: { eq: $slug }}) {
     data {
       id
       attributes {
@@ -162,7 +162,7 @@ query RecentNews ($PublicationState: PublicationState){
       attributes {
         Title
         Excerpt
-        Slug
+        slug
       }
     }
   }

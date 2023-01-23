@@ -1,10 +1,10 @@
 'use client';
 
 import React from "react"
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import { IWButtonInternal } from "./button";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -28,10 +28,9 @@ const responsive = {
   }
 };
 
-export default function AboutUS () {
+export function About1 () {
     return (
       <>
-      <AnimatePresence>
           <div className="max-w-6xl mx-auto">
           <motion.div
         initial= {{
@@ -51,10 +50,8 @@ export default function AboutUS () {
               when: "afterChildren",
               ease: "anticipate", 
             }}}
-          viewport={{ once: false, amount: 0.6 }}
-          className="w-32">
+          className="relative w-32">
                     <motion.div
-        key="two.grow"
         initial= {{
             scale: "100%",
               }}
@@ -69,18 +66,16 @@ export default function AboutUS () {
           }
             }}
             whileTap={{scale: 0.9}}
-          className="-ml-64 w-32 -mt-32">
+          className="relative -ml-64 w-32 -mt-32">
 <Image
-  src="/public/images/sparkle-red.png"
-  width={100}
-  height={100}
-  objectFit={'contain'}
+  src="/images/sparkle-white.png"
+  width={227}
+  height={190}
   alt="sparkle image"
-  sizes="100vw"
-  style={{
-    width: "100%",
-    height: "auto"
-  }}></Image>
+  sizes="(max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  33vw"
+  ></Image>
         </motion.div>
         </motion.div>
             <div className="z-10 flex flex-col-reverse md:flex-row md:mt-10 items-center md:justify-around mx-auto gap-10 p-5">
@@ -88,10 +83,8 @@ export default function AboutUS () {
                 <h2> WHAT IS A2IM INDIE WEEK?</h2>
                 <hr className="border-iwred my-5"></hr>
                 <h4>Running for over 15 years, and with over 1200 attendees, it&apos;s the largest independent music gathering in the world. Yearly, Indie Week hosts over 60 panels and workshops, 1800 curated business meetings, and countless opportunities tailor-made for the independent sector&apos;s unique needs.</h4>
-                
-<IWButtonInternal href='/tickets'>LEARN MORE</IWButtonInternal>
+              <IWButtonInternal href='/tickets'>LEARN MORE</IWButtonInternal>
               </div>
-              
               <div className="image-cropper flex-initial w-1/2 m-10 max-w-xl">
                 <Image
                   className="roundedimage"
@@ -108,12 +101,23 @@ export default function AboutUS () {
               </div>
             </div>
           </div>
+          </>
+)
+}
+export function InfoSegment(){
+  return (
+          <>
           <h4 className="mx-auto text-center pb-10 max-w-5xl">For A2IM Indie Week 2023, we’ll be back in New York City at a new, larger location. Details forthcoming…</h4>
-        </AnimatePresence>
+          </>
+)
+}
+
+export function About2(){
+  return(
+    <>
     <div className="mx-auto max-w-6xl">
       <div className="mx-auto">
       <motion.div
-      key="two"
       initial= {{
           opacity:0,
           x:200,
@@ -134,7 +138,6 @@ export default function AboutUS () {
         viewport={{ once: false, amount: 0.8 }}
         className="w-32 -mt-32 invisible md:visible">
                   <motion.div
-      key="two.grow"
       initial= {{
           scale: "100%",
             }}
@@ -152,32 +155,25 @@ export default function AboutUS () {
         className="w-32">
 <Image
 src="/images/sparkle-red.png"
-width={100}
-height={100}
-objectFit={'contain'}
+width={227}
+height={190}
 alt="sparkle shape"
-sizes="100vw"
-style={{
-  width: "100%",
-  height: "auto",
-  objectFit: "contain"
-}}></Image>
+sizes="(max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  33vw"></Image>
       </motion.div>
       </motion.div>
         <div className="flex flex-col md:flex-row -mt-10 md:justify-around items-center mx-auto gap-10 p-5">
-          <div className="image-cropper flex-initial max-w-xl m-10 w-1/2">
+          <div className="relative image-cropper max-w-xl">
             <Image
               className="roundedimage"
-              src="/public/images/iwmeetings-sq.jpg"
+              src="/images/iwmeetings-sq.jpg"
               alt='indie week meeting room'
               width={500}
               height={500}
-              sizes="100vw"
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain"
-              }} />
+              sizes="(max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  33vw" />
           </div>
           <div className="flex-initial relative max-w-2xl p-20 text-right">
             <h2>WHO ATTENDS A2IM INDIE WEEK?</h2>
@@ -255,6 +251,13 @@ style={{
         </div>
       </div>
     </div>
+    </>
+  )
+}
+
+export function FooterDisclaimer(){
+  return(
+<>
     <div className="max-w-6xl mx-auto pb-64 ">
     <h2>ABOUT A2IM</h2>
     <hr className="border-iwred my-5"></hr>
@@ -265,4 +268,15 @@ As an organization, A2IM is committed to protecting the value of independent mus
 </div>
     </>
   );
+}
+
+export default function AboutUS(){
+  return (
+    <>
+    <About1/>
+    <InfoSegment/>
+    <About2/>
+    <FooterDisclaimer/>
+    </>
+  )
 }

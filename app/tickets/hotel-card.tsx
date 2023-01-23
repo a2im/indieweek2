@@ -49,12 +49,14 @@ export default function HotelCard(){
   src="/images/sparkle-red.png"
   width={100}
   height={100}
-  objectFit={'contain'}
   alt="sparkle image"
-  sizes="100vw"
+  sizes="(max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  33vw"
   style={{
     width: "100%",
-    height: "auto"
+    height: "auto",
+    objectFit: "contain"
   }}></Image>
         </motion.div>
         </motion.div>

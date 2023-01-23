@@ -79,33 +79,27 @@ export default function MyNavbar() {
                 navbar ? 'block' : 'hidden'
               }`}
             >
-              <ul ref={ref} className="md:flex md:space-x-3">
+              <ul ref={ref} className="md:flex">
                 <li 
                   className="text-center">
-                  <Link href="/about" onClick={() => setNavbar(false)} className="text-2xl">
-                  About us
+                  <Link href="/about" onClick={() => setNavbar(false)} className="text-xl uppercase">
+                  Info
                   </Link>
                 </li>
                 <li className="text-center">
-                  <Link href="/tickets" onClick={() => setNavbar(false)} className="text-2xl">
+                  <Link href="/tickets" onClick={() => setNavbar(false)} className="text-xl uppercase">
                     Tickets
                   </Link>
                 </li>
                 <li 
                   className="text-center">
-                  <Link href="/hotel" onClick={() => setNavbar(false)} className="text-2xl">
-                    Hotel
-                  </Link>
-                </li>
-                <li 
-                  className="text-center">
-                  <Link href="/program" onClick={() => setNavbar(false)} className="text-2xl">
+                  <Link href="/program" onClick={() => setNavbar(false)} className="text-xl uppercase">
                     Program
                   </Link>
                 </li>
                 <li 
                   className="text-center">
-                  <Link href="/contact" onClick={() => setNavbar(false)} className="text-2xl">
+                  <Link href="/contact" onClick={() => setNavbar(false)} className="text-xl uppercase">
                     Contact
                   </Link>
                 </li>

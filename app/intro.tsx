@@ -192,7 +192,6 @@ return (
   <div className="mx-auto max-w-6xl md:pb-0 z-30 relative">
     <div className="mx-auto">
     <motion.div
-    key="two"
     initial= {{
         opacity:0,
         x:200,
@@ -213,7 +212,6 @@ return (
       viewport={{ once: false, amount: 0.8 }}
       className="w-32 -mt-32 invisible md:visible">
                 <motion.div
-    key="two.grow"
     initial= {{
         scale: "100%",
           }}

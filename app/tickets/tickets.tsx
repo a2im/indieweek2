@@ -45,7 +45,7 @@ export default function MyTickets(){
           whileTap={{scale: 0.9}}
         className="-ml-64 w-32 -mt-32">
 <Image
-src="/images/sparkle-red.png"
+src="/images/sparkle-white.png"
 width={100}
 height={100}
 alt="sparkle image"

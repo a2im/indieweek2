@@ -6,6 +6,7 @@ module.exports = {
     WORDPRESS_API_URL: process.env.WORDPRESS_API_URL,
     NEXT_PUBLIC_A2IMCMS_API_URL: process.env.NEXT_PUBLIC_A2IMCMS_API_URL,
     NEXT_PUBLIC_A2IMCMS_API_GQL_URL: process.env.NEXT_PUBLIC_A2IMCMS_API_GQL_URL,
+    YOUTUBE_API_KEY: process.env.YOUTUBE_API_KEY,
   },
   images: {
     domains: [

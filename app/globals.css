@@ -215,7 +215,7 @@
 }
 
 .roundedimage {
-  display: inline;
+  display: inside;
   margin: 0 auto;
 }
 
@@ -452,4 +452,23 @@ a.social:hover {
 }
 .footer-shadow:hover {
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.preload {
+  display: none;
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }

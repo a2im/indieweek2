@@ -7,8 +7,7 @@ import SponsorFooter from "./sponsors";
 
 export default function Footer() {
   return (
-    <footer className="md:-mt-60 z-0 w-full">
-
+    <footer className="md:-mt-60 z-0 w-full pt-32">
               <div className="mx-auto relative h-[400] md:h-[800px] -mb-[600px]">
         <Image className="absolute inset-x-0 bottom-0 mx-auto" src={'/images/waves.png'} fill={true} alt="iw waves image"/>
         </div>

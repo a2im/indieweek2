@@ -1,5 +1,6 @@
 import { SocialFollowWhite } from '../SocialFollow'
 import Footer from '../footer'
+import WatchPastYears from '../watch-past-years'
 
 export default function Program() {
   return (
@@ -24,6 +25,7 @@ to the Libera Awards mailing list to hear first about program availability!</h4>
               </div>
               </div>
           </div>
+          <WatchPastYears data2021 data2022/>
           <Footer/>
     </div>
   )

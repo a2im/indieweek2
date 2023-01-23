@@ -1,5 +1,4 @@
 
-import LiberaQualifications from '../qualifications'
 import Footer from '../footer'
 
 export default function FAQ() {
@@ -11,7 +10,6 @@ export default function FAQ() {
   FAQ
   </h2>
   </div>
-          <LiberaQualifications/>
           <Footer/>
     </>
   )

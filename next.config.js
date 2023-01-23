@@ -19,6 +19,7 @@ module.exports = {
       'a2imindieweek.org',
       'indieweek.a2im.xyz',
       'a2im-strapi-cms-images.s3.amazonaws.com',
+      'i.ytimg.com',
     ],
     remotePatterns: [
       {
@@ -50,8 +51,13 @@ module.exports = {
         hostname: 'a2im-strapi-cms-images.s3.amazonaws.com',
         port: '80',
         pathname: '/***',
-      }
-
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+        port: '80',
+        pathname: '/***',
+      },
     ],
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; sandbox;",

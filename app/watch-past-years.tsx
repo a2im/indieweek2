@@ -2,69 +2,77 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import Link from 'next/link';
 
-const YOUTUBE_PLAYLIST_ITEMS_API = 'https://www.googleapis.com/youtube/v3/playlistItems';
+const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    desktop: {
+      breakpoint: { max: 1024, min: 728 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 728, min: 640 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 640, min: 0 },
+      items: 1
+    }
+  };
 
-export default function WatchPastYears({ data2021, data2022 }){
+export default function WatchPastYears({data2021, data2022}){
     return (
         <>
         <div className="max-w-6xl mx-auto">
-        <h2 className="text-center py-5">Watch Past Years</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2">
-            <ul>
-                {data2021?.data?.items?.map(({ id, snippet}) => {
+        <h2 className="text-center pt-10 py-5">Watch Past Years</h2>
+        <h3 className="text-2xl font-bold">2022</h3>
+            <hr className="border-iwred my-5"></hr>
+            <div className="pb-10">
+            <Carousel responsive={responsive}>
+                {data2022?.items?.map(({ id, snippet }) => {
             const { title, thumbnails = {}, resourceId = {} } = snippet;
             const { medium } = thumbnails;
                 return (
-                <li key={id} className="w-32">
-                    <a href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}>
-                    <p>
-                        <Image width={medium.width} height={medium.height} src={medium.url} alt="" />
-                    </p>
-                    <h3>{ title }</h3>
-                    </a>
-                </li>
+                <div key={id} className="border-solid border-white border-3 rounded-2xl hover:scale-105">
+                    <Link href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}>
+                        <Image width={medium.width} height={medium.height} src={medium.url} alt="">
+                        </Image>
+                        <h3 className="text-lg">{title}</h3>
+                        </Link>    
+                </div>
                 )
             })}
-            </ul>
-            <ul>
-                {data2022?.data?.items?.map(({ id, snippet }) => {
-            const { title, thumbnails = {}, resourceId = {} } = snippet;
-            const { medium } = thumbnails;
-                return (
-                <li key={id} className="w-32">
-                    <a href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}>
-                    <p>
-                        <Image width={medium.width} height={medium.height} src={medium.url} alt="" />
-                    </p>
-                    <h3>{ title }</h3>
-                    </a>
-                </li>
-                )
-            })}
-            </ul>
+            </Carousel>
             </div>
+        <h3 className="text-2xl font-bold">2021</h3>
+        <hr className="border-iwred my-5"></hr>
+        <div className="pb-10">
+            <Carousel responsive={responsive}>
+                {data2021?.items?.map(({ id, snippet }) => {
+            const { title, thumbnails = {}, resourceId = {} } = snippet;
+            const { medium } = thumbnails;
+                return (
+                <div key={id} className="border-solid border-white border-3 rounded-2xl hover:scale-105">
+                    <Link href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}>
+                        <Image width={medium.width} height={medium.height} src={medium.url} alt="">
+                        </Image>
+                        <h3 className="text-lg">{title}</h3>
+                        </Link>    
+                </div>
+                )
+            })}
+            </Carousel>
+            </div>
+            
         </div>
         </>
     )
 }
 
-export async function Get2021Playlist (){
-const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&maxResults=50&playlistId=[PL62SJLnyvK_igjmzcMUIFgVh2sKqWeK7g]&key=${process.env.YOUTUBE_API_KEY}`, {credentials: 'omit'})
-  const data2021 = await res.json();
-  return {
-    props: {
-      data2021
-    }
-  }
-}
 
-export async function Get2022Playlist (){
-const res = await fetch(`${YOUTUBE_PLAYLIST_ITEMS_API}?part=snippet&maxResults=50&playlistId=[PL62SJLnyvK_iaUGE9jwQgSRcdClJeYI2a]&key=${process.env.YOUTUBE_API_KEY}`, {credentials: 'omit'})
-    const data2022 = await res.json();
-    return {
-    props: {
-        data2022
-    }
-    }
-}

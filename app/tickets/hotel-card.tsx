@@ -5,9 +5,12 @@ import { IWButtonExternal } from "../button";
 
 export default function HotelCard(){
   return (
-
-
-<div className="max-w-6xl mx-auto text-center">
+<div id="hotels" className="max-w-6xl mx-auto text-center">
+<div className="grow shrink content-center">
+<h2 className="pt-20 grow font-bold align-middle text-center leading-tight">
+Hotel Accomodations
+  </h2>
+  </div>
           <motion.div
         initial= {{
             opacity:0,

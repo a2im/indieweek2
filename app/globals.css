@@ -175,6 +175,11 @@
     padding-left: 15px;
     padding-right: 15px;
   }
+  li > ul { display: none; }
+  li:hover > ul { display: block; }
+  .lvl1 li { display: relative; position:relative; }
+  .lvl2 { position: absolute; }
+  .lvl2 li { position: relative; }
   html::-webkit-scrollbar {
     display: none;
   }

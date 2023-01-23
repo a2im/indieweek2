@@ -9,7 +9,6 @@ export default function MyNavbar() {
   const [navbar, setNavbar] = useState(false);
   useOnClickOutside(ref, () => setNavbar(false));
   return (
-    <div>
       <nav className="bg-iwred w-full fixed z-50">
         <div className="justify-between max-w-6xl mx-auto items-center md:flex">
           <div>
@@ -79,17 +78,84 @@ export default function MyNavbar() {
                 navbar ? 'block' : 'hidden'
               }`}
             >
-              <ul ref={ref} className="md:flex">
+              <ul ref={ref} className="md:lvl1 
+              md:flex ">
                 <li 
                   className="text-center">
                   <Link href="/about" onClick={() => setNavbar(false)} className="text-xl uppercase">
                   Info
                   </Link>
+                    <ul className="
+                        mx-auto
+                        md:-ml-4 
+                        md:lvl2 ">
+                          <li className="
+                              text-center
+                              md:text-left 
+                              text-white 
+                              text-l
+                              uppercase 
+                              hover:scale-105 
+                              w-full
+                              py-2
+                              ">
+                            <Link href="/about" onClick={() => setNavbar(false)}>
+                              ABOUT US
+                            </Link>
+                          </li>
+                          <li className="
+                              text-center
+                              md:text-left 
+                              text-white 
+                              text-l
+                              uppercase 
+                              hover:scale-105 
+                              w-full
+                              py-2
+                              ">
+                            <Link href="/faq" onClick={() => setNavbar(false)}>
+                              FAQ
+                            </Link>
+                          </li>
+                          </ul>
                 </li>
                 <li className="text-center">
                   <Link href="/tickets" onClick={() => setNavbar(false)} className="text-xl uppercase">
-                    Tickets
+                    Attend
                   </Link>
+                  <ul className="
+                        mx-auto
+                        md:-ml-4 
+                        md:lvl2 ">
+                          <li className="
+                              text-center
+                              md:text-left 
+                              text-white 
+                              text-l
+                              uppercase 
+                              hover:scale-105 
+                              w-full
+                              py-2
+                              ">
+                            <Link href="/tickets#tickets" prefetch={false} passHref onClick={() => setNavbar(false)} replace>
+                              Tickets
+                            </Link>
+                          </li>
+                          <li className="
+                              text-center
+                              md:text-left 
+                              text-white 
+                              text-l
+                              uppercase 
+                              hover:scale-105 
+                              w-full
+                              py-2
+                              ">
+                            <Link href="/tickets#hotels" prefetch={false} passHref onClick={() => setNavbar(false)} replace>
+                              Hotels
+                            </Link>
+                          </li>
+                          </ul>
                 </li>
                 <li 
                   className="text-center">
@@ -99,8 +165,8 @@ export default function MyNavbar() {
                 </li>
                 <li 
                   className="text-center">
-                  <Link href="/contact" onClick={() => setNavbar(false)} className="text-xl uppercase">
-                    Contact
+                  <Link href="/sponsors" onClick={() => setNavbar(false)} className="text-xl uppercase">
+                    Sponsors
                   </Link>
                 </li>
               </ul>
@@ -108,7 +174,6 @@ export default function MyNavbar() {
           </div>
         </div>
       </nav>
-    </div>
   );
 }
 function useOnClickOutside(ref, handler) {

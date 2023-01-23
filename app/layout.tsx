@@ -23,7 +23,7 @@ export default function RootLayout({
         </head>
       <body className="min-h-screen z-0 bg-iwtexture">
       <Providers>
-      <MyNavbar />
+        <MyNavbar/>
       {children}
       <MyModal />
       </Providers>

@@ -6,7 +6,7 @@ import { IWButtonInternal } from "../button"
 export default function MyTickets(){
     return (
         <>
-        <div className="max-w-6xl mx-auto text-center">
+        <div id="tickets" className="max-w-6xl mx-auto text-center">
         <motion.div
       initial= {{
           opacity:0,

@@ -4,6 +4,7 @@ import React, { useId, useState } from 'react'
 import { motion } from "framer-motion"
 import Link from 'next/link'
 import Footer from '../footer';
+import MyNavbar from '../navbar';
 
 export default function Contact() {
   const id = useId();
@@ -89,6 +90,7 @@ export default function Contact() {
   return (
     <div className="bggradient">
           <title>Indie Week - Contact Us</title>
+          <MyNavbar/>
           <div className="grow shrink content-center">
 <h2 className="pt-20 grow font-bold align-middle text-center leading-tight">
   Contact

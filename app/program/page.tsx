@@ -1,13 +1,11 @@
 import { SocialFollowWhite } from '../SocialFollow'
 import Footer from '../footer'
 import WatchPastYears from '../watch-past-years'
-import MyNavbar from '../navbar'
 
 export default function Program() {
   return (
-    <div className="bggradient">
+    <div className="bggradient pt-8">
           <title>Indie Week - Program</title>
-          <MyNavbar/>
           <div className="grow shrink content-center">
 <h2 className="pt-20 grow font-bold align-middle text-center leading-tight">
 Program

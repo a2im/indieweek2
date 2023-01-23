@@ -1,12 +1,10 @@
 import AboutUS from '../about-us'
 import Footer from '../footer'
-import MyNavbar from '../navbar'
 
 export default function About() {
   return (
-    <div className="bggradient">
+    <div className="bggradient pt-8">
           <title>Indie Week - About Us</title>
-          <MyNavbar/>
           <AboutUS/>
           <Footer />
     </div>

@@ -1,13 +1,11 @@
 import { SocialFollowWhite } from '../SocialFollow'
 import Footer from '../footer'
 import WatchPastYears from '../watch-past-years'
-import MyNavbar from '../navbar'
 
 export default function Sponsors() {
   return (
-    <div className="bggradient">
+    <div className="bggradient pt-8">
           <title>Indie Week - Sponsors</title>
-          <MyNavbar/>
           <div className="mx-auto mb-8 py-20"> 
             <div className='flex max-w-4xl mb-10 mx-auto gap-10 justify-center'> 
               <div className='mx-auto pb-10 p-4'>

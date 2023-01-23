@@ -88,9 +88,8 @@ export default function Contact() {
      console.log(fullname, email, subject, message);
    };
   return (
-    <div className="bggradient">
+    <div className="bggradient pt-8">
           <title>Indie Week - Contact Us</title>
-          <MyNavbar/>
           <div className="grow shrink content-center">
 <h2 className="pt-20 grow font-bold align-middle text-center leading-tight">
   Contact

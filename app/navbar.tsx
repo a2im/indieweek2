@@ -78,40 +78,43 @@ export default function MyNavbar() {
                 navbar ? 'block' : 'hidden'
               }`}
             >
-              <ul ref={ref} className="md:lvl1 
-              md:flex ">
+              <ul className="md:lvl1 text-xl relative
+                  uppercase text-center
+              md:flex z-50">
                 <li 
-                  className="text-center">
-                  <Link href="/about" onClick={() => setNavbar(false)} className="text-xl uppercase">
+                  className="
+                  px-3 
+                  hover:scale-105
+                  z-50
+                  ">
+                  <Link href="/about" onClick={() => setNavbar(false)} 
+                  className="
+                  ">
                   Info
                   </Link>
                     <ul className="
                         mx-auto
-                        md:-ml-4 
-                        md:lvl2 ">
+                        md:lvl2
+                        rounded-b-3xl
+                        md:-ml-6
+                        px-3
+                        pb-3
+                        bg-iwred
+                        z-40
+                        ">
                           <li className="
-                              text-center
-                              md:text-left 
-                              text-white 
-                              text-l
-                              uppercase 
-                              hover:scale-105 
                               w-full
                               py-2
+                              hover:scale-105
                               ">
                             <Link href="/about" onClick={() => setNavbar(false)}>
-                              ABOUT US
+                              ABOUT
                             </Link>
                           </li>
                           <li className="
-                              text-center
-                              md:text-left 
-                              text-white 
-                              text-l
-                              uppercase 
-                              hover:scale-105 
                               w-full
                               py-2
+                              hover:scale-105
                               ">
                             <Link href="/faq" onClick={() => setNavbar(false)}>
                               FAQ
@@ -119,37 +122,34 @@ export default function MyNavbar() {
                           </li>
                           </ul>
                 </li>
-                <li className="text-center">
-                  <Link href="/tickets" onClick={() => setNavbar(false)} className="text-xl uppercase">
+                <li className="
+                px-3 
+                hover:scale-105
+                ">
+                  <Link href="/tickets" onClick={() => setNavbar(false)}>
                     Attend
                   </Link>
                   <ul className="
                         mx-auto
-                        md:-ml-4 
-                        md:lvl2 ">
+                        md:lvl2 
+                        bg-iwred 
+                        rounded-b-3xl
+                        px-3
+                        md:-ml-4
+                        pb-3">
                           <li className="
-                              text-center
-                              md:text-left 
-                              text-white 
-                              text-l
-                              uppercase 
-                              hover:scale-105 
                               w-full
                               py-2
+                              hover:scale-105
                               ">
                             <Link href="/tickets#tickets" prefetch={false} passHref onClick={() => setNavbar(false)} replace>
                               Tickets
                             </Link>
                           </li>
                           <li className="
-                              text-center
-                              md:text-left 
-                              text-white 
-                              text-l
-                              uppercase 
-                              hover:scale-105 
                               w-full
                               py-2
+                              hover:scale-105
                               ">
                             <Link href="/tickets#hotels" prefetch={false} passHref onClick={() => setNavbar(false)} replace>
                               Hotels
@@ -158,14 +158,14 @@ export default function MyNavbar() {
                           </ul>
                 </li>
                 <li 
-                  className="text-center">
-                  <Link href="/program" onClick={() => setNavbar(false)} className="text-xl uppercase">
+                  className="px-3 hover:scale-105">
+                  <Link href="/program" onClick={() => setNavbar(false)}>
                     Program
                   </Link>
                 </li>
                 <li 
-                  className="text-center">
-                  <Link href="/sponsors" onClick={() => setNavbar(false)} className="text-xl uppercase">
+                  className="px-3 hover:scale-105">
+                  <Link href="/sponsors" onClick={() => setNavbar(false)}>
                     Sponsors
                   </Link>
                 </li>

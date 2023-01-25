@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="max-w-4xl mx-auto justify-center items-center flex flex-col md:gap-20 lg:gap-64 md:flex-row py-10">
             <Link href="/" passHref className="w-96">
               <Image
-                className="relative"
+                className="relative hover:scale-105"
                 src="/logos/A2IM-logos/A2IM-logo-white.png"
                 alt='a2im logo'
                 height={179}

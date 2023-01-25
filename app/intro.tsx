@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { IWButtonInternal } from "./button"
+import { IWButtonInternal, IWButtonAnchor } from "./button"
 import { AnimatePresence, motion } from "framer-motion";
 
 
@@ -91,7 +91,7 @@ export function Intro() {
         <div className="flex flex-col md:flex-row justify-center content-center max-w-5xl mx-auto">
         <IWButtonInternal href="/about" >LEARN MORE</IWButtonInternal>
         <IWButtonInternal href="/tickets" >GET TICKETS</IWButtonInternal>
-        <IWButtonInternal href="/tickets">BOOK YOUR STAY</IWButtonInternal>
+        <IWButtonAnchor href="/tickets#hotels">BOOK YOUR STAY</IWButtonAnchor>
         </div>
     </div>
     </>

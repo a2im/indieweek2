@@ -6,6 +6,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Link from 'next/link';
 
+
 const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -26,7 +27,7 @@ const responsive = {
     }
   };
 
-export default function WatchPastYears({data2021, data2022}){
+export default function WatchPastYears({data2022, data2021}){
     return (
         <>
         <div className="max-w-6xl mx-auto">

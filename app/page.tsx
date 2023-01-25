@@ -4,7 +4,7 @@ import MyIntro from './intro'
 import { Amplify } from 'aws-amplify';
 import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
-import awsExports from '../src/aws-exports';
+import awsExports from '../.next/aws-exports';
 Amplify.configure(awsExports);
 
 export function Home({signOut, user}) {

@@ -10,6 +10,16 @@
       "StackName": "amplify-amplify43453c3657bb4-staging-213134",
       "StackId": "arn:aws:cloudformation:us-east-1:858049411748:stack/amplify-amplify43453c3657bb4-staging-213134/a492e960-9cf7-11ed-8253-0e3d32010dcd",
       "AmplifyAppId": "d3grn7zqk810y"
+    },
+    "categories": {
+      "auth": {
+        "indieweek2": {
+          "userPoolId": "us-east-1_Fg7M9goMs",
+          "userPoolName": "A2IM Web Logins",
+          "webClientId": "2le7lj33gf5lc9rgtjm00cosc9",
+          "nativeClientId": "2le7lj33gf5lc9rgtjm00cosc9"
+        }
+      }
     }
   }
 }

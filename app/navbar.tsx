@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import Image from "next/image";
+import LoginButton from './login-btn';
 
 export default function MyNavbar() {
   const ref = useRef();
@@ -168,6 +169,9 @@ export default function MyNavbar() {
                   <Link href="/sponsors" onClick={() => setNavbar(false)}>
                     Sponsors
                   </Link>
+                </li>
+                <li>
+                  <LoginButton/>
                 </li>
               </ul>
             </div>

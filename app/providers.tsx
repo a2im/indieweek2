@@ -1,6 +1,7 @@
 'use client';
 
 import { ApolloProvider, ApolloClient, InMemoryCache, HttpLink} from "@apollo/client"
+import { SessionProvider } from "next-auth/react"
 
 
 const cache = new InMemoryCache();
@@ -14,10 +15,12 @@ const client = new ApolloClient({
 
 export default client;
 
-export function Providers({ children }) {
+export function Providers({ children, pageProps: {session} }) {
   return (
+    <SessionProvider session={session}>
     <ApolloProvider client={client}>
         {children}
         </ApolloProvider>
+        </SessionProvider>
   );
 }

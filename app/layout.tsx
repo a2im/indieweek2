@@ -11,7 +11,7 @@ config.autoAddCss = false
 library.add(fas)
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) { 

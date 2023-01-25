@@ -7,13 +7,9 @@ module.exports = {
     NEXT_PUBLIC_A2IMCMS_API_URL: process.env.NEXT_PUBLIC_A2IMCMS_API_URL,
     NEXT_PUBLIC_A2IMCMS_API_GQL_URL: process.env.NEXT_PUBLIC_A2IMCMS_API_GQL_URL,
     YOUTUBE_API_KEY: process.env.YOUTUBE_API_KEY,
-    COGNITO_CLIENT_ID: process.env.COGNITO_CLIENT_ID,
-    COGNITO_CLIENT_SECRET: process.env.COGNITO_CLIENT_SECRET,
-    COGNITO_ISSUER: process.env.COGNITO_ISSUER,
   },
   images: {
     domains: [
-      process.env.WORDPRESS_API_URL.match(/(?!(w+)\.)\w*(?:\w+\.)+\w+/)[0], // Valid WP Image domain.
       '0.gravatar.com',
       '1.gravatar.com',
       '2.gravatar.com',

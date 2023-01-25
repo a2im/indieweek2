@@ -11,8 +11,6 @@ const client = new ApolloClient({
   link
 });
 
-export default client;
-
 export function Providers({ children }) {
   return (
     <ApolloProvider client={client}>
@@ -20,3 +18,4 @@ export function Providers({ children }) {
         </ApolloProvider>
   );
 }
+

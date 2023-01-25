@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import Image from "next/image";
 
-export default function MyNavbar() {
+export default function MyNavbar({user, signOut}) {
   const ref = useRef();
   const [navbar, setNavbar] = useState(false);
   useOnClickOutside(ref, () => setNavbar(false));
@@ -168,6 +168,10 @@ export default function MyNavbar() {
                   <Link href="/sponsors" onClick={() => setNavbar(false)}>
                     Sponsors
                   </Link>
+                </li>
+                <li>
+                <h1>Hello {user.username}</h1>
+      <button onClick={signOut}>Sign out</button>
                 </li>
               </ul>
             </div>

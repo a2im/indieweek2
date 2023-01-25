@@ -1,6 +1,5 @@
 import MyHead from './head';
 import './globals.css'
-import MyNavbar from './navbar'
 import MyModal from "./modal"
 import { Providers } from './providers';
 import { config } from '@fortawesome/fontawesome-svg-core'
@@ -23,7 +22,6 @@ export default function RootLayout({
         </head>
       <body className="min-h-screen bg-iwtexture">
       <Providers> 
-        <MyNavbar/>
       {children}
       <MyModal />
       </Providers>

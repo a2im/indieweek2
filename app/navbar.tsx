@@ -9,7 +9,7 @@ export default function MyNavbar({signOut}) {
   const [navbar, setNavbar] = useState(false);
   useOnClickOutside(ref, () => setNavbar(false));
   return (
-      <nav className="bg-iwred w-full fixed z-50">
+      <nav className="bg-black w-full fixed z-50">
         <div className="justify-between max-w-6xl mx-auto items-center md:flex">
           <div>
             <div className="flex items-center justify-between md:block">

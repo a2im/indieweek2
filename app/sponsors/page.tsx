@@ -16,7 +16,7 @@ export default async function Sponsors() {
                   COMING SOON 
                 </h3>
                 <h4 className="text-center">Follow us on social media for the latest updates and subscribe
-to the Libera Awards mailing list to hear first about sponsors!</h4>
+to the Indie Week mailing list to hear first about sponsors!</h4>
               <div className="max-w-lg pt-20 mx-auto">
               <SocialFollowWhite/>
               </div>

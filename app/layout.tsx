@@ -1,4 +1,5 @@
 import MyHead from './head';
+import App from './App';
 import './globals.css'
 import MyModal from "./modal"
 import { Providers } from './providers';
@@ -22,7 +23,7 @@ export default function RootLayout({
         </head>
       <body className="min-h-screen bg-iwtexture">
       <Providers> 
-      {children}
+        <App>{children}</App>
       <MyModal />
       </Providers>
       </body>

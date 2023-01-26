@@ -8,11 +8,11 @@ import '@aws-amplify/ui-react/styles.css';
 import awsExports from './aws-exports';
 Amplify.configure(awsExports);
 
-export function Home({signOut, user}) {
+export function Home({signOut}) {
   return (
     <div className="bggradient2">
       <title>Indie Week - Home</title>
-      <MyNavbar user={user} signOut={signOut}/>
+      <MyNavbar signOut={signOut}/>
           <MyIntro/>
         <Footer/>
     </div>

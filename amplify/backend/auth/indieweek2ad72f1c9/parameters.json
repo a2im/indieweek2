@@ -1,13 +1,14 @@
 {
   "authSelections": "userPoolOnly",
-  "resourceName": "indieweek2",
+  "resourceName": "indieweek2ad72f1c9",
   "serviceType": "imported",
   "region": "us-east-1",
   "usernameAttributes": [
     "email"
   ],
-  "authProvidersUserPool": [],
   "requiredAttributes": [
+    "given_name",
+    "family_name",
     "email"
   ],
   "passwordPolicyMinLength": 8,

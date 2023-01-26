@@ -1,6 +1,6 @@
 {
   "auth": {
-    "indieweek2": {
+    "indieweek2ad72f1c9": {
       "customAuth": false,
       "dependsOn": [],
       "providerPlugin": "awscloudformation",
@@ -9,35 +9,35 @@
     }
   },
   "parameters": {
-    "AMPLIFY_auth_indieweek2_nativeClientId": {
+    "AMPLIFY_auth_indieweek2ad72f1c9_nativeClientId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "indieweek2"
+          "resourceName": "indieweek2ad72f1c9"
         }
       ]
     },
-    "AMPLIFY_auth_indieweek2_userPoolId": {
+    "AMPLIFY_auth_indieweek2ad72f1c9_userPoolId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "indieweek2"
+          "resourceName": "indieweek2ad72f1c9"
         }
       ]
     },
-    "AMPLIFY_auth_indieweek2_userPoolName": {
+    "AMPLIFY_auth_indieweek2ad72f1c9_userPoolName": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "indieweek2"
+          "resourceName": "indieweek2ad72f1c9"
         }
       ]
     },
-    "AMPLIFY_auth_indieweek2_webClientId": {
+    "AMPLIFY_auth_indieweek2ad72f1c9_webClientId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "indieweek2"
+          "resourceName": "indieweek2ad72f1c9"
         }
       ]
     }

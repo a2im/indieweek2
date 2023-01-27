@@ -16,6 +16,8 @@ module.exports = {
       backgroundImage: {
         'iwtexture': "url('/Background/background.jpg')",
         'footer': "url('/images/waves.png')",
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(var(--tw-gradient-stops))',
       },
     },
     screens: {

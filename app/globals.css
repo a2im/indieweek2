@@ -32,7 +32,6 @@
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
 }
  .modalinfo {
   position: absolute;
@@ -44,7 +43,7 @@
   margin: auto;
   align-items: stretch;
   display: flex;
-  z-index: 90;
+  z-index: 99;
  }
 
  .modalbuttonbg {
@@ -186,17 +185,6 @@
 /* Start purging... */
 @tailwind components;
 /* Stop purging. */
-
-/* Write you own custom component styles here */
-.iwbuttonsolid {
-  border-radius: 30px;
-  background-color: #ffffff;
-  color: black;
-  font-size: 2rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  text-transform: uppercase;
-}
 
 .image-cropper {
   position: relative;

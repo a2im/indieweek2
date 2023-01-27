@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import Image from "next/image";
 
-export default function MyNavbar({signOut}) {
+export default function MyNavbar() {
   const ref = useRef();
   const [navbar, setNavbar] = useState(false);
   useOnClickOutside(ref, () => setNavbar(false));
@@ -28,9 +28,7 @@ export default function MyNavbar({signOut}) {
                     height: "auto"
                   }} />
                 </div>
-                <div className="mt-1">
                 <h2 className="text-3xl text-white font-normal tracking-normal">INDIE<span className="text-white font-bold tracking-tighter">WEEK</span></h2>
-                </div>
               </div>
               </a>
               </Link>
@@ -80,12 +78,11 @@ export default function MyNavbar({signOut}) {
             >
               <ul className="md:lvl1 text-xl relative
                   uppercase text-center
-              md:flex z-50">
+              md:flex">
                 <li 
                   className="
                   px-3 
                   hover:scale-105
-                  z-50
                   ">
                   <Link href="/about" onClick={() => setNavbar(false)} 
                   className="
@@ -96,11 +93,10 @@ export default function MyNavbar({signOut}) {
                         mx-auto
                         md:lvl2
                         rounded-b-3xl
+                        bg-black
                         md:-ml-6
                         px-3
                         pb-3
-                        bg-iwred
-                        z-40
                         ">
                           <li className="
                               w-full
@@ -131,9 +127,9 @@ export default function MyNavbar({signOut}) {
                   </Link>
                   <ul className="
                         mx-auto
-                        md:lvl2 
-                        bg-iwred 
+                        md:lvl2
                         rounded-b-3xl
+                        bg-black
                         px-3
                         md:-ml-4
                         pb-3">
@@ -168,9 +164,6 @@ export default function MyNavbar({signOut}) {
                   <Link href="/sponsors" onClick={() => setNavbar(false)}>
                     Sponsors
                   </Link>
-                </li>
-                <li className="px-3 hover:scale-105">
-                  <button onClick={signOut}>Sign out</button>
                 </li>
               </ul>
             </div>

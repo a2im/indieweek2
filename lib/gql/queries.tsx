@@ -168,3 +168,30 @@ query RecentNews ($PublicationState: PublicationState){
   }
 }
 `;
+
+export const GET_INFO_BUTTON = gql`
+query getInfoButton($PublicationState: PublicationState, $Name: String! ) {
+    infoButtons(filters: { apps: { Name: { eq: $Name }}},publicationState: $PublicationState) {
+      data {
+        id
+        attributes {
+          Info
+        }
+      }
+    }
+  }
+  `;
+
+export const GET_ALL_FAQ = gql`
+query getLiberaFAQs($PublicationState: PublicationState, $Name: String!, $Category: String!) {
+    faqItems(filters: { apps: { Name: { eq: $Name }}, Category: { eq: $Category}},publicationState: $PublicationState, pagination: { page: 1, pageSize: 50 }) {
+      data {
+        id
+        attributes {
+          Question
+          Answer
+        }
+      }
+    }
+  }
+  `; 

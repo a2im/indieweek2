@@ -8,7 +8,7 @@ export function Intro() {
   return (
     <>
     <div className="bggradient2">
-      <div className="items-center -mb-40 md:mb-0 justify-center flex flex-col md:flex-row gap-10 pt-28">
+      <div className="items-center justify-center flex flex-col md:flex-row gap-10 py-20">
           <AnimatePresence>
             <motion.div 
               initial= {{
@@ -22,7 +22,7 @@ export function Intro() {
                   damping: 7,
                   duration: 0.5, 
                 }}}
-              className="w-1/2 min-w-2xl max-w-4xl">
+              className="p-3 min-w-2xl max-w-4xl">
               <Image
                 height={379}
                 width={1791}
@@ -49,7 +49,7 @@ export function Intro() {
                     duration: 1,
                     }
                   }}
-              className="w-32">
+              className="w-32 collapse md:visible">
               <motion.div
                 initial= {{
                     scale: "100%",
@@ -65,7 +65,7 @@ export function Intro() {
                       }
                     }}
                 whileTap={{scale: 0.9}}
-                className="md:w-32 invisible md:visible">
+                className="md:w-32 collapse md:visible">
                   <Image
                   src="/images/sparkle-white.png"
                   width={100}
@@ -81,11 +81,11 @@ export function Intro() {
           </AnimatePresence>
         </div>
       </div>
-      <div className="mx-auto p-20">
-      <h4 className="max-w-3xl text-center mx-auto">
+      <div className="mx-auto -mt-64 md:-mt-32">
+      <h4 className="max-w-3xl text-center mx-auto p-5 md:my-10">
       Founded by independents, for independents, A2IM Indie Week is a four-day conference for the independent music community in the United States.
       </h4>
-        <div className="flex flex-col md:flex-row justify-center content-center max-w-5xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-center content-center max-w-4xl mx-auto pb-10 gap-5">
           <IWButtonInternal href="/about" >LEARN MORE</IWButtonInternal>
           <IWButtonInternal href="/tickets" >GET TICKETS</IWButtonInternal>
           <IWButtonAnchor href="/tickets#hotels">BOOK YOUR STAY</IWButtonAnchor>
@@ -97,37 +97,23 @@ export function Intro() {
 
 export function Intro2 () {
   return (
-    <div className="-mb-52 max-w-6xl mx-auto">
-      <div className="w-32">
-        <div className="-ml-64 w-32 -mt-45 md:-mt-32">
-          <Image
-          src="/images/sparkle-red.png"
-          width={100}
-          height={100}
-          alt="sparkle image"
-          sizes="100vw"
-          style={{
-            width: "100%",
-            height: "auto"
-          }}/>
-        </div>
-      </div>
-      <div className="z-10 flex flex-col-reverse md:flex-row md:mt-10 items-center md:justify-around mx-auto gap-10 p-5">
-        <div className="flex-initial relative p-20 items-center max-w-xl">
+    <div className="max-w-5xl mx-auto">
+      <div className="flex flex-col-reverse md:flex-row md:mt-10 items-center md:justify-around mx-auto gap-10 p-5">
+        <div className="flex-initial relative items-center max-w-xl">
           <h2> INDEPENDENT MUSIC&apos;S LARGEST CONFERENCE</h2>
           <hr className="border-iwred my-5"></hr>
-          <h4>Held annually in New York City, A2IM Indie Week
+          <h4 className="my-5">Held annually in New York City, A2IM Indie Week
             is the largest gathering of the independent
             music community. Drawing labels, distributors,
             DSPs, agencies and more, participants can
             expect 4 days of insightful discussions and
             fruitful networking.</h4>
-          <IWButtonInternal href='/tickets'>LEARN MORE</IWButtonInternal>
+          <IWButtonInternal href='/about'>LEARN MORE</IWButtonInternal>
         </div>
-        <div className="image-cropper flex-initial w-1/2 -mt-32 md:-mt-10 md:m-10 max-w-xl">
+        <div className="image-cropper">
           <Image
           className="roundedimage"
-          src="/images/opening-reception-sq.jpg"
+          src="/images/iwmeetings-sq-2.jpg"
           alt='indie week opening reception'
           width={300}
           height={300}
@@ -146,50 +132,34 @@ export function Intro2 () {
 
 export function Intro3 () {
 return (
-  <div className="mx-auto max-w-6xl md:pb-0 z-30 relative">
-    <div className="mx-auto">
-      <div className="w-32 -mt-32 invisible md:visible">
-        <div className="w-32">
-          <Image
-          src="/images/sparkle-red.png"
-          width={100}
-          height={100}
-          alt="sparkle shape"
-          sizes="100vw"
-          style={{
-          width: "100%",
-          height: "auto",
-          }} />
-        </div>
-      </div>
-      <div className="flex flex-col md:flex-row -mt-10 md:justify-around items-center mx-auto gap-10 p-5">
-        <div className="image-cropper flex-initial max-w-xl m-10 w-1/2">
+  <div className="max-w-5xl mx-auto z-40">
+  <div className="flex flex-col md:flex-row md:mt-10 items-center md:justify-around mx-auto gap-10 p-5">
+        <div className="image-cropper flex-initial">
           <Image
           className="roundedimage"
           src="/images/iwmeetings-sq.jpg"
           alt='indie week meeting room'
-          width={500}
-          height={500}
+          width={300}
+          height={300}
           sizes="100vw"
           style={{
             width: "100%",
             height: "auto",
           }} />
         </div>
-        <div className="flex-initial relative max-w-xl p-20 -mt-20 md:mt-0 text-right">
+        <div className="relative max-w-xl text-right">
           <h3><span><h2>FOLLOW A2IM </h2></span>TO
             STAY UP TO DATE ON
             PROGRAMMING
             & TICKET SALES</h3>
             <hr className="border-iwred my-5"></hr>
-          <h4 >Each year we carefully curate our lineup of
+          <h4 className="my-5">Each year we carefully curate our lineup of
             expert speakers to discuss the most precient
             topics in music. Subjects covered have included
             touring, marketing, sync licensing, industry
             predictions, DSP workshops, and many more.</h4>
-          <IWButtonInternal href='/tickets'>PAST PROGRAMMING</IWButtonInternal>
+          <IWButtonAnchor href='/program#past-years'>PAST PROGRAMMING</IWButtonAnchor>
         </div>
-      </div>
     </div>
   </div>
 );
@@ -197,11 +167,9 @@ return (
 
 export default function MyIntro () {
   return (
-    <div className="pt-20">
+    <div className="flex flex-col gap-20">
           <Intro />
-          <div className="py-8 md:hidden" />
           <Intro2 />
-          <div className="py-8 md:hidden" />
           <Intro3 />
         </div>
   )

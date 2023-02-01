@@ -3,6 +3,7 @@ import Image from "next/legacy/image";
 import { PostRelationResponseCollection, PostEntityResponseCollection } from "../../../lib/gql/types";
 import Footer from '../../footer'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Head from "next/head";
 
 
 export default async function MyPost({params,}: { params: { 
@@ -12,7 +13,9 @@ export default async function MyPost({params,}: { params: {
 const res = await fetch(`${process.env.NEXT_PUBLIC_A2IMCMS_API_URL}/posts?populate[0]=coverImage&filters[slug][$eq]=${params.slug}`);
 const posts: PostRelationResponseCollection = await res.json()
 
-  return <div className="pt-16 bg-sky-50 pb-20">
+  return (
+  <>
+  <div className="pt-16 bg-sky-50 pb-20">
     <div className="max-w-5xl mx-auto text-4xl ">
 <Link href="/news">
     <FontAwesomeIcon icon="arrow-left-long" className="ml-16 hover:scale-105"/>
@@ -21,7 +24,15 @@ const posts: PostRelationResponseCollection = await res.json()
   <div className="mx-auto Borderswap5 max-w-5xl p-10 gap-5 mb-20">
   {posts?.data.map(posts => (
             <div key={posts.id} className="mx-auto p-20 LiberaBorder2 bg-white text-black">
-             <div className="flex flex-row justify-content-evenly">
+               <Head>
+                <title>{posts.attributes?.Title}</title>
+                <meta
+                      name="description"
+                      content="Founded by independents, for independents, A2IM Indie Week is a four-day conference for the independent music community in the United States."
+                      key="desc"
+                    />
+              </Head>
+      <div className="flex flex-row justify-content-evenly">
               <Link href={`/news/${posts?.attributes?.slug}`}><h3 className="max-w-xl p-10 hover:scale-105">{posts.attributes?.Title}</h3></Link>
               <div className="relative w-1/2">
               <Image 
@@ -42,6 +53,8 @@ const posts: PostRelationResponseCollection = await res.json()
         </div>
         <Footer />
     </div>
+    </>
+    )
 }
 
 export async function generateStaticParams() {

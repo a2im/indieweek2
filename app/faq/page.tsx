@@ -1,20 +1,28 @@
+import GetFAQ from './faq-categories'
+import { JumpTo } from './faq-categories'
 import Footer from '../footer'
-import WatchPastYears from '../watch-past-years'
-import { Get2021Playlist, Get2022Playlist } from '../YTplaylists';
+import Head from 'next/head'
 
-export default async function FAQ() {
-  const data2021 = await Get2021Playlist()
-  const data2022 = await Get2022Playlist()
+export default function FAQ() {
   return (
-    <>
-          <title>Indie Week - Frequently Asked Questions</title>
-          <div className="grow shrink content-center bggradient">
-<h2 className="pt-20 grow font-bold align-middle text-center leading-tight">
-  FAQ
-  </h2>
-  <WatchPastYears data2021={data2021} data2022={data2022} />
-          <Footer/>
-          </div>
-    </>
+    <div className="bggradient pt-8">
+      <Head>
+      <title>Indie Week - Program</title>
+      <meta
+          name="description"
+          content="Founded by independents, for independents, A2IM Indie Week is a four-day conference for the independent music community in the United States."
+          key="desc"
+        />
+      </Head>
+      <div className="pb-20">
+        <JumpTo/>
+        <GetFAQ Category='GENERAL'/>
+        <GetFAQ Category='TICKETING'/>
+        <GetFAQ Category='ACCESSIBILITY'/>
+        <GetFAQ Category='ACCOMMODATIONS'/>
+        <GetFAQ Category='PRESS'/>
+        </div>
+        <Footer/>
+    </div>
   )
 }

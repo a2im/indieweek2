@@ -54,64 +54,16 @@
  } 
 
 /* Write your own custom base styles here */
-.accordion {
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  border-top-color: transparent;
-  padding: 20px;
-  border: 1px solid transparent;
+
+
+[hidden] {
+  display: none;
 }
 
 .accordion__item + .accordion__item {
   border-top: 1px solid transparent;
 }
 
-.accordion__button {
-  background-color: rgba(255, 251, 235, 0.8);
-  color: #ffffff;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border-top-right-radius: 50px;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.accordion__button:hover {
-  background-color: #ddd;
-}
-
-.accordion__button:before {
-  display: inline-block;
-  content: '';
-  height: 10px;
-  width: 10px;
-  margin-right: 12px;
-  border-bottom: 2px solid currentColor;
-  border-right: 2px solid currentColor;
-  transform: rotate(-45deg);
-}
-
-.accordion__button[aria-expanded='true']::before,
-.accordion__button[aria-selected='true']::before {
-  transform: rotate(45deg);
-}
-
-[hidden] {
-  display: none;
-}
-
-.accordion__panel {
-  padding: 20px;
-  animation: fadein 0.35s ease-in;
-}
 
 /* -------------------------------------------------- */
 /* ---------------- Animation part ------------------ */

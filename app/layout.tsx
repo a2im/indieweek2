@@ -1,4 +1,3 @@
-import MyHead from './head';
 import './globals.css'
 import MyModal from "./modal"
 import { Providers } from './providers';
@@ -18,9 +17,7 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      <head>
-        <MyHead></MyHead>
-        </head>
+      <head/>
       <body className="min-h-screen bg-iwtexture">
       <Providers> 
         <MyNavbar/>

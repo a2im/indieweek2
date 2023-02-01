@@ -3,6 +3,7 @@
 import React, { useId, useState } from 'react'
 import Link from 'next/link'
 import Footer from '../footer'
+import Head from 'next/head';
 
 export default function Sponsors() {
   const id = useId();
@@ -87,7 +88,14 @@ export default function Sponsors() {
    };
   return (
     <div className="bggradient pt-8">
+      <Head>
           <title>Indie Week - Sponsors</title>
+          <meta
+          name="description"
+          content="Founded by independents, for independents, A2IM Indie Week is a four-day conference for the independent music community in the United States."
+          key="desc"
+        />
+      </Head>
           <div className="mx-auto mb-8 py-20"> 
             <div className='grid grid-cols-0 max-w-3xl mb-10 mx-auto gap-10 justify-center'> 
             <form className="rounded-3xl flex flex-col px-8 py-8 bg-black bg-opacity-75 border-4">

@@ -3,7 +3,7 @@ import Script from 'next/script'
 
 export default function MyHead() {
   return (
-    <head>
+    <>
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -83,6 +83,6 @@ export default function MyHead() {
           });
         `
       }}></Script>
-</head>
+</>
   )
 }

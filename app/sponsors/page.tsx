@@ -99,9 +99,10 @@ export default function Sponsors() {
           <div className="mx-auto mb-8 py-20 pb-96 md:pb-32"> 
             <div className='grid grid-cols-0 max-w-3xl mb-10 mx-auto gap-10 justify-center'> 
             <form className="rounded-3xl flex flex-col px-8 py-8 bg-black bg-opacity-75 border-4">
-              <h2 className="text-center py-5">Interested in Sponsoring?</h2>
+              <h3 className="font-bold text-center py-5">Interested in Sponsoring?</h3>
+              <hr className="border-iwred mb-5"></hr>
       <h3 className="text-3xl text-center pb-10">
-        Send us a message
+        Send us a message!
         </h3>
       <label 
       htmlFor="fullname" 
@@ -122,7 +123,7 @@ export default function Sponsors() {
       <textarea id={id} value={message} onChange={e => setMessage(e.target.value)} name="message" rows={4} className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"></textarea>
       <div className="flex flex-row items-center justify-start">
         <button className="bg-white px-7 drop-shadow-2xl max-h-21 justify-center leading-tight mx-auto mt-10 rounded-full" onClick={handleSubmit}>
-              <h3 className="align-middle text-4xl text-black truncate font-normal tracking-tighter leading-tight">
+              <h3 className="align-middle text-4xl text-black truncate font-normal tracking-tighter leading-tight py-2 px-4">
             {buttonText}
             </h3>
         </button>

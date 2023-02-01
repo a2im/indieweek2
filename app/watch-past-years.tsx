@@ -30,10 +30,10 @@ const responsive = {
 export default function WatchPastYears({data2022, data2021}){
     return (
         <>
-        <div id="past-years" className="max-w-5xl mx-auto pb-96 md:pb-28">
-        <h2 className="text-center pt-10 py-5">Watch Past Years</h2>
-        <h3 className="text-2xl font-bold">2022</h3>
-            <hr className="border-iwred my-5"></hr>
+        <div id="past-years" className="p-10 rounded-3xl bg-black bg-opacity-75 border-4 border-white mx-auto max-w-5xl mb-[400px] md:mb-32">
+        <h3 className="font-bold mb-5">Watch Past Years</h3>
+        <h3 className="text-3xl font-bold animate-bounce">2022</h3>
+        <hr className="border-iwred mb-5 max-w-64"></hr>
             <div className="pb-10">
             <Carousel responsive={responsive}>
                 {data2022?.items?.map(({ id, snippet }) => {
@@ -51,8 +51,8 @@ export default function WatchPastYears({data2022, data2021}){
             })}
             </Carousel>
             </div>
-        <h3 className="text-2xl font-bold">2021</h3>
-        <hr className="border-iwred my-5"></hr>
+        <h3 className="text-3xl font-bold animate-bounce">2021</h3>
+        <hr className="border-iwred mb-5 max-w-64"></hr>
         <div className="pb-10">
             <Carousel responsive={responsive}>
                 {data2021?.items?.map(({ id, snippet }) => {

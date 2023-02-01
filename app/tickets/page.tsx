@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Footer from '../footer'
-import MyTickets from './tickets'
-import HotelCard from './hotel-card'
+import { MyTickets,HotelCard } from './tickets'
 import WatchPastYears from '../watch-past-years'
 import { Get2021Playlist, Get2022Playlist } from '../YTplaylists';
     

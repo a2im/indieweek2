@@ -56,9 +56,9 @@ export function About1 () {
 }
 export function InfoSegment(){
   return (
-          <>
+          <div className="p-10 rounded-3xl bg-black bg-opacity-75 border-4 border-white mx-auto max-w-5xl">
           <h4 className="mx-auto text-center pb-10 max-w-5xl">For A2IM Indie Week 2023, we’ll be back in New York City at a new, larger location. Details forthcoming…</h4>
-          </>
+          </div>
 )
 }
 
@@ -158,7 +158,7 @@ export function About2(){
 export function FooterDisclaimer(){
   return(
 <>
-    <div className="max-w-5xl mx-auto pb-20">
+  <div className="p-10 rounded-3xl bg-black bg-opacity-75 border-4 border-white mx-auto max-w-5xl">
     <h2>ABOUT A2IM</h2>
     <hr className="border-iwred my-5"></hr>
     <h4>The American Association of Independent Music (A2IM) is a 501(c)(6) not-for-profit trade organization that serves as a central voice for a diverse community of over 600 independently owned record labels operating within the United States. A2IM  represents their interests in the marketplace, in the media, on Capitol Hill, and as part of the global music community.

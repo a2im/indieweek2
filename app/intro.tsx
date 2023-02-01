@@ -83,7 +83,7 @@ export function Intro() {
       </div>
       <div className="mx-auto -mt-64 md:-mt-32">
       <h4 className="max-w-3xl text-center mx-auto p-5 md:my-10">
-      Founded by independents, for independents, A2IM Indie Week is a four-day conference for the independent music community in the United States.
+      Founded by independents, for independents, A2IM Indie Week is a three-day conference for the independent music community in the United States.
       </h4>
         <div className="flex flex-col md:flex-row justify-between content-center max-w-5xl mx-auto pb-10 gap-5">
           <IWButtonInternal href="/about" >LEARN MORE</IWButtonInternal>
@@ -106,7 +106,7 @@ export function Intro2 () {
             is the largest gathering of the independent
             music community. Drawing labels, distributors,
             DSPs, agencies and more, participants can
-            expect 4 days of insightful discussions and
+            expect 3 days of insightful discussions and
             fruitful networking.</h4>
           <IWButtonInternal href='/about'>LEARN MORE</IWButtonInternal>
         </div>

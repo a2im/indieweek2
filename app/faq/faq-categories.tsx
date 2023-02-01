@@ -24,13 +24,13 @@ import {
       if (loading) return <div className="mx-auto animate-pulse h-[50px] w-[896px] bg-gray-200 dark:bg-gray-700 rounded-xl py-20 my-5"></div>
       if (error) return <p>Error</p>
     return (
-<div id={Category} className="mt-20 rounded-3xl bg-black bg-opacity-75 border-4 border-white mx-auto max-w-5xl">
+<div id={Category} className="mt-20 rounded-3xl bg-black bg-opacity-50 border-4 border-white mx-auto max-w-4xl">
                       <div className="py-3">
                       <h3 className="font-bold text-center">{Category}</h3>
                       <hr className="mb-3 mt-2 border-iwred mx-10"></hr>
         <Accordion allowMultipleExpanded className="mx-10">
         {data?.faqItems.data.map(faqItems => (
-                    <AccordionItem key={faqItems.id}  className="bg-white text-black text-center mx-auto rounded-3xl relative my-8" activeClassName="bg-black bg-opacity-75 border-4 text-center mx-auto rounded-3xl relative my-8">
+                    <AccordionItem key={faqItems.id}  className="bg-white text-black text-center mx-auto rounded-3xl relative my-8" activeClassName="bg-black bg-opacity-50 border-4 text-center mx-auto rounded-3xl relative my-8">
                 <AccordionItemHeading className="relative mx-auto text-3xl py-2">
                     <AccordionItemButton  >
                       {faqItems.attributes.Question}

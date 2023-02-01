@@ -24,9 +24,9 @@ export function Intro() {
                 }}}
               className="p-3 min-w-2xl max-w-4xl">
               <Image
-                height={379}
-                width={1791}
-                src="/logos/iw23_Black_Horizontal_Logo_white.png"
+                height={496}
+                width={1747}
+                src="/logos/Indie Week 23.png"
                 alt="Indie Week Logo"
                 style={{
                   maxWidth: "100%",

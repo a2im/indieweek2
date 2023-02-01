@@ -5,9 +5,9 @@ import { IWButtonInternal, IWButtonExternal } from "../button"
 export function MyTickets(){
     return (
         <>
-        <div id="tickets" className="max-w-6xl mx-auto text-center pt-10">
-          <div className="flex flex-col md:flex-row items-center md:justify-around mx-auto gap-10 p-5">
-            <div className="flex-initial relative px-20 max-w-xl">
+        <div id="tickets" className="max-w-5xl mx-auto text-center pt-10">
+          <div className="grid grid-cols-0 md:grid-cols-2 items-center md:justify-between mx-auto gap-10 p-5">
+            <div className="relative px-5 max-w-xl">
               <h2 className="text-4xl"> Get tickets and accommodations early to save more!</h2>
               <hr className="border-black my-5"></hr>
               <h4 className="pb-2">  We’re excited to host A2IM Indie Week in the heart of Manhattan 
@@ -17,7 +17,7 @@ export function MyTickets(){
               </h4>
               <IWButtonInternal href='/tickets'>LEARN MORE</IWButtonInternal>
             </div>
-            <div className="list-inside mx-auto border-4 border-white px-8 py-10 bg-black bg-opacity-75 rounded-3xl">
+            <div className="list-inside mx-auto border-4 border-white px-8 py-5 bg-black bg-opacity-75 rounded-3xl">
               <h3 className="font-bold">Current Tickets Available</h3> 
               <hr className="border-iwred mt-5"></hr>
               <p className="text-3xl py-10">
@@ -33,7 +33,7 @@ export function MyTickets(){
 
 export function HotelCard(){
   return (
-    <div id="hotels" className="max-w-5xl mx-auto text-center pb-10 pt-32">
+    <div id="hotels" className="max-w-5xl mx-auto text-center pb-32 pt-32">
     <h2> Crowne Plaza Times Square</h2>
     <hr className="border-iwred my-5"></hr>
     <div className="grid grid-cols-0 md:grid-cols-2">

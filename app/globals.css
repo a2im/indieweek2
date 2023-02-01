@@ -111,6 +111,17 @@
   p {
       font-family: Manrope;
     }
+    li > ul { display: none; }
+    li:hover > ul { display: block; }
+    .lvl1 li { display: relative; position:relative; }
+    .lvl2 { position: absolute; }
+    .lvl2 li { position: relative; }
+    html::-webkit-scrollbar {
+      display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
   li > ul { display: none; }
   li:hover > ul { display: block; }
   .lvl1 li { display: relative; position:relative; }

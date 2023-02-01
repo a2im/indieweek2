@@ -9,7 +9,7 @@ export default function MyNavbar() {
   const [navbar, setNavbar] = useState(false);
   useOnClickOutside(ref, () => setNavbar(false));
   return (
-      <nav className="bg-black w-full fixed z-50">
+      <nav className="bg-black w-full fixed z-50 shadow-2xl">
         <div className="justify-between max-w-6xl mx-auto items-center md:flex">
           <div>
             <div className="flex items-center justify-between md:block">
@@ -72,11 +72,11 @@ export default function MyNavbar() {
           </div>
           <div>
             <div
-              className={`flex-1 justify-center md:block ${
+              className={`flex-1 py-10 md:py-0 justify-center md:block ${
                 navbar ? 'block' : 'hidden'
               }`}
             >
-              <ul className="md:lvl1 text-xl relative
+              <ul id="iwnavbar" className="md:lvl1 text-xl relative
                   uppercase text-center
               md:flex">
                 <li 

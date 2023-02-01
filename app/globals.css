@@ -122,8 +122,8 @@
 }
 
 @media only screen and (max-width: 600px) {
-  li > ul { display: none; }
-  li:hover > ul { display: block; }
+  li > ul { display: inline; }
+  li:hover > ul { display: inline; }
   .lvl1 li { display: relative; position:relative; }
   .lvl2 { position: absolute; }
   .lvl2 li { position: relative; }

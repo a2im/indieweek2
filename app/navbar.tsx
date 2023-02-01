@@ -76,93 +76,87 @@ export default function MyNavbar() {
                 navbar ? 'block' : 'hidden'
               }`}
             >
-              <ul id="iwnavbar" className="md:lvl1 text-xl relative
+              <ul id="iwnavbar" className="md:lvl1 text-xl relative mx-auto
                   uppercase text-center
               md:flex">
                 <li 
                   className="
-                  px-3 
-                  hover:scale-105
+                  mx-auto
+                  md:px-3 
                   ">
                   <Link href="/about" onClick={() => setNavbar(false)} 
-                  className="
-                  ">
-                  Info
+                  >
+                    <h2 className="my-3 md:my-0 text-xl hover:scale-105 md:text-white bg-white md:bg-transparent rounded-3xl text-black">Info</h2>
                   </Link>
                     <ul className="
                         mx-auto
                         md:lvl2
-                        rounded-b-3xl
-                        bg-black
+                        md:rounded-b-3xl
+                        md:bg-black
                         md:-ml-6
-                        px-3
-                        pb-3
+                        md:px-3
+                        md:pb-3
                         ">
                           <li className="
-                              w-full
-                              py-2
-                              hover:scale-105
+                              md:w-full
+                              md:py-2
                               ">
                             <Link href="/about" onClick={() => setNavbar(false)}>
-                              ABOUT
+                            <h2 className="my-3 md:my-0 text-xl hover:scale-105 md:text-white bg-white md:bg-transparent rounded-3xl text-black">ABOUT</h2>
                             </Link>
                           </li>
                           <li className="
-                              w-full
-                              py-2
-                              hover:scale-105
+                              md:w-full
+                              md:py-2
                               ">
                             <Link href="/faq" onClick={() => setNavbar(false)}>
-                              FAQ
+                            <h2 className="my-3 md:my-0 text-xl hover:scale-105 md:text-white bg-white md:bg-transparent rounded-3xl text-black">FAQ</h2>
                             </Link>
                           </li>
                           </ul>
                 </li>
                 <li className="
-                px-3 
-                hover:scale-105
+                md:px-3 
                 ">
                   <Link href="/tickets" onClick={() => setNavbar(false)}>
-                    Attend
+                  <h2 className="my-3 md:my-0 text-xl hover:scale-105 md:text-white bg-white md:bg-transparent rounded-3xl text-black">Attend</h2>
                   </Link>
                   <ul className="
-                        mx-auto
+                        md:mx-auto
                         md:lvl2
-                        rounded-b-3xl
-                        bg-black
-                        px-3
+                        md:rounded-b-3xl
+                        md:bg-black
+                        md:px-3
                         md:-ml-4
-                        pb-3">
+                        md:pb-3">
                           <li className="
-                              w-full
-                              py-2
-                              hover:scale-105
+                              md:w-full
+                              md:py-2
                               ">
                             <Link href="/tickets#tickets" prefetch={false} passHref onClick={() => setNavbar(false)} replace>
-                              Tickets
+                            <h2 className="my-3 md:my-0 text-xl hover:scale-105 md:text-white bg-white md:bg-transparent rounded-3xl text-black">Tickets</h2>
                             </Link>
                           </li>
                           <li className="
-                              w-full
-                              py-2
-                              hover:scale-105
+                              md:w-full
+                              md:py-2
                               ">
                             <Link href="/tickets#hotels" prefetch={false} passHref onClick={() => setNavbar(false)} replace>
-                              Hotels
+                            <h2 className="my-3 md:my-0 text-xl hover:scale-105 md:text-white bg-white md:bg-transparent rounded-3xl text-black">Hotels</h2>
                             </Link>
                           </li>
                           </ul>
                 </li>
                 <li 
-                  className="px-3 hover:scale-105">
+                  className="md:px-3">
                   <Link href="/program" onClick={() => setNavbar(false)}>
-                    Program
+                  <h2 className="my-3 md:my-0 text-xl hover:scale-105 md:text-white bg-white md:bg-transparent rounded-3xl text-black">Program</h2>
                   </Link>
                 </li>
                 <li 
-                  className="px-3 hover:scale-105">
+                  className="md:px-3">
                   <Link href="/sponsors" onClick={() => setNavbar(false)}>
-                    Sponsors
+                  <h2 className="my-3 md:my-0 text-xl hover:scale-105 md:text-white bg-white md:bg-transparent rounded-3xl text-black">Sponsors</h2>
                   </Link>
                 </li>
               </ul>

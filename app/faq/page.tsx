@@ -14,7 +14,7 @@ export default function FAQ() {
           key="desc"
         />
       </Head>
-      <div className="pb-20">
+      <div className="pb-96 md:pb-20">
         <JumpTo/>
         <GetFAQ Category='GENERAL'/>
         <GetFAQ Category='TICKETING'/>

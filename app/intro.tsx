@@ -167,7 +167,7 @@ return (
 
 export default function MyIntro () {
   return (
-    <div className="flex flex-col gap-20">
+    <div className="flex flex-col gap-20 pb-96 md:pb-28">
           <Intro />
           <Intro2 />
           <Intro3 />

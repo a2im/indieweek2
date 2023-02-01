@@ -96,7 +96,7 @@ export default function Sponsors() {
           key="desc"
         />
       </Head>
-          <div className="mx-auto mb-8 py-20"> 
+          <div className="mx-auto mb-8 py-20 pb-96 md:pb-32"> 
             <div className='grid grid-cols-0 max-w-3xl mb-10 mx-auto gap-10 justify-center'> 
             <form className="rounded-3xl flex flex-col px-8 py-8 bg-black bg-opacity-75 border-4">
               <h2 className="text-center py-5">Interested in Sponsoring?</h2>

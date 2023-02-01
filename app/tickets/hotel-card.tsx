@@ -5,7 +5,7 @@ import { IWButtonExternal } from "../button";
 
 export default function HotelCard(){
   return (
-    <div id="hotels" className="max-w-6xl mx-auto text-center pb-10 pt-32">
+    <div id="hotels" className="max-w-5xl mx-auto text-center pb-10 pt-32">
     <h2> Crowne Plaza Times Square</h2>
     <hr className="border-iwred my-5"></hr>
     <div className="grid grid-cols-0 md:grid-cols-2">

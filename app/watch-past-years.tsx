@@ -30,7 +30,7 @@ const responsive = {
 export default function WatchPastYears({data2022, data2021}){
     return (
         <>
-        <div id="past-years" className="max-w-6xl mx-auto">
+        <div id="past-years" className="max-w-5xl mx-auto pb-96 md:pb-28">
         <h2 className="text-center pt-10 py-5">Watch Past Years</h2>
         <h3 className="text-2xl font-bold">2022</h3>
             <hr className="border-iwred my-5"></hr>

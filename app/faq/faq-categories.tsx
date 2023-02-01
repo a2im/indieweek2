@@ -24,7 +24,7 @@ import {
       if (loading) return <div className="mx-auto animate-pulse h-[50px] w-[896px] bg-gray-200 dark:bg-gray-700 rounded-xl py-20 my-5"></div>
       if (error) return <p>Error</p>
     return (
-<div id={Category} className="max-w-4xl rounded-2xl mx-auto my-10 bg-opacity-75 px-5">
+<div id={Category} className="max-w-4xl rounded-2xl mx-auto my-10 px-5">
                       <div className="py-3">
                       <h3 className="text-center">{Category}</h3>
                       <hr className="mx-1 mb-3 mt-2 border-iwred"></hr>

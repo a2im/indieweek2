@@ -4,7 +4,7 @@ import React, { useId, useState } from 'react'
 import { motion } from "framer-motion"
 import Link from 'next/link'
 import Footer from '../footer';
-import MyNavbar from '../navbar';
+
 
 export default function Contact() {
   const id = useId();
@@ -60,7 +60,7 @@ export default function Contact() {
  
      if (isValidForm) {
       setButtonText("sending");
-       const res = await fetch("./api/sendgrid", {
+       const res = await fetch("./api/support", {
          body: JSON.stringify({
            email: email,
            fullname: fullname,

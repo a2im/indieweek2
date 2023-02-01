@@ -30,20 +30,20 @@ const responsive = {
 export function About1 () {
     return (
       <div className="max-w-5xl mx-auto">
-      <div className="z-10 flex flex-col-reverse md:flex-row md:mt-10 items-center md:justify-around mx-auto gap-10 p-5">
-        <div className="flex-initial relative items-center max-w-xl">
+      <div className="z-10 grid grid-cols-0 md:grid-cols-2 md:mt-10 items-center md:justify-around mx-auto gap-10 p-5">
+        <div className="flex-initial relative items-center max-w-xl py-8 order-last md:order-first">
                 <h2> WHAT IS A2IM INDIE WEEK?</h2>
                 <hr className="border-black my-5"></hr>
                 <h4 className="my-5">Running for over 15 years, and with over 1200 attendees, it&apos;s the largest independent music gathering in the world. Yearly, Indie Week hosts over 60 panels and workshops, 1800 curated business meetings, and countless opportunities tailor-made for the independent sector&apos;s unique needs.</h4>
               <IWButtonInternal href='/tickets'>LEARN MORE</IWButtonInternal>
               </div>
-              <div className="image-cropper">
+              <div className="image-cropper m-7">
                 <Image
                   className="roundedimage"
                   src="/images/opening-reception-sq.jpg"
                   alt='indie week opening reception'
-                  width={300}
-                  height={300}
+                  width={500}
+                  height={500}
                   sizes="100vw"
                   style={{
                     width: "100%",
@@ -65,19 +65,19 @@ export function InfoSegment(){
 export function About2(){
   return(
     <div className="max-w-5xl mx-auto">
-    <div className="flex flex-col md:flex-row md:mt-10 items-center md:justify-around mx-auto gap-10 p-5">
-          <div className="image-cropper flex-initial">
+    <div className="grid grid-cols-0 md:grid-cols-2 md:mt-10 items-center md:justify-around mx-auto gap-10 p-5">
+          <div className="image-cropper m-7">
               <Image
                 className="roundedimage"
-                src="/images/iwmeetings-sq.jpg"
+                src="/images/ABOUT_sq.jpg"
                 alt='indie week meeting room'
-                width={300}
-                height={300}
+                width={500}
+                height={500}
                 sizes="(max-width: 768px) 100vw,
                     (max-width: 1200px) 50vw,
                     33vw" />
             </div>
-            <div className="flex-initial relative max-w-xl text-right">
+            <div className="flex-initial py-8 relative max-w-xl text-right">
               <h2>WHO ATTENDS A2IM INDIE WEEK?</h2>
               <hr className="border-iwred my-5"></hr>
               <ul className="mx-auto pb-8">

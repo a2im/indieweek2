@@ -98,8 +98,8 @@ export function Intro() {
 export function Intro2 () {
   return (
     <div className="max-w-5xl mx-auto">
-      <div className="flex flex-col-reverse md:flex-row md:mt-10 items-center md:justify-around mx-auto gap-10 p-5">
-        <div className="flex-initial relative items-center max-w-xl">
+      <div className="grid grid-cols-0 md:grid-cols-2 md:mt-10 items-center md:justify-around mx-auto gap-10 p-5">
+        <div className="py-8 flex-initial relative items-center max-w-xl order-last md:order-first">
           <h2> INDEPENDENT MUSIC&apos;S LARGEST CONFERENCE</h2>
           <hr className="border-iwred my-5"></hr>
           <h4 className="my-5">Held annually in New York City, A2IM Indie Week
@@ -110,13 +110,13 @@ export function Intro2 () {
             fruitful networking.</h4>
           <IWButtonInternal href='/about'>LEARN MORE</IWButtonInternal>
         </div>
-        <div className="image-cropper">
+        <div className="image-cropper m-7">
           <Image
           className="roundedimage"
           src="/images/iwmeetings-sq-2.jpg"
           alt='indie week opening reception'
-          width={300}
-          height={300}
+          width={500}
+          height={500}
           sizes="100vw"
           style={{
             width: "100%",
@@ -133,21 +133,21 @@ export function Intro2 () {
 export function Intro3 () {
 return (
   <div className="max-w-5xl mx-auto z-40">
-  <div className="flex flex-col md:flex-row md:mt-10 items-center md:justify-around mx-auto gap-10 p-5">
-        <div className="image-cropper flex-initial">
+  <div className="grid grid-cols-0 md:grid-cols-2 md:mt-10 items-center md:justify-around mx-auto gap-10 p-5">
+        <div className="image-cropper m-7">
           <Image
           className="roundedimage"
-          src="/images/iwmeetings-sq.jpg"
+          src="/images/HOMEPAGE_2_sm.jpg"
           alt='indie week meeting room'
-          width={300}
-          height={300}
+          width={500}
+          height={500}
           sizes="100vw"
           style={{
             width: "100%",
             height: "auto",
           }} />
         </div>
-        <div className="relative max-w-xl text-right">
+        <div className="py-8 relative max-w-xl text-right">
           <h3><span><h2>FOLLOW A2IM </h2></span>TO
             STAY UP TO DATE ON
             PROGRAMMING

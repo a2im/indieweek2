@@ -1,6 +1,6 @@
 "use client";
 
-import { IWButtonInternal, IWButtonExternal } from "../button"
+import { IWButtonInternal, IWButtonExternal } from "../app/button"
 
 export function MyTickets(){
     return (

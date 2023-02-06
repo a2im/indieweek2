@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { GET_ALL_FAQ } from "../../lib/gql/queries";
+import { GET_ALL_FAQ } from "../lib/gql/queries";
 import { useQuery } from '@apollo/client';
 import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm'

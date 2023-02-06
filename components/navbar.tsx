@@ -1,13 +1,28 @@
 'use client';
-
+import { useOnClickOutside } from 'usehooks-ts'
 import Link from 'next/link';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef} from 'react';
 import Image from "next/image";
+import { useUser } from '../utils/useUser';
+import { useSupabaseClient } from '@supabase/auth-helpers-react';
+
 
 export default function MyNavbar() {
   const ref = useRef();
   const [navbar, setNavbar] = useState(false);
-  useOnClickOutside(ref, () => setNavbar(false));
+  const { user } = useUser();
+  const supabaseClient = useSupabaseClient();
+  const handleClickOutside = () => {
+    setNavbar(false)
+    console.log('clicked outside')
+  }
+
+  const handleClickInside = () => {
+    setNavbar(!navbar)
+    console.log('clicked inside')
+  }
+
+  useOnClickOutside(ref, handleClickOutside)
   return (
       <nav className="bg-black w-full fixed z-50 shadow-2xl">
         <div className="justify-between max-w-6xl mx-auto items-center md:flex">
@@ -35,7 +50,7 @@ export default function MyNavbar() {
               <div className="md:hidden">
                 <button
                   className="pr-2 mr-2 pl-2 text-white rounded-md outline-none focus:border-white focus:border"
-                  onClick={() => setNavbar(!navbar)}
+                  onClick={handleClickInside}
                 >
                   {navbar ? (
                     <svg
@@ -76,7 +91,7 @@ export default function MyNavbar() {
                 navbar ? 'block' : 'hidden'
               }`}
             >
-              <ul id="iwnavbar" className="md:lvl1 text-xl relative mx-auto
+              <ul ref={ref} id="iwnavbar" className="md:lvl1 text-xl relative mx-auto
                   uppercase text-center
               md:flex">
                 <li 
@@ -84,7 +99,7 @@ export default function MyNavbar() {
                   mx-auto
                   md:px-3 
                   ">
-                  <Link href="/about" onClick={() => setNavbar(false)} 
+                  <Link href="/about" onClick={handleClickOutside}
                   >
                     <h2 className="my-3 md:my-0 text-xl hover:scale-105 md:text-white bg-white md:bg-transparent rounded-3xl text-black">Info</h2>
                   </Link>
@@ -101,7 +116,7 @@ export default function MyNavbar() {
                               md:w-full
                               md:py-2
                               ">
-                            <Link href="/about" onClick={() => setNavbar(false)}>
+                            <Link href="/about" onClick={handleClickOutside}>
                             <h2 className="my-3 md:my-0 text-xl hover:scale-105 md:text-white bg-white md:bg-transparent rounded-3xl text-black">ABOUT</h2>
                             </Link>
                           </li>
@@ -109,7 +124,7 @@ export default function MyNavbar() {
                               md:w-full
                               md:py-2
                               ">
-                            <Link href="/faq" onClick={() => setNavbar(false)}>
+                            <Link href="/faq" onClick={handleClickOutside}>
                             <h2 className="my-3 md:my-0 text-xl hover:scale-105 md:text-white bg-white md:bg-transparent rounded-3xl text-black">FAQ</h2>
                             </Link>
                           </li>
@@ -118,7 +133,7 @@ export default function MyNavbar() {
                 <li className="
                 md:px-3 
                 ">
-                  <Link href="/tickets" onClick={() => setNavbar(false)}>
+                  <Link href="/tickets" onClick={handleClickOutside}>
                   <h2 className="my-3 md:my-0 text-xl hover:scale-105 md:text-white bg-white md:bg-transparent rounded-3xl text-black">Attend</h2>
                   </Link>
                   <ul className="
@@ -133,7 +148,7 @@ export default function MyNavbar() {
                               md:w-full
                               md:py-2
                               ">
-                            <Link href="/tickets#tickets" prefetch={false} passHref onClick={() => setNavbar(false)} replace>
+                            <Link href="/tickets#tickets" prefetch={false} passHref onClick={handleClickOutside} replace>
                             <h2 className="my-3 md:my-0 text-xl hover:scale-105 md:text-white bg-white md:bg-transparent rounded-3xl text-black">Tickets</h2>
                             </Link>
                           </li>
@@ -141,7 +156,7 @@ export default function MyNavbar() {
                               md:w-full
                               md:py-2
                               ">
-                            <Link href="/tickets#hotels" prefetch={false} passHref onClick={() => setNavbar(false)} replace>
+                            <Link href="/tickets#hotels" prefetch={false} passHref onClick={handleClickOutside} replace>
                             <h2 className="my-3 md:my-0 text-xl hover:scale-105 md:text-white bg-white md:bg-transparent rounded-3xl text-black">Hotels</h2>
                             </Link>
                           </li>
@@ -149,46 +164,41 @@ export default function MyNavbar() {
                 </li>
                 <li 
                   className="md:px-3">
-                  <Link href="/program" onClick={() => setNavbar(false)}>
+                  <Link href="/program" onClick={handleClickOutside}>
                   <h2 className="my-3 md:my-0 text-xl hover:scale-105 md:text-white bg-white md:bg-transparent rounded-3xl text-black">Program</h2>
                   </Link>
                 </li>
                 <li 
                   className="md:px-3">
-                  <Link href="/sponsors" onClick={() => setNavbar(false)}>
+                  <Link href="/sponsors" onClick={handleClickOutside}>
                   <h2 className="my-3 md:my-0 text-xl hover:scale-105 md:text-white bg-white md:bg-transparent rounded-3xl text-black">Sponsors</h2>
                   </Link>
+                </li>
+                <li
+                  className="text-center font-serif text-zinc-500 whitespace-nowrap hover:scale-105">
+                  <div className="flex flex-1 justify-end space-x-8">
+                  {user ? (
+                      <span
+                        onClick={async () => {
+                          await supabaseClient.auth.signOut();
+                          <Link href="/signin">
+                          Sign in
+                        </Link>
+                        }}
+                      >
+                        Sign out
+                      </span>
+                    ) : (
+                      <Link href="/signin">
+                        Sign in
+                      </Link>
+                    )}
+                  </div>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </nav>
-  );
-}
-function useOnClickOutside(ref, handler) {
-  useEffect(
-    () => {
-      const listener = (event) => {
-        // Do nothing if clicking ref's element or descendent elements
-        if (!ref.current || ref.current.contains(event.target)) {
-          return;
-        }
-        handler(event);
-      };
-      document.addEventListener("mousedown", listener);
-      document.addEventListener("touchstart", listener);
-      return () => {
-        document.removeEventListener("mousedown", listener);
-        document.removeEventListener("touchstart", listener);
-      };
-    },
-    // Add ref and handler to effect dependencies
-    // It's worth noting that because passed in handler is a new ...
-    // ... function on every render that will cause this effect ...
-    // ... callback/cleanup to run every render. It's not a big deal ...
-    // ... but to optimize you can wrap handler in useCallback before ...
-    // ... passing it into this hook.
-    [ref, handler]
   );
 }

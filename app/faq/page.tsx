@@ -1,5 +1,5 @@
-import GetFAQ from './faq-categories'
-import { JumpTo } from './faq-categories'
+import GetFAQ from '../../components/faq-categories'
+import { JumpTo } from '../../components/faq-categories'
 import Footer from '../footer'
 
 export default function FAQ() {

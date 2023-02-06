@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { IWButtonInternal, IWButtonAnchor } from "./button"
+import { IWButtonInternal, IWButtonAnchor } from "../app/button"
 import { AnimatePresence, motion } from "framer-motion";
 
 

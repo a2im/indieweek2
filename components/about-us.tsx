@@ -3,7 +3,7 @@
 import React from "react"
 import Image from "next/image";
 import Link from "next/link";
-import { IWButtonInternal } from "../button";
+import { IWButtonInternal } from "../app/button";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 

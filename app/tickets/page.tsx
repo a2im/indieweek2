@@ -1,6 +1,6 @@
 import Footer from '../footer'
 import { MyTickets,HotelCard } from './tickets'
-import WatchPastYears from '../watch-past-years'
+import WatchPastYears from '../watch-past-years';
 import { Get2021Playlist, Get2022Playlist } from '../YTplaylists';
     
 export default async function Tickets() {

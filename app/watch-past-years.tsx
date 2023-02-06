@@ -6,7 +6,6 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Link from 'next/link';
 
-
 const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -42,8 +41,7 @@ export default function WatchPastYears({data2022, data2021}){
                 return (
                 <div key={id} className="border-solid border-white border-3 rounded-2xl hover:scale-105">
                     <Link href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}>
-                        <Image width={medium.width} height={medium.height} src={medium.url} alt="">
-                        </Image>
+                        <Image src={medium?.url} width={medium?.width} height={medium?.height} alt={`thumbnail image for ${title}`}/>
                         <h3 className="text-lg">{title}</h3>
                         </Link>    
                 </div>
@@ -61,8 +59,7 @@ export default function WatchPastYears({data2022, data2021}){
                 return (
                 <div key={id} className="border-solid border-white border-3 rounded-2xl hover:scale-105">
                     <Link href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}>
-                        <Image width={medium.width} height={medium.height} src={medium.url} alt="">
-                        </Image>
+                        <Image src={medium?.url} width={medium?.width} height={medium?.height} alt={`thumbnail image for ${title}`}/>
                         <h3 className="text-lg">{title}</h3>
                         </Link>    
                 </div>

@@ -48,7 +48,7 @@ export function HotelCard(){
               <h3 className="text-2xl font-bold">One King Bed</h3>
               <h3 className="text-xl">$309 +tax</h3>
               <hr className="border-iwred mx-10 mt-5"></hr>
-              <IWButtonExternal href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" >Book Now!</IWButtonExternal>
+              <IWButtonExternal href="https://www.crowneplaza.com/redirect?path=asearch&brandCode=CP&localeCode=en&regionCode=1&hotelCode=NYCMH&checkInDate=08&checkInMonthYear=052023&checkOutDate=19&checkOutMonthYear=052023&rateCode=6CBARC&_PMID=99801505&GPC=A2I&cn=no&viewfullsite=true" >Book Now!</IWButtonExternal>
             </div>
           </li>
           <li className="pt-5 my-5 text-3xl border-solid border-4 border-white rounded-2xl bg-black bg-opacity-75">
@@ -56,7 +56,7 @@ export function HotelCard(){
             <h3 className="text-2xl font-bold">2 Double Beds</h3>
             <h3 className="text-xl">$329 +tax</h3>
             <hr className="border-iwred mx-10 mt-5"></hr>
-              <IWButtonExternal href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Book Now!</IWButtonExternal>
+              <IWButtonExternal href="https://www.crowneplaza.com/redirect?path=asearch&brandCode=CP&localeCode=en&regionCode=1&hotelCode=NYCMH&checkInDate=08&checkInMonthYear=052023&checkOutDate=19&checkOutMonthYear=052023&rateCode=6CBARC&_PMID=99801505&GPC=A2I&cn=no&viewfullsite=true">Book Now!</IWButtonExternal>
             </div>
           </li>
         </ul>

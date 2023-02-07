@@ -1,11 +1,11 @@
 import Footer from './footer'
-import MyNavbar from '../components/navbar'
+import MyUi from '../components/navbar'
 import MyIntro from '../components/intro'
 
 export default function Home() {
   return (
     <>
-    <MyNavbar/>
+    <MyUi/>
     <div className="bggradient2">
       <title>Indie Week - Home</title>
       <meta

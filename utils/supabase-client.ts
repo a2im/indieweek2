@@ -2,10 +2,11 @@ import {
   createBrowserSupabaseClient,
   User
 } from '@supabase/auth-helpers-nextjs';
-import { ProductWithPrice } from 'types';
-import type { Database } from 'types_db';
-
-export const supabase = createBrowserSupabaseClient<Database>();
+import { ProductWithPrice } from '../lib/types';
+import type { Database } from '../lib/database.types';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+export const supabase = createBrowserSupabaseClient<Database>({supabaseUrl, supabaseKey});
 
 export const getActiveProductsWithPrices = async (): Promise<
   ProductWithPrice[]

@@ -3,7 +3,6 @@ import Link from 'next/link'
 import React from "react";
 import { SocialFollowWhite } from "../components/SocialFollow";
 import AdBanner from "../components/ad-banner";
-import SponsorFooter from "../components/sponsors";
 
 export default function Footer() {
   return (

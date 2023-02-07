@@ -31,13 +31,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang="en">
       <head/>
       <body className="min-h-screen bg-iwtexture">
-      <MyApolloProvider> 
-      <SupabaseProvider session={session}>
+        <SupabaseProvider session={session}>
           <SupabaseListener serverAccessToken={session?.access_token} />
-        {children}
-      <MyModal />
-      </SupabaseProvider>
-      </MyApolloProvider>
+            <MyApolloProvider> 
+              {children}
+            </MyApolloProvider>
+            <MyModal />
+        </SupabaseProvider>
       </body>
     </html>
   )

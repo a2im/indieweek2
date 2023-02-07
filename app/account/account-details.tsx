@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, ReactNode } from 'react';
 import { updateUserName } from '../../utils/supabase-client';
-import { useUser } from '@supabase/auth-ui-react/dist/esm/src/components/Auth/UserContext';
+import { useUser } from '../../utils/useUser';
 import { useSupabase } from '../../components/supabase-provider';
 import { User } from '@supabase/supabase-js';
 
@@ -68,7 +68,7 @@ export default function AccountDetails({ user }: { user: User }){
           footer={<p>We will email you to verify the change.</p>}
         >
           <p className="text-xl mt-8 mb-4 font-semibold">
-            {session ? userDetails.email : null}
+            {session ? user.email : null}
           </p>
         </Card>
       </div>

@@ -1,7 +1,8 @@
 import MyNavbar from '../../components/navbar';
+import AccountDetails from './account-details';
+import { User } from '@supabase/supabase-js';
 
-export default function Account(){
-
+export default function Account({ user }: { user: User }){
   return (
     <>
     <MyNavbar/>
@@ -16,7 +17,7 @@ export default function Account(){
           </p>
         </div>
       </div>
-      
+      <AccountDetails user={user}/>
     </section>
     </>
   );

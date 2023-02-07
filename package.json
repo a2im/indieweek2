@@ -6,12 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "codegen": "graphql-codegen --config codegen.ts"
+    "lint": "next lint"
   },
   "dependencies": {
     "@apollo/client": "^3.7.6",
-    "@aws-amplify/ui-react": "^4.3.5",
     "@fortawesome/fontawesome-free": "^6.2.1",
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
@@ -19,7 +17,6 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@next/font": "^13.1.6",
     "@sendgrid/mail": "^7.7.0",
-    "@stripe/stripe-js": "^1.46.0",
     "@supabase/auth-helpers-nextjs": "^0.5.4",
     "@supabase/auth-helpers-react": "^0.3.1",
     "@supabase/auth-ui-react": "^0.2.6",
@@ -36,7 +33,6 @@
     "graphql": "^16.6.0",
     "graphql-request": "^5.0.0",
     "next": "^13.1.6",
-    "next-auth": "^4.18.10",
     "react": "^18.2.0",
     "react-accessible-accordion": "^5.0.0",
     "react-dom": "^18.2.0",
@@ -47,13 +43,11 @@
     "server-only": "^0.0.1",
     "sharp": "^0.31.2",
     "stripe": "^11.9.1",
+    "uglify-js": "^3.17.4",
     "usehooks-ts": "^2.9.1",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "2.16.1",
-    "@graphql-codegen/client-preset": "1.2.3",
-    "@graphql-codegen/introspection": "2.2.3",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.19",
     "supabase": "^1.36.7",

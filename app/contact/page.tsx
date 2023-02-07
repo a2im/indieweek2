@@ -4,6 +4,7 @@ import React, { useId, useState } from 'react'
 import { motion } from "framer-motion"
 import Link from 'next/link'
 import Footer from '../footer';
+import MyNavbar from '../../components/navbar';
 
 
 export default function Contact() {
@@ -88,6 +89,8 @@ export default function Contact() {
      console.log(fullname, email, subject, message);
    };
   return (
+    <>
+    <MyNavbar/>
     <div className="bggradient pt-8">
           <title>Indie Week - Contact Us</title>
           <div className="grow shrink content-center">
@@ -141,5 +144,6 @@ export default function Contact() {
       </motion.div>
       <Footer/>
     </div>
+    </>
   )
 }

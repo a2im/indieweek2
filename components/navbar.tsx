@@ -3,15 +3,12 @@ import { useOnClickOutside } from 'usehooks-ts'
 import Link from 'next/link';
 import { useState, useRef} from 'react';
 import Image from "next/image";
-import { useUser } from '../utils/useUser';
-import { useSupabaseClient } from '@supabase/auth-helpers-react';
+import Login from '../app/sign-in/login';
 
 
 export default function MyNavbar() {
   const ref = useRef();
   const [navbar, setNavbar] = useState(false);
-  const { user } = useUser();
-  const supabaseClient = useSupabaseClient();
   const handleClickOutside = () => {
     setNavbar(false)
     console.log('clicked outside')
@@ -176,24 +173,7 @@ export default function MyNavbar() {
                 </li>
                 <li
                   className="text-center font-serif text-zinc-500 whitespace-nowrap hover:scale-105">
-                  <div className="flex flex-1 justify-end space-x-8">
-                  {user ? (
-                      <span
-                        onClick={async () => {
-                          await supabaseClient.auth.signOut();
-                          <Link href="/signin">
-                          Sign in
-                        </Link>
-                        }}
-                      >
-                        Sign out
-                      </span>
-                    ) : (
-                      <Link href="/signin">
-                        Sign in
-                      </Link>
-                    )}
-                  </div>
+                  <Login/>
                 </li>
               </ul>
             </div>

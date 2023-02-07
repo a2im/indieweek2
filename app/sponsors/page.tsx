@@ -1,5 +1,6 @@
 "use client";
 
+import MyNavbar from '../../components/navbar';
 import React, { useId, useState } from 'react'
 import Link from 'next/link'
 import Footer from '../footer'
@@ -86,6 +87,8 @@ export default function Sponsors() {
      console.log(fullname, email, subject, message);
    };
   return (
+    <>
+    <MyNavbar/>
     <div className="bggradient pt-8">
           <title>Indie Week - Sponsors</title>
           <meta
@@ -132,5 +135,6 @@ export default function Sponsors() {
           </div>
           <Footer/>
     </div>
+    </>
   )
 }

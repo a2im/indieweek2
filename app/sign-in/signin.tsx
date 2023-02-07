@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useSupabase } from '../../components/supabase-provider'
 import { Auth } from '@supabase/auth-ui-react'
 import { customTheme } from './theme'
@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 
 export default function Signin() {
   const router = useRouter()
-  const { supabase, session } = useSupabase()
+  const { supabase, session } = useSupabase();
 
   return ( 
     session ? (router.push('/')) : (

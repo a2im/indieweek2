@@ -1,14 +1,13 @@
 "use client";
 import Image from "next/image";
 import { IWButtonInternal, IWButtonAnchor } from "../app/button"
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export function Intro() {
   return (
     <>
     <div className="bggradient2">
       <div className="items-center justify-center flex flex-col md:flex-row gap-10 py-20">
-          <AnimatePresence>
             <motion.div 
               initial= {{
                 scale: "0%",
@@ -77,7 +76,6 @@ export function Intro() {
                   }}/>
               </motion.div>
             </motion.div>
-          </AnimatePresence>
         </div>
       </div>
       <div className="mx-auto -mt-64 md:-mt-32">

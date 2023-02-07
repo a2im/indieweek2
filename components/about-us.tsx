@@ -30,7 +30,7 @@ const responsive = {
 export function About1 () {
     return (
       <div className="max-w-5xl mx-auto">
-      <div className="z-10 grid grid-cols-0 md:grid-cols-2 md:mt-10 items-center md:justify-around mx-auto gap-10 p-5">
+      <div className="grid grid-cols-0 md:grid-cols-2  items-center md:justify-around mx-auto gap-10 p-5">
         <div className="flex-initial relative items-center max-w-xl py-8 order-last md:order-first">
                 <h2> WHAT IS A2IM INDIE WEEK?</h2>
                 <hr className="border-black my-5"></hr>

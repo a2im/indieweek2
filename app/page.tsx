@@ -14,7 +14,6 @@ export default function Home() {
           key="desc"
         />
           <MyIntro/>
-        <Footer/>
     </div>
     </>
   )

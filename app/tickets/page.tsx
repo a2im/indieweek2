@@ -1,16 +1,13 @@
-import Footer from '../footer'
 import { MyTickets,HotelCard } from '../../components/tickets'
 import WatchPastYears from '../../components/watch-past-years';
 import { Get2021Playlist, Get2022Playlist } from '../YTplaylists';
-import MyNavbar from '../../components/navbar';
     
 export default async function Tickets() {
   const data2021 = await Get2021Playlist()
   const data2022 = await Get2022Playlist()
   return (
     <>
-    <MyNavbar/>
-    <div className="bggradient pt-8">
+    <div className="bggradient">
           <title>Indie Week - Tickets</title>
           <meta
           name="description"
@@ -20,7 +17,6 @@ export default async function Tickets() {
         <MyTickets/>
         <HotelCard/>
         <WatchPastYears data2021={data2021} data2022={data2022}/>
-          <Footer/>
     </div>
     </>
   )

@@ -1,15 +1,20 @@
-import MyNavbar from "../../components/navbar"
-import Footer from "../footer"
 import Signin from "./signin"
 
 export default function SignIn() {
   return (
-    < >  
-      <MyNavbar/>
-      <div className="pb-64 pt-32 mx-auto">
-        <Signin/>
+    <>
+    <div className="bggradient pt-8">
+          <title>Indie Week - Program</title>
+          <meta
+          name="description"
+          content="Founded by independents, for independents, A2IM Indie Week is a four-day conference for the independent music community in the United States."
+          key="desc"
+        />
+          <div className="mx-auto mb-8 py-20"> 
+      <div className=" mx-auto">
       </div>
-      <Footer/>
+      </div>
+      </div>
     </>
   )
 }

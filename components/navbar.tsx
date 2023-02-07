@@ -2,8 +2,8 @@
 import { useOnClickOutside } from 'usehooks-ts'
 import Link from 'next/link';
 import Image from "next/image";
-import Login from '../app/sign-in/login';
 import React from "react"
+import { useSupabase } from './supabase-provider';
 import { motion } from "framer-motion";
 import { useState, useRef } from "react";
 import ReactMarkdown from "react-markdown";
@@ -11,23 +11,25 @@ import remarkGfm from 'remark-gfm'
 import { useQuery } from "@apollo/client";
 import { GET_INFO_BUTTON } from "../lib/gql/queries";
 
-
 export function MyNavbar() {
-  const ref = useRef();
+  const Navref = useRef();
   const [navbar, setNavbar] = useState(false);
+  const { supabase, session } = useSupabase();
   const handleClickOutside = () => {
     setNavbar(false)
-    console.log('clicked outside')
   }
-
   const handleClickInside = () => {
     setNavbar(!navbar)
-    console.log('clicked inside')
   }
-
-  useOnClickOutside(ref, handleClickOutside)
+  const handleLogout = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      console.log({ error });
+    }
+  };
+  useOnClickOutside(Navref, handleClickOutside)
   return (
-      <nav className="bg-black w-full fixed z-50 shadow-2xl">
+      <nav className="bg-black w-full z-90 shadow-2xl fixed inset-x-0 top-0 ">
         <div className="justify-between max-w-6xl mx-auto items-center md:flex">
           <div>
             <div className="flex items-center justify-between md:block">
@@ -94,7 +96,7 @@ export function MyNavbar() {
                 navbar ? 'block' : 'hidden'
               }`}
             >
-              <ul ref={ref} id="iwnavbar" className="md:lvl1 text-xl relative mx-auto
+              <ul ref={Navref} id="iwnavbar" className="md:lvl1 text-xl relative mx-auto
                   uppercase text-center
               md:flex">
                 <li 
@@ -179,7 +181,15 @@ export function MyNavbar() {
                 </li>
                 <li
                   className="text-center font-serif text-zinc-500 whitespace-nowrap hover:scale-105">
-                  <Login/>
+                  { session ? (
+                    <button onClick={handleLogout}>Logout</button>
+                  ) : (
+                    <>
+                      <button>
+                        <Link href="/sign-in">Login</Link>
+                        </button>
+                    </>
+                  )}
                 </li>
               </ul>
             </div>
@@ -190,10 +200,16 @@ export function MyNavbar() {
 }
 
 export function MyModal (){
-    const ref = useRef();
+    const Modalref = useRef();
     const [isModalOpen, setModalOpen] = useState(false)
     const close = () => setModalOpen(false);
-    useOnClickOutside(ref, () => setModalOpen(false));
+    const handleClickOutside = () => {
+      setModalOpen(false)
+    }
+    const handleClickInside = () => {
+      setModalOpen(true)
+    }
+    useOnClickOutside(Modalref, handleClickOutside)
     const dropIn = {
         hidden: {
             opacity: 0,
@@ -215,10 +231,10 @@ export function MyModal (){
 
     return (
         <>
-            <div className="flex fixed bottom-5 right-5 w-20 h-20 rounded-3xl bg-gradient-radial from-black via-transparent to-transparent">
+            <div className="z-80 flex fixed bottom-5 right-5 w-20 h-20 rounded-3xl bg-gradient-radial from-black via-transparent to-transparent">
             {isModalOpen ? (
                 <motion.div
-                ref={ref}
+                ref={Modalref}
                 onClick={(e) => e.stopPropagation()}
                 className="fixed border-4 p-5 modalinfo w-96 shadow-2xl bottom-16 md:right-16 right-7"
                 variants={dropIn}
@@ -231,7 +247,6 @@ export function MyModal (){
                  ) : (
                 <motion.button 
                 whileTap={{scale: 0.95}}
-                className="save-button"
                 onClick={() => (setModalOpen(true))}>
                 <div className="w-20 h-20">
                 <Image
@@ -276,8 +291,8 @@ export function MyModal (){
 export default function MyUi(){
   return(
     <>
-    <MyNavbar/>
     <MyModal/>
+    <MyNavbar/>
     </>
   )
 }

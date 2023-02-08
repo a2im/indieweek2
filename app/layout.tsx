@@ -4,7 +4,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { MyApolloProvider } from '../components/apollo-provider';
-import AuthProvider from '../components/next-auth-provider';
+import AuthContext from '../components/next-auth-provider';
 import { getServerSession } from "next-auth/next"
 import { authOptions } from "../pages/api/auth/[...nextauth]"
 
@@ -19,11 +19,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang="en">
       <head/>
       <body className="min-h-screen bg-iwtexture">
-        <AuthProvider session={session}>
+        <AuthContext>
             <MyApolloProvider> 
               {children}
             </MyApolloProvider>
-          </AuthProvider>
+          </AuthContext>
       </body>
     </html>
   )

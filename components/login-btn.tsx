@@ -6,8 +6,8 @@ export default function LoginButton() {
     return (
       <>
       <div className="mx-auto max-w-md">
-        Signed in as {session.user.email} <br />
-        <button className="text-black bg-white px-4 py-1 rounded-md" onClick={() => signOut()}>Sign out</button>
+        Hi, {session.user.name}!
+        <button className="text-black bg-white px-4 py-1 rounded-md mx-3" onClick={() => signOut()}>Sign out</button>
         </div>
       </>
     )

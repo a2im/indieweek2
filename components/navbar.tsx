@@ -9,6 +9,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm'
 import { useQuery } from "@apollo/client";
 import { GET_INFO_BUTTON } from "../lib/gql/queries";
+import LoginButton from './login-btn';
 
 export function MyNavbar() {
   const Navref = useRef();
@@ -176,7 +177,7 @@ return(
             </li>
             <li
               className="text-center font-serif text-zinc-500 whitespace-nowrap hover:scale-105">
-<p>Sign In</p>
+<LoginButton/>
             </li>
           </ul>
         </div>

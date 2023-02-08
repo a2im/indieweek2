@@ -2,7 +2,7 @@ import AboutUS from '../../components/about-us'
 import WatchPastYears from '../../components/watch-past-years'
 import { Get2021Playlist, Get2022Playlist } from '../YTplaylists';
 import Footer from '../footer'
-import MyUi from '../../components/navbar'
+import MyUi from '../../components/my-ui'
 
 export default async function About() {
   const data2021 = await Get2021Playlist()

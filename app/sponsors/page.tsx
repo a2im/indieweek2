@@ -3,7 +3,7 @@
 import React, { useId, useState } from 'react'
 import Link from 'next/link'
 import Footer from '../footer'
-import MyUi from '../../components/navbar'
+import MyUi from '../../components/my-ui'
 
 export default function Sponsors() {
   const id = useId();

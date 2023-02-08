@@ -2,14 +2,35 @@
 import { useOnClickOutside } from 'usehooks-ts'
 import Link from 'next/link';
 import Image from "next/image";
-import React from "react"
 import { motion } from "framer-motion";
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm'
 import { useQuery } from "@apollo/client";
 import { GET_INFO_BUTTON } from "../lib/gql/queries";
-import LoginButton from './login-btn';
+import { useSession, signIn, signOut } from "next-auth/react"
+
+function LoginButton() {
+  const { data: session } = useSession()
+  if (session) {
+    return (
+      <>
+      <div className="mx-auto max-w-md">
+        Hi, {session.user.name}!
+        <button className="text-black bg-white px-4 py-1 rounded-md mx-3" onClick={() => signOut()}>Sign out</button>
+        </div>
+      </>
+    )
+  }
+  return (
+    <>
+    <div className="mx-auto max-w-md">
+      Not signed in <br />
+      <button className="text-black bg-white px-4 py-1 rounded-md" onClick={() => signIn()}>Sign in</button>
+      </div>
+    </>
+  )
+}
 
 export function MyNavbar() {
   const Navref = useRef();
@@ -175,7 +196,7 @@ return(
             </li>
             <li
               className="text-center font-serif text-zinc-500 whitespace-nowrap hover:scale-105">
-<LoginButton/>
+          <LoginButton/>
             </li>
           </ul>
         </div>
@@ -283,3 +304,5 @@ export default function MyUi(){
     </>
   )
 }
+
+

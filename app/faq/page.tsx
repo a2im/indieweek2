@@ -1,7 +1,7 @@
 import GetFAQ from '../../components/faq-categories'
 import { JumpTo } from '../../components/faq-categories'
 import Footer from '../footer'
-import MyUi from '../../components/navbar'
+import MyUi from '../../components/my-ui'
 
 export default function FAQ() {
   return (

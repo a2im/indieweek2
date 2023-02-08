@@ -1,5 +1,5 @@
 import Footer from './footer'
-import MyUi from '../components/navbar'
+import MyUi from '../components/my-ui'
 import MyIntro from '../components/intro'
 
 export default async function Home() {

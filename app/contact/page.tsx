@@ -4,7 +4,7 @@ import React, { useId, useState } from 'react'
 import { motion } from "framer-motion"
 import Link from 'next/link'
 import Footer from '../footer'
-import MyUi from '../../components/navbar'
+import MyUi from '../../components/my-ui'
 
 export default function Contact() {
   const id = useId();

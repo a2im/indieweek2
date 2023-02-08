@@ -3,6 +3,7 @@ import MyUi from '../components/my-ui'
 import MyIntro from '../components/intro'
 
 export default async function Home() {
+
   return (
     <>
           <MyUi/>

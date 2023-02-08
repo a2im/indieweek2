@@ -1,7 +1,6 @@
 import Footer from './footer'
 import MyUi from '../components/navbar'
 import MyIntro from '../components/intro'
-import LoginButton from '../components/login-btn'
 
 export default async function Home() {
   return (

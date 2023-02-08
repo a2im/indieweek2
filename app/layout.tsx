@@ -5,8 +5,6 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { MyApolloProvider } from '../components/apollo-provider';
 import AuthContext from '../components/next-auth-provider';
-import { getServerSession } from "next-auth/next"
-import { authOptions } from "../pages/api/auth/[...nextauth]"
 
 config.autoAddCss = false
 library.add(fas)
@@ -14,7 +12,6 @@ library.add(fas)
 export const revalidate = 0;
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) { 
-  const session = await getServerSession(authOptions)
   return (
     <html lang="en">
       <head/>

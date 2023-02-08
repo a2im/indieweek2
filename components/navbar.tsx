@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from "next/image";
 import React from "react"
 import { motion } from "framer-motion";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm'
 import { useQuery } from "@apollo/client";
@@ -14,7 +14,6 @@ import LoginButton from './login-btn';
 export function MyNavbar() {
   const Navref = useRef();
   const [navbar, setNavbar] = useState(false);
-  const [data, setData] = useState()
   const handleClickOutside = () => {
     setNavbar(false)
   }
@@ -23,7 +22,6 @@ export function MyNavbar() {
   }
   
   useOnClickOutside(Navref, handleClickOutside)
-
 return(
     <nav className="bg-black w-full z-10 shadow-2xl fixed inset-x-0 top-0 ">
     <div className="justify-between max-w-6xl mx-auto items-center md:flex">

@@ -10,29 +10,9 @@ import { useQuery } from "@apollo/client";
 import { GET_INFO_BUTTON } from "../lib/gql/queries";
 import { useSession, signIn, signOut } from "next-auth/react"
 
-function LoginButton() {
-  const { data: session } = useSession()
-  if (session) {
-    return (
-      <>
-      <div className="mx-auto max-w-md">
-        Hi, {session.user.name}!
-        <button className="text-black bg-white px-4 py-1 rounded-md mx-3" onClick={() => signOut()}>Sign out</button>
-        </div>
-      </>
-    )
-  }
-  return (
-    <>
-    <div className="mx-auto max-w-md">
-      Not signed in <br />
-      <button className="text-black bg-white px-4 py-1 rounded-md" onClick={() => signIn()}>Sign in</button>
-      </div>
-    </>
-  )
-}
 
-export function MyNavbar() {
+
+export function MyNavbar({children}) {
   const Navref = useRef();
   const [navbar, setNavbar] = useState(false);
   const handleClickOutside = () => {
@@ -196,7 +176,7 @@ return(
             </li>
             <li
               className="text-center font-serif text-zinc-500 whitespace-nowrap hover:scale-105">
-          <LoginButton/>
+          {children}
             </li>
           </ul>
         </div>
@@ -206,10 +186,31 @@ return(
   )
 }
 
+export function LoginButton() {
+  const { data: session, status } = useSession()
+  if (status === "authenticated") {
+    return (
+      <>
+      <div className="mx-auto max-w-md">
+        Hi, {session.user.name}!
+        <button className="text-black bg-white px-4 py-1 rounded-md mx-3" onClick={() => signOut()}>Sign out</button>
+        </div>
+      </>
+    )
+  }
+  return (
+    <>
+    <div className="mx-auto max-w-md">
+      Not signed in <br />
+      <button className="text-black bg-white px-4 py-1 rounded-md" onClick={() => signIn()}>Sign in</button>
+      </div>
+    </>
+  )
+};
+
 export function MyModal (){
     const Modalref = useRef();
     const [isModalOpen, setModalOpen] = useState(false)
-    const close = () => setModalOpen(false);
     const handleClickOutside = () => {
       setModalOpen(false)
     }
@@ -273,7 +274,7 @@ export function MyModal (){
     );
     }
       
-      function ModalInfo(){
+      export function ModalInfo(){
         const { loading, error, data } = useQuery(GET_INFO_BUTTON, { 
             variables: {
               PublicationState: "LIVE", 
@@ -297,10 +298,10 @@ export function MyModal (){
 export default function MyUi(){
   return(
     <>
-    <div className="relative">
     <MyModal/>
-    <MyNavbar/>
-    </div>
+    <MyNavbar>
+      <LoginButton/>
+      </MyNavbar>
     </>
   )
 }

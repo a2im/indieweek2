@@ -9,9 +9,7 @@ import AuthContext from '../components/next-auth-provider';
 config.autoAddCss = false
 library.add(fas)
 
-export const revalidate = 0;
-
-export default async function RootLayout({ children }: { children: React.ReactNode }) { 
+export default async function RootLayout({ children }: { children: React.ReactNode }, pageProps: { session }) { 
   return (
     <html lang="en">
       <head/>

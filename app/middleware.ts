@@ -1,17 +1,15 @@
-import { createMiddlewareSupabaseClient } from '@supabase/auth-helpers-nextjs'
-import { NextResponse } from 'next/server'
+import { withAuth } from "next-auth/middleware"
 
-import type { NextRequest } from 'next/server'
-import type { Database } from '../lib/database.types'
+export default withAuth(
+  // `withAuth` augments your `Request` with the user's token.
+  function middleware(req) {
+    console.log(req.nextauth.token)
+  },
+  {
+    callbacks: {
+      authorized: ({ token }) => token?.role === "admin",
+    },
+  }
+)
 
-export async function middleware(req: NextRequest) {
-  const res = NextResponse.next()
-
-  const supabase = createMiddlewareSupabaseClient<Database>({ req, res })
-
-  const {
-    data: { session },
-  } = await supabase.auth.getSession()
-
-  return res
-}
+export const config = { matcher: ["/admin"] }

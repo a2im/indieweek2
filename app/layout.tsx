@@ -1,32 +1,29 @@
-import "server-only";
-
 import './globals.css';
-import type { Session } from '@supabase/auth-helpers-nextjs';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import SupabaseListener from '../components/supabase-listener';
-import SupabaseProvider from '../components/supabase-provider';
 import { MyApolloProvider } from '../components/apollo-provider';
+import AuthProvider from '../components/next-auth-provider';
+import { getServerSession } from "next-auth/next"
+import { authOptions } from "../pages/api/auth/[...nextauth]"
 
 config.autoAddCss = false
 library.add(fas)
-type MaybeSession = Session | null;
+
 export const revalidate = 0;
 
-export default async function RootLayout({ children, session }: { children: React.ReactNode, session: MaybeSession;}) { 
-
+export default async function RootLayout({ children }: { children: React.ReactNode }) { 
+  const session = await getServerSession(authOptions)
   return (
     <html lang="en">
       <head/>
       <body className="min-h-screen bg-iwtexture">
-      <SupabaseProvider session={session}>
-         <SupabaseListener serverAccessToken={session?.access_token} />
+        <AuthProvider session={session}>
             <MyApolloProvider> 
               {children}
             </MyApolloProvider>
-        </SupabaseProvider>
+          </AuthProvider>
       </body>
     </html>
   )

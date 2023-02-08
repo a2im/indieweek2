@@ -3,21 +3,16 @@ import { useOnClickOutside } from 'usehooks-ts'
 import Link from 'next/link';
 import Image from "next/image";
 import React from "react"
-import { useSupabase } from './supabase-provider';
 import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm'
 import { useQuery } from "@apollo/client";
 import { GET_INFO_BUTTON } from "../lib/gql/queries";
-import { useUser, useSupabaseClient } from '@supabase/auth-helpers-react'
 
 export function MyNavbar() {
   const Navref = useRef();
   const [navbar, setNavbar] = useState(false);
-  const { supabase, session } = useSupabase();
-  const supabaseClient = useSupabaseClient()
-  const user = useUser()
   const [data, setData] = useState()
   const handleClickOutside = () => {
     setNavbar(false)
@@ -25,22 +20,9 @@ export function MyNavbar() {
   const handleClickInside = () => {
     setNavbar(!navbar)
   }
-  const handleLogout = async () => {
-    const { error } = await supabase.auth.signOut();
-    if (error) {
-      console.log({ error });
-    }
-  };
+  
   useOnClickOutside(Navref, handleClickOutside)
 
-  useEffect(() => {
-    async function loadData() {
-      const { data } = await supabaseClient.from('public').select('*')
-      setData(data)
-    }
-    // Only run query once user is logged in.
-    if (user) loadData()
-  }, [user])
 return(
     <nav className="bg-black w-full z-10 shadow-2xl fixed inset-x-0 top-0 ">
     <div className="justify-between max-w-6xl mx-auto items-center md:flex">
@@ -194,15 +176,7 @@ return(
             </li>
             <li
               className="text-center font-serif text-zinc-500 whitespace-nowrap hover:scale-105">
-              { session ? (
-                <button onClick={handleLogout}>Logout</button>
-              ) : (
-                <>
-                  <button>
-                    <Link href="/sign-in">Login</Link>
-                    </button>
-                </>
-              )}
+<p>Sign In</p>
             </li>
           </ul>
         </div>

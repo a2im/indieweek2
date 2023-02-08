@@ -3,6 +3,8 @@
 import React, { useId, useState } from 'react'
 import { motion } from "framer-motion"
 import Link from 'next/link'
+import Footer from '../footer'
+import MyUi from '../../components/navbar'
 
 export default function Contact() {
   const id = useId();
@@ -87,6 +89,7 @@ export default function Contact() {
    };
   return (
     <>
+    <MyUi/>
     <div className="bggradient pt-8">
           <title>Indie Week - Contact Us</title>
           <div className="grow shrink content-center">
@@ -139,6 +142,8 @@ export default function Contact() {
         </div>
       </motion.div>
     </div>
+
+    <Footer/>
     </>
   )
 }

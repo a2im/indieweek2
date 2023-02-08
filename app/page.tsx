@@ -5,8 +5,8 @@ import MyIntro from '../components/intro'
 export default function Home() {
   return (
     <>
-    <MyUi/>
-    <div className="bggradient2">
+          <MyUi/>
+    <div className="bggradient2 relative">
       <title>Indie Week - Home</title>
       <meta
           name="description"
@@ -14,6 +14,7 @@ export default function Home() {
           key="desc"
         />
           <MyIntro/>
+          <Footer/>
     </div>
     </>
   )

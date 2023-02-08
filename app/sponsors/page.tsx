@@ -2,6 +2,8 @@
 
 import React, { useId, useState } from 'react'
 import Link from 'next/link'
+import Footer from '../footer'
+import MyUi from '../../components/navbar'
 
 export default function Sponsors() {
   const id = useId();
@@ -86,6 +88,7 @@ export default function Sponsors() {
    };
   return (
     <>
+    <MyUi/>
     <div className="bggradient pt-8">
           <title>Indie Week - Sponsors</title>
           <meta
@@ -130,7 +133,10 @@ export default function Sponsors() {
     </form>
               </div>
           </div>
+          
     </div>
+
+        <Footer/>
     </>
   )
 }

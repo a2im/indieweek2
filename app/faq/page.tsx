@@ -1,9 +1,12 @@
 import GetFAQ from '../../components/faq-categories'
 import { JumpTo } from '../../components/faq-categories'
+import Footer from '../footer'
+import MyUi from '../../components/navbar'
 
 export default function FAQ() {
   return (
     <>
+    <MyUi/>
     <div className="bggradient pt-8">
       <title>Indie Week - Program</title>
       <meta
@@ -20,6 +23,8 @@ export default function FAQ() {
         <GetFAQ Category='PRESS'/>
         </div>
     </div>
+
+    <Footer/>
     </>
   )
 }

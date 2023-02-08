@@ -1,8 +1,11 @@
 import Signin from "./signin"
+import Footer from '../footer'
+import MyUi from '../../components/navbar'
 
 export default function SignIn() {
   return (
     <>
+    <MyUi/>
     <div className="bggradient pt-8">
           <title>Indie Week - Program</title>
           <meta
@@ -16,6 +19,8 @@ export default function SignIn() {
       </div>
       </div>
       </div>
+
+          <Footer/>
     </>
   )
 }

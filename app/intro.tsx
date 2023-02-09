@@ -117,7 +117,9 @@ export function Intro2 () {
           alt='indie week opening reception'
           width={500}
           height={500}
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
           style={{
             width: "100%",
             height: "auto",

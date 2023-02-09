@@ -39,7 +39,7 @@ export default function WatchPastYears({data2022, data2021}){
             const { title, thumbnails = {}, resourceId = {} } = snippet;
             const { medium } = thumbnails;
                 return (
-                <div key={id} className="border-solid border-white border-3 rounded-2xl hover:scale-105">
+                <div key={id} className="border-solid border-white border-3 rounded-2xl hover:scale-105 gap">
                     <Link href={`https://www.youtube.com/watch?v=${resourceId.videoId}`}>
                         <Image src={medium?.url} width={medium?.width} height={medium?.height} alt={`thumbnail image for ${title}`}/>
                         <h3 className="text-lg">{title}</h3>

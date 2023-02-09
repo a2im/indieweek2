@@ -35,7 +35,7 @@ export function About1 () {
                 <h2> WHAT IS A2IM INDIE WEEK?</h2>
                 <hr className="border-black my-5"></hr>
                 <h4 className="my-5">Running for over 15 years, and with over 1200 attendees, it&apos;s the largest independent music gathering in the world. Yearly, Indie Week hosts over 60 panels and workshops, 1800 curated business meetings, and countless opportunities tailor-made for the independent sector&apos;s unique needs.</h4>
-              <IWButtonInternal href='/tickets'>LEARN MORE</IWButtonInternal>
+              <IWButtonInternal href='/tickets'>Buy Tickets</IWButtonInternal>
               </div>
               <div className="image-cropper m-7">
                 <Image

@@ -2,14 +2,18 @@ import { SocialFollowWhite } from '../../components/SocialFollow'
 import WatchPastYears from '../../components/watch-past-years'
 import { Get2021Playlist, Get2022Playlist } from '../YTplaylists';
 import Footer from '../footer'
-import MyUi from '../../components/my-ui'
+import MyNavbar from '../../components/nav'
+import LoginButton from '../../components/login'
+import ModalInfo from '../../components/modal-info'
+import MyModal from '../../components/modal'
 
 export default async function Program() {
   const data2021 = await Get2021Playlist()
   const data2022 = await Get2022Playlist()
   return (
     <>
-    <MyUi/>
+       <MyNavbar><LoginButton/></MyNavbar>
+    <MyModal><ModalInfo/></MyModal>
     <div className="bggradient pt-8">
           <title>Indie Week - Program</title>
           <meta

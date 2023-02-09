@@ -3,7 +3,10 @@
 import React, { useId, useState } from 'react'
 import Link from 'next/link'
 import Footer from '../footer'
-import MyUi from '../../components/my-ui'
+import MyNavbar from '../../components/nav'
+import LoginButton from '../../components/login'
+import ModalInfo from '../../components/modal-info'
+import MyModal from '../../components/modal'
 
 export default function Sponsors() {
   const id = useId();
@@ -88,7 +91,8 @@ export default function Sponsors() {
    };
   return (
     <>
-    <MyUi/>
+        <MyNavbar><LoginButton/></MyNavbar>
+    <MyModal><ModalInfo/></MyModal>
     <div className="bggradient pt-8">
           <title>Indie Week - Sponsors</title>
           <meta

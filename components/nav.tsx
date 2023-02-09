@@ -2,17 +2,9 @@
 import { useOnClickOutside } from 'usehooks-ts'
 import Link from 'next/link';
 import Image from "next/image";
-import { motion } from "framer-motion";
 import React, { useState, useRef } from "react";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from 'remark-gfm'
-import { useQuery } from "@apollo/client";
-import { GET_INFO_BUTTON } from "../lib/gql/queries";
-import { useSession, signIn, signOut } from "next-auth/react"
 
-
-
-export function MyNavbar({children}) {
+export default function MyNavbar({children}) {
   const Navref = useRef();
   const [navbar, setNavbar] = useState(false);
   const handleClickOutside = () => {
@@ -186,124 +178,10 @@ return(
   )
 }
 
-export function LoginButton() {
-  const { data: session, status } = useSession()
-  if (status === "authenticated") {
-    return (
-      <>
-      <div className="mx-auto max-w-md">
-        Hi, {session.user.name}!
-        <button className="text-black bg-white px-4 py-1 rounded-md mx-3" onClick={() => signOut()}>Sign out</button>
-        </div>
-      </>
-    )
-  }
-  return (
-    <>
-    <div className="mx-auto max-w-md">
-      Not signed in <br />
-      <button className="text-black bg-white px-4 py-1 rounded-md" onClick={() => signIn()}>Sign in</button>
-      </div>
-    </>
-  )
-};
 
-export function MyModal (){
-    const Modalref = useRef();
-    const [isModalOpen, setModalOpen] = useState(false)
-    const handleClickOutside = () => {
-      setModalOpen(false)
-    }
-    const handleClickInside = () => {
-      setModalOpen(true)
-    }
-    useOnClickOutside(Modalref, handleClickOutside)
-    const dropIn = {
-        hidden: {
-            opacity: 0,
-        },
-        visible: {
-            opacity: 1,
-            transition: {
-                duration: 0.1,
-                type: "spring",
-                damping: 40,
-                stiffness: 300,
-            }
-        },
-        exit: {
-            y:"-100vh",
-            opacity: 0,
-        },
-    };
-
-    return (
-        <>
-            <div className="z-10 flex fixed bottom-5 right-5 w-20 h-20 rounded-3xl bg-gradient-radial from-black via-transparent to-transparent">
-            {isModalOpen ? (
-                <motion.div
-                ref={Modalref}
-                onClick={(e) => e.stopPropagation()}
-                className="fixed border-4 p-5 modalinfo w-96 shadow-2xl bottom-16 md:right-16 right-7"
-                variants={dropIn}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                >
-                <ModalInfo/>
-                </motion.div>
-                 ) : (
-                <button 
-                onClick={handleClickInside}>
-                <div className="w-20 h-20">
-                <Image
-                src="/logos/A2IM-logos/A2IM-button-white.png"
-                alt="a2im button"
-                width={75}
-                height={75}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                  objectFit: "contain"
-                }} />
-                </div>
-            </button>
-                )}
-            </div>
-     </>
-    );
-    }
       
-      export function ModalInfo(){
-        const { loading, error, data } = useQuery(GET_INFO_BUTTON, { 
-            variables: {
-              PublicationState: "LIVE", 
-              Name: "Indie Week"
-            }});
-            if (loading) return <div className="animate-pulse h-[150px] w-[100px] bg-gray-200 dark:bg-gray-700 rounded-xl"></div>
-            if (error) return <p>Error</p>
-        return (
-            <div>
-                {data?.infoButtons.data.map(info => (
-                <div key={info.id} className="px-4 pb-4 justify-evenly rounded-xl">
-                  <h3 className="text-2xl py-2 font-bold">INFORMATION</h3>
-                    <ReactMarkdown className="line-break" remarkPlugins={[remarkGfm]}>{info.attributes.Info}</ReactMarkdown>
-                    </div>
-                                  )
-                )}
-            </div>
-        )
-    }
+      
 
-export default function MyUi(){
-  return(
-    <>
-    <MyModal/>
-    <MyNavbar>
-      <LoginButton/>
-      </MyNavbar>
-    </>
-  )
-}
+
 
 

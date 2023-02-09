@@ -1,12 +1,16 @@
 import Footer from './footer'
-import MyUi from '../components/my-ui'
 import MyIntro from '../components/intro'
+import MyNavbar from '../components/nav'
+import LoginButton from '../components/login'
+import ModalInfo from '../components/modal-info'
+import MyModal from '../components/modal'
 
 export default async function Home() {
 
   return (
     <>
-          <MyUi/>
+    <MyNavbar><LoginButton/></MyNavbar>
+    <MyModal><ModalInfo/></MyModal>
     <div className="bggradient2 relative">
       <title>Indie Week - Home</title>
       <meta

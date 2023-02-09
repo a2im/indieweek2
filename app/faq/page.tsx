@@ -1,12 +1,16 @@
 import GetFAQ from '../../components/faq-categories'
 import { JumpTo } from '../../components/faq-categories'
 import Footer from '../footer'
-import MyUi from '../../components/my-ui'
+import MyNavbar from '../../components/nav'
+import LoginButton from '../../components/login'
+import ModalInfo from '../../components/modal-info'
+import MyModal from '../../components/modal'
 
 export default function FAQ() {
   return (
     <>
-    <MyUi/>
+        <MyNavbar><LoginButton/></MyNavbar>
+    <MyModal><ModalInfo/></MyModal>
     <div className="bggradient pt-8">
       <title>Indie Week - Program</title>
       <meta

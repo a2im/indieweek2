@@ -1,11 +1,25 @@
 "use client";
 
 import { SessionProvider } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
-export interface AuthContextProps {
-  children: React.ReactNode;
+export default function AuthContext({ children }) {
+  return (
+  <SessionProvider>
+<Auth>
+  {children}
+</Auth>
+</SessionProvider>
+)
 }
 
-export default function AuthContext({ children }: AuthContextProps, pageProps: { session }) {
-  return <SessionProvider session={pageProps.session}>{children}</SessionProvider>;
+function Auth({ children }) {
+  // if `{ required: true }` is supplied, `status` can only be "loading" or "authenticated"
+  const { status } = useSession({ required: true })
+
+  if (status === "loading") {
+    return <div>Loading...</div>
+  }
+
+  return children
 }

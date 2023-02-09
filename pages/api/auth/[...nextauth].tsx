@@ -29,13 +29,6 @@ session: {
   updateAge: 24 * 60 * 60, // 24 hours
 },
 callbacks: {
-  async redirect({ url, baseUrl }) {
-    // Allows relative callback URLs
-    if (url.startsWith("/")) return `${baseUrl}${url}`
-    // Allows callback URLs on the same origin
-    else if (new URL(url).origin === baseUrl) return url
-    return baseUrl
-  },
   async session({ session, token }) {
     // Send properties to the client, like an access_token and user id from a provider.
     session.accessToken = token.accessToken

@@ -7,4 +7,3 @@ customHeaders:
         value: 'SAMEORIGIN'
       - key: 'Referrer-Policy'
         value: 'strict-origin-when-cross-origin'
-

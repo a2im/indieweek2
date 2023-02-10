@@ -12,7 +12,7 @@ export default function MyNavbar() {
   useOnClickOutside(ref, () => setNavbar(false));
   return (
     <>
-      <nav className="bg-black w-full fixed z-50 shadow-2xl">
+      <nav className="bg-black w-full fixed z-50">
         <div className="justify-between max-w-6xl mx-auto items-center md:flex">
           <div>
             <div className="flex items-center justify-between md:block">
@@ -212,25 +212,25 @@ export function NavbarAnnouncements(){
     <div className="z-40 mx-auto overflow-x-hidden relative flex max-w-5xl gap-10">
     <div className="animate-marquee top-0 whitespace-nowrap">
     {data?.announcements.data.map(announcements => (
-        <h3 key={announcements.id} className="text-black text-xl px-5 mt-10 uppercase">{announcements.attributes.text}</h3>
+        <h3 key={announcements.id} className="text-black text-2xl px-5 mt-10 uppercase">{announcements.attributes.text}</h3>
         )
         )}
     </div>
     <div className="absolute top-0 animate-marquee2 whitespace-nowrap pt-10">
     {data?.announcements.data.map(announcements => (
-        <h3 key={announcements.id} className="text-black text-xl px-5 uppercase">{announcements.attributes.text}</h3>
+        <h3 key={announcements.id} className="text-black text-2xl px-5 uppercase">{announcements.attributes.text}</h3>
         )
         )}
     </div>
     <div className="absolute top-0 animate-marquee3 whitespace-nowrap pt-10">
     {data?.announcements.data.map(announcements => (
-        <h3 key={announcements.id} className="text-black text-xl px-5 uppercase">{announcements.attributes.text}</h3>
+        <h3 key={announcements.id} className="text-black text-2xl px-5 uppercase">{announcements.attributes.text}</h3>
         )
         )}
     </div>
     <div className="absolute top-0 animate-marquee4 whitespace-nowrap pt-10">
     {data?.announcements.data.map(announcements => (
-        <h3 key={announcements.id} className="text-black text-xl px-5 uppercase">{announcements.attributes.text}</h3>
+        <h3 key={announcements.id} className="text-black text-2xl px-5 uppercase">{announcements.attributes.text}</h3>
         )
         )}
     </div>

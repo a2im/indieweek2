@@ -116,6 +116,19 @@ export default function MyNavbar() {
                             <h2 className="my-3 md:my-0 text-xl hover:scale-105 md:text-white bg-white md:bg-transparent rounded-3xl text-black">FAQ</h2>
                             </Link>
                           </li>
+                          <li className="
+                              md:w-full
+                              md:py-2
+                              ">
+                            <Link 
+                            href="https://a2im.org/about-us/join-a2im/" 
+                            target="_blank"
+                            rel="noopener noreferrer" 
+                            onClick={() => setNavbar(false)}
+                            >
+                            <h2 className="my-3 md:my-0 text-lg hover:scale-105 md:text-white bg-white md:bg-transparent rounded-3xl text-black whitespace-nowrap">Join A2IM</h2>
+                            </Link>
+                          </li>
                           </ul>
                 </li>
                 <li className="

@@ -129,7 +129,7 @@ export function MyTickets(){
 export function HotelCard(){
   return (
     <>
-    <div id="hotels" className="pb-96 md:pb-40 mb-20">
+    <div id="hotels" className="pb-20">
     <h3 className="font-bold text-4xl md:text-5xl text-center pb-10">ACCOMMODATIONS</h3>
     <div  className="max-w-5xl mx-auto text-center pt-5 overflow-hidden border-4 border-white bg-black bg-opacity-50 rounded-3xl">
     <h3 className="font-bold py-5 text-3xl">Crowne Plaza Times Square</h3>

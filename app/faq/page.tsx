@@ -1,6 +1,7 @@
 import GetFAQ from './faq-categories'
 import { JumpTo } from './faq-categories'
 import Footer from '../footer'
+import InfoSegment from '../info'
 
 export default function FAQ() {
   return (
@@ -18,6 +19,7 @@ export default function FAQ() {
         <GetFAQ Category='ACCESSIBILITY'/>
         <GetFAQ Category='ACCOMMODATIONS'/>
         <GetFAQ Category='PRESS'/>
+        <InfoSegment/>
         </div>
         <Footer/>
     </div>

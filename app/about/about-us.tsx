@@ -3,9 +3,10 @@
 import React from "react"
 import Image from "next/image";
 import Link from "next/link";
-import { IWButtonInternal } from "../button";
+import { IWButtonInternal, IWButtonExternal, IWButtonAnchor } from "../button";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import InfoSegment from "../info";
 
 const responsive = {
   superLargeDesktop: {
@@ -54,18 +55,12 @@ export function About1 () {
           </div>
 )
 }
-export function InfoSegment(){
-  return (
-          <div className="p-10 rounded-3xl bg-black bg-opacity-75 border-4 border-white mx-auto max-w-5xl">
-          <h4 className="mx-auto text-center pb-10 max-w-5xl">For A2IM Indie Week 2023, we’ll be back in New York City at a new, larger location. Details forthcoming…</h4>
-          </div>
-)
-}
+
 
 export function About2(){
   return(
-    <div className="max-w-5xl mx-auto">
-    <div className="grid grid-cols-0 md:grid-cols-2 md:mt-10 items-center md:justify-around mx-auto gap-10 p-5">
+    <div className="max-w-5xl mx-auto pb-20">
+    <div className="grid grid-cols-0 md:grid-cols-2 items-center md:justify-around mx-auto gap-10 p-5">
           <div className="image-cropper m-7">
               <Image
                 className="roundedimage"
@@ -158,7 +153,7 @@ export function About2(){
 export function FooterDisclaimer(){
   return(
 <>
-  <div className="p-10 rounded-3xl bg-black bg-opacity-75 border-4 border-white mx-auto max-w-5xl mb-20">
+  <div className="p-10 rounded-3xl bg-black bg-opacity-75 border-4 border-white mx-auto max-w-5xl">
     <h2>ABOUT A2IM</h2>
     <hr className="border-iwred my-5"></hr>
     <h4>The American Association of Independent Music (A2IM) is a 501(c)(6) not-for-profit trade organization that serves as a central voice for a diverse community of over 600 independently owned record labels operating within the United States. A2IM  represents their interests in the marketplace, in the media, on Capitol Hill, and as part of the global music community.
@@ -174,9 +169,8 @@ export default function AboutUS(){
   return (
     <div className="flex flex-col gap-20">
     <About1/>
-    <InfoSegment/>
-    <About2/>
     <FooterDisclaimer/>
+    <About2/>
     </div>
   )
 }

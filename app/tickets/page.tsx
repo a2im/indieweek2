@@ -1,5 +1,6 @@
 import Footer from '../footer'
 import { MyTickets,HotelCard } from './tickets'
+import InfoSegment from '../info'
     
 export default async function Tickets() {
   return (
@@ -13,6 +14,8 @@ export default async function Tickets() {
         />
           <MyTickets/>
           <HotelCard/>
+          <InfoSegment/>
+          <div className="pb-96 md:pb-40 mb-20"></div>
           <Footer/>
     </div>
     </>

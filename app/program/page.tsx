@@ -2,6 +2,7 @@ import { SocialFollowWhite } from '../SocialFollow'
 import Footer from '../footer'
 import WatchPastYears from '../watch-past-years'
 import { Get2021Playlist, Get2022Playlist } from '../YTplaylists';
+import InfoSegment from '../info';
 
 export default async function Program() {
   const data2021 = await Get2021Playlist()
@@ -15,7 +16,7 @@ export default async function Program() {
           key="desc"
         />
           <div className="mx-auto mb-8 py-20"> 
-            <div className='flex max-w-4xl mb-10 mx-auto gap-10 justify-center bg-black bg-opacity-75 rounded-3xl border-4 border-white'> 
+            <div className='flex max-w-5xl mb-10 mx-auto gap-10 justify-center bg-black bg-opacity-75 rounded-3xl border-4 border-white'> 
               <div className='mx-auto pb-10 p-4'>
                 <h3 className="mb-6 font-bold text-center">
                   COMING SOON 
@@ -30,6 +31,7 @@ to the Indie Week mailing list to hear first about program availability!</h4>
               </div>
           </div>
           <WatchPastYears data2021={data2021} data2022={data2022}/>
+          <InfoSegment/>
           <Footer/>
     </div>
   )

@@ -129,6 +129,10 @@ module.exports = {
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
+      marquee: 'marquee 15s linear infinite',
+      marquee2: 'marquee2 15s linear infinite',
+      marquee3: 'marquee3 15s linear infinite',
+      marquee4: 'marquee4 15s linear infinite',
     },
     aria: {
       checked: 'checked="true"',
@@ -580,6 +584,22 @@ module.exports = {
           transform: 'none',
           animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
         },
+      },
+      marquee: {
+        '0%': { transform: 'translateX(0%)' },
+        '100%': { transform: 'translateX(-100%)' },
+      },
+      marquee2: {
+        '0%': { transform: 'translateX(100%)' },
+        '100%': { transform: 'translateX(0%)' },
+      },
+      marquee3: {
+        '0%': { transform: 'translateX(200%)' },
+        '100%': { transform: 'translateX(100%)' },
+      },
+      marquee4: {
+        '0%': { transform: 'translateX(300%)' },
+        '100%': { transform: 'translateX(200%)' },
       },
     },
     letterSpacing: {

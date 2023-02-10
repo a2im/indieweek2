@@ -1,5 +1,29 @@
 @tailwind base;
 
+@keyframes strike{
+  0%   { width : 0; }
+  100% { width: 100%; }
+}
+
+.strike {
+  position: relative;
+}
+.strike::after {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 80%;
+  height: 2px;
+  background: #ff1827;
+  animation-name: strike;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; 
+}
+
+
 .bggradient {
   background: linear-gradient(to bottom, #ff1827 5%, transparent 50%);
 }

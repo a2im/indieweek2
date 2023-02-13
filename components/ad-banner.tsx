@@ -36,7 +36,7 @@ export default function AdBanner(){
     if (error) return <p>Error</p>
     
 return(
-<div className="max-w-4xl mx-auto justify-center items-center py-10">
+<div className="max-w-4xl  mx-auto justify-center items-center py-10">
 <Carousel
   swipeable={false}
   draggable={false}
@@ -50,7 +50,7 @@ return(
   transitionDuration={2000}
   arrows={false}
   showDots={false}
-  className="mx-auto"
+  className="mx-auto z-20"
 >
         {/* Map through the data */}
         {data.ads.data.map(ads => (

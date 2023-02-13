@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 
 export function SocialFollowWhite() {
   return (
-    <div className="social-container text-white items-center content-center grid grid-cols-5 p-8 gap-8">           
+    <div className="social-container z-20 text-white items-center content-center grid grid-cols-5 p-8 gap-8">           
       <motion.button 
       whileHover={{scale: 1.04}}
       whileTap={{scale: 0.95}}>

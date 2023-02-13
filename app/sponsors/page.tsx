@@ -93,7 +93,7 @@ export default function Sponsors() {
           content="Founded by independents, for independents, A2IM Indie Week is a four-day conference for the independent music community in the United States."
           key="desc"
         />
-          <div className="mx-auto mb-8 py-20 pb-96 md:pb-64"> 
+          <div className="mx-auto mb-8 py-20"> 
             <div className='grid grid-cols-0 max-w-3xl mb-10 mx-auto gap-10 justify-center'> 
             <form className="rounded-3xl flex flex-col px-8 py-8 bg-black bg-opacity-75 border-4">
               <h3 className="font-bold text-center py-5">Interested in Sponsoring?</h3>

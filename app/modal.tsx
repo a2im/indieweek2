@@ -36,12 +36,12 @@ export default function MyModal (){
 
     return (
         <>
-            <div className="flex fixed bottom-5 right-5 w-20 h-20 rounded-3xl bg-gradient-radial from-black via-transparent to-transparent">
+            <div className=" z-50 flex fixed bottom-5 right-5 w-20 h-20 rounded-3xl bg-gradient-radial from-black via-transparent to-transparent">
             {isModalOpen ? (
                 <motion.div
                 ref={ref}
                 onClick={(e) => e.stopPropagation()}
-                className="fixed border-4 p-5 modalinfo w-96 shadow-2xl bottom-16 md:right-16 right-7"
+                className="fixed border-4 p-5 modalinfo w-96 shadow-2xl bottom-16 md:right-16 right-7 "
                 variants={dropIn}
                 initial="hidden"
                 animate="visible"

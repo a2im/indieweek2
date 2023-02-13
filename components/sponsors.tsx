@@ -106,7 +106,7 @@ export function SponsorTier3() {
 
 export default function SponsorFooter () {
   return (
-    <div className="relative pb-32">
+    <div className="relative py-20 z-30">
     <div className="flex flex-col max-w-5xl mx-auto p-8 bg-black bg-opacity-75 shadow-2xl rounded-2xl border-4">
     <h4 className="font-bold text-5xl uppercase">Our Sponsors</h4>
       <hr className="m-3 border-iwred mx-3"></hr>

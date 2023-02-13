@@ -86,65 +86,10 @@ export function About2(){
                 28 Countries Represented
                 </li>
               </ul>
-              <Carousel responsive={responsive} className="my-5 max-w-sm md:max-w-xl">
-                <div className="px-10 relative max-w-xl">
-                  <Link href="https://a2im.org">
-                    <Image src={'/logos/A2IM-logos/A2IM-logo.png'} width={768} height={324} alt="a2im full logo"/>
-                  </Link>
-                </div>
-                <div className="px-10">
-                  <Link href="https://a2im.org">
-                    <Image src={'/logos/A2IM-logos/A2IM-logo-white.png'} width={768} height={324} alt="a2im full logo"/>
-                  </Link>
-                </div>
-                <div className="px-10">
-                  <Link href="https://a2im.org">
-                    <Image src={'/logos/A2IM-logos/A2IM-button-black.png'} width={1200} height={1200} alt="a2im button logo"/>
-                  </Link>
-                </div>
-                <div className="px-10">
-                  <Link href="https://a2im.org">
-                    <Image src={'/logos/A2IM-logos/A2IM-button-white.png'} width={1200} height={1200} alt="a2im button logo white"/>
-                  </Link>
-                </div>
-                <div className="px-10">
-                  <Link href="https://a2im.org">
-                    <Image src={'/logos/A2IM-logos/A2IM-logo.png'} width={768} height={324} alt="a2im full logo"/>
-                  </Link>
-                </div>
-                <div className="px-10">
-                  <Link href="https://a2im.org">
-                    <Image src={'/logos/A2IM-logos/A2IM-logo-white.png'} width={768} height={324} alt="a2im full logo"/>
-                  </Link>
-                </div>
-                <div className="px-10">
-                  <Link href="https://a2im.org">
-                    <Image src={'/logos/A2IM-logos/A2IM-button-black.png'} width={1200} height={1200} alt="a2im button logo"/>
-                  </Link>
-                </div>
-                <div className="px-10">
-                  <Link href="https://a2im.org">
-                    <Image src={'/logos/A2IM-logos/A2IM-button-white.png'} width={1200} height={1200} alt="a2im button logo white"/>
-                  </Link>
-                </div>
-                <div className="px-10">
-                  <Link href="https://a2im.org">
-                    <Image src={'/logos/A2IM-logos/A2IM-button-white.png'} width={1200} height={1200} alt="a2im button logo white"/>
-                  </Link>
-                </div>
-                <div className="px-10">
-                  <Link href="https://a2im.org">
-                    <Image src={'/logos/A2IM-logos/A2IM-button-white.png'} width={1200} height={1200} alt="a2im button logo white"/>
-                  </Link>
-                </div>
-                <div className="px-10">
-                  <Link href="https://a2im.org">
-                    <Image src={'/logos/A2IM-logos/A2IM-button-white.png'} width={1200} height={1200} alt="a2im button logo white"/>
-                  </Link>
-                </div>
-              </Carousel>
-              <IWButtonInternal href='/tickets'>PAST PROGRAMMING</IWButtonInternal>
-            </div>
+              <div className="py-5">
+              <IWButtonInternal href='/program'>PAST PROGRAMMING</IWButtonInternal>
+           </div> 
+           </div>
           </div>
         </div>
   )

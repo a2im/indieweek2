@@ -15,7 +15,6 @@ export default async function Tickets() {
           <MyTickets/>
           <HotelCard/>
           <InfoSegment/>
-          <div className="pb-96 md:pb-40 mb-20"></div>
           <Footer/>
     </div>
     </>

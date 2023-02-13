@@ -1,11 +1,11 @@
 import './globals.css'
 import MyModal from "./modal"
-import { Providers } from './providers';
+import { Providers } from '../components/providers';
 import { config } from '@fortawesome/fontawesome-svg-core'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import MyNavbar from './navbar';
+import MyNavbar from '../components/navbar';
 config.autoAddCss = false
 library.add(fas)
 

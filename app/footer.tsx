@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from 'next/link'
 import React from "react";
-import { SocialFollowWhite } from "./SocialFollow";
-import AdBanner from "./ad-banner";
-import SponsorFooter from "./sponsors";
+import { SocialFollowWhite } from "../components/SocialFollow";
+import AdBanner from "../components/ad-banner";
+import SponsorFooter from "../components/sponsors";
 
 export default function Footer() {
   return (
     <footer className="md:-mt-60 z-0 w-full pt-32">
+      <SponsorFooter/>
               <div className="mx-auto relative h-[400] md:h-[800px] -mb-[600px]">
         <Image className="absolute inset-x-0 bottom-0 mx-auto" 
         src={'/images/waves.png'} 

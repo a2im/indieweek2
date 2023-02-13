@@ -1,5 +1,5 @@
 import Footer from './footer'
-import MyIntro from './intro'
+import MyIntro from '../components/intro'
 
 export default function Home() {
   return (

@@ -1,7 +1,7 @@
-import { SocialFollowWhite } from '../SocialFollow'
+import { SocialFollowWhite } from '../../components/SocialFollow'
 import Footer from '../footer'
-import WatchPastYears from '../watch-past-years'
-import { Get2021Playlist, Get2022Playlist } from '../YTplaylists';
+import WatchPastYears from '../../components/watch-past-years'
+import { Get2021Playlist, Get2022Playlist } from '../../components/YTplaylists';
 import InfoSegment from '../info';
 
 export default async function Program() {

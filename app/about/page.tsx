@@ -13,7 +13,7 @@ export default async function About() {
           <AboutUS/>
           <WatchPastYears data2021={data2021} data2022={data2022}/>
           <InfoSegment/>
-          <div className="pb-96 md:pb-40 mb-20"></div>
+          <div className=""></div>
           <Footer/>
     </div>
   )

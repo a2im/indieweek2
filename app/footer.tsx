@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="w-full relative">
         <div className="mx-auto md:gap-20 p-10  ">
           <AdBanner/>
-        <div className="max-w-5xl bg-black z-20 relative border-4 rounded-3xl bg-opacity-75 px-10 mx-auto justify-center items-center flex flex-col md:gap-20 md:flex-row py-10">
+        <div className="max-w-5xl  relative px-10 mx-auto justify-center items-center flex flex-col md:gap-20 md:flex-row py-10">
             <Link href="/" passHref className="w-96">
               <Image
                 className="relative hover:scale-105 z-20"

@@ -111,9 +111,7 @@ export default function SponsorFooter () {
     <h4 className="font-bold text-5xl uppercase">Our Sponsors</h4>
       <hr className="m-3 border-iwred mx-3"></hr>
         <SponsorTier1/>
-        <hr className="m-3 border-iwred mx-3"></hr>
         <SponsorTier2/>
-        <hr className="m-3 border-iwred mx-3"></hr>
         <SponsorTier3/>
     </div>
     </div>

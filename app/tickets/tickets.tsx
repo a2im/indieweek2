@@ -13,15 +13,15 @@ export function MyTickets(){
               <hr className="border-black my-5"></hr>
               <h4 className="my-5">
               We’re excited to host A2IM Indie Week in the heart of Manhattan 
-                at the sleek Crowne Plaza Hotel. Stay at the Indie Week HQ for 
+                at the sleek InterContinental New York Times Square. Stay at the Indie Week HQ for 
                 discounted rooms, easy access to the conference site, and to 
                 make the most of our after hours events.</h4>
             </div>
             <div className="rounded-full overflow-hidden m-10">
               <Image
                 className="roundedimage"
-                src="/images/crowne-plaza2-sq.jpeg"
-                alt='crowne-plaza'
+                src="/images/hotel.jpeg"
+                alt='hotel image'
                 width={500}
                 height={500}
                 sizes="(max-width: 768px) 100vw,
@@ -132,11 +132,11 @@ export function HotelCard(){
     <div id="hotels" className="pb-20">
     <h3 className="font-bold text-4xl md:text-5xl text-center pb-10">ACCOMMODATIONS</h3>
     <div  className="max-w-5xl mx-auto text-center pt-5 overflow-hidden border-4 border-white bg-black bg-opacity-50 rounded-3xl">
-    <h3 className="font-bold py-5 text-3xl">Crowne Plaza Times Square</h3>
+    <h3 className="font-bold py-5 text-3xl">InterContinental New York Times Square</h3>
     <div className="rounded-3xl max-h-[300px] overflow-hidden object-contain  p-10 relative py-3">
               <Image
-              className="rounded-3xl w-full relative object-bottom bottom-0"
-                src="/images/crowne-plaza3-banner.jpeg"
+              className="rounded-3xl w-full relative"
+                src="/images/hotel3.jpg"
                 alt='indie week opening reception'
                 width={700}
                 height={300}
@@ -150,7 +150,7 @@ export function HotelCard(){
               <h3 className="text-xl">$309 +tax</h3>
               <hr className="border-iwred mx-10 mt-5"></hr>
               <div className="py-5 bottom-0">
-              <IWButtonExternal href="https://www.ihg.com/crowneplaza/hotels/us/en/find-hotels/select-roomrate?qDest=1605%20Broadway,%20New%20York,%20NY,%20US&qPt=CASH&qCiD=13&qCoD=16&qCiMy=52023&qCoMy=52023&qAdlt=1&qChld=0&qRms=1&qIta=99801505&qRtP=6CBARC&qAAR=6CBARC&qGrpCd=A2I&qSlH=NYCMH&srb_u=1&qSrt=sBR&qBrs=6c.hi.ex.sb.ul.ic.cp.cw.in.vn.cv.rs.ki.ma.sp.va.sp.re.vx.nd.ii.sx.we.lx&qWch=0&qSmP=0&qRad=30&qRdU=mi&setPMCookies=false" >Book Now!</IWButtonExternal>
+              <IWButtonExternal href="https://www.ihg.com/intercontinental/hotels/us/en/find-hotels/select-roomrate?qDest=300%20West%2044th%20Street,%20New%20York,%20NY,%20US&qPt=CASH&qCiD=12&qCoD=16&qCiMy=52023&qCoMy=52023&qAdlt=1&qChld=0&qRms=1&qIta=99801505&qRtP=6CBARC&qGrpCd=ZBA&qSlH=NYCHC&srb_u=1&qSrt=sBR&qBrs=6c.hi.ex.sb.ul.ic.cp.cw.in.vn.cv.rs.ki.ma.sp.va.sp.re.vx.nd.ii.sx.we.lx&qWch=0&qSmP=0&qRad=30&qRdU=mi&setPMCookies=false" >Book Now!</IWButtonExternal>
             </div>
             </div>
             <div className="pt-5 my-5 text-3xl border-solid border-4 border-white rounded-2xl bg-black bg-opacity-75">
@@ -158,12 +158,12 @@ export function HotelCard(){
             <h3 className="text-xl">$329 +tax</h3>
             <hr className="border-iwred mx-10 mt-5"></hr>
             <div className="py-5 bottom-0">
-              <IWButtonExternal href="https://www.ihg.com/crowneplaza/hotels/us/en/find-hotels/select-roomrate?qDest=1605%20Broadway,%20New%20York,%20NY,%20US&qPt=CASH&qCiD=13&qCoD=16&qCiMy=52023&qCoMy=52023&qAdlt=1&qChld=0&qRms=1&qIta=99801505&qRtP=6CBARC&qAAR=6CBARC&qGrpCd=A2I&qSlH=NYCMH&srb_u=1&qSrt=sBR&qBrs=6c.hi.ex.sb.ul.ic.cp.cw.in.vn.cv.rs.ki.ma.sp.va.sp.re.vx.nd.ii.sx.we.lx&qWch=0&qSmP=0&qRad=30&qRdU=mi&setPMCookies=false">Book Now!</IWButtonExternal>
+              <IWButtonExternal href="https://www.ihg.com/intercontinental/hotels/us/en/find-hotels/select-roomrate?qDest=300%20West%2044th%20Street,%20New%20York,%20NY,%20US&qPt=CASH&qCiD=12&qCoD=16&qCiMy=52023&qCoMy=52023&qAdlt=1&qChld=0&qRms=1&qIta=99801505&qRtP=6CBARC&qGrpCd=ZBA&qSlH=NYCHC&srb_u=1&qSrt=sBR&qBrs=6c.hi.ex.sb.ul.ic.cp.cw.in.vn.cv.rs.ki.ma.sp.va.sp.re.vx.nd.ii.sx.we.lx&qWch=0&qSmP=0&qRad=30&qRdU=mi&setPMCookies=false">Book Now!</IWButtonExternal>
             </div>
             </div>
     </div>
     <div className="h-[300px] mt-10">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.058312196947!2d-73.98725238459359!3d40.760742179326584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258567367bf3f%3A0x94b2c1c08294f791!2sCrowne%20Plaza%20Times%20Square%20Manhattan%2C%20an%20IHG%20Hotel!5e0!3m2!1sen!2sus!4v1669928501346!5m2!1sen!2sus" width="100%" height="100%" loading="lazy" className="flex-initial"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.155781811028!2d-73.9894109!3d40.758598299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258539c5fdce1%3A0x284ddbfdad85ef75!2s300%20W%2044th%20St%2C%20New%20York%2C%20NY%2010036!5e0!3m2!1sen!2sus!4v1678390526583!5m2!1sen!2sus" width="100%" height="100%" loading="lazy" className="flex-initial"></iframe>
   </div>
   </div>
   </div>

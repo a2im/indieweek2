@@ -47,7 +47,7 @@ export function MyTickets(){
                   Members
                 </p>
                 <p className="text-2xl text-right my-auto"><span className="text-iwred px-2 strike">$599.99</span>
-                  $199.99
+                  $299.99
                 </p>
                 </div><hr className="border-iwred"></hr>
                 </li>

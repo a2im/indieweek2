@@ -26,12 +26,12 @@ export function Intro() {
               <Image
                 height={496}
                 width={1747}
-                src="/logos/Indie Week 23.png"
+                src="/logos/Indie Week 23 Logo_White-01 .png"
                 alt="Indie Week Logo"
                 style={{
                   maxWidth: "100%",
                   height: "auto"
-                }} />
+                }} priority />
             </motion.div>
             <motion.div
               initial= {{

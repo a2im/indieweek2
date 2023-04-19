@@ -49,7 +49,7 @@ export function About1 () {
                   style={{
                     width: "100%",
                     height: "auto",
-                  }} />
+                  }} priority />
               </div>
             </div>
           </div>

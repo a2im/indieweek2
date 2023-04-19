@@ -218,7 +218,6 @@ export function NavbarAnnouncements(){
       Name: "Indie Week",
     }});
     if (error) return <p>Error</p>
-    console.log(data)
   return (
     <>
     <div className="w-full bg-white">

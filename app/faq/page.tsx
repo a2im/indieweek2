@@ -3,15 +3,14 @@ import { JumpTo } from './faq-categories'
 import Footer from '../footer'
 import InfoSegment from '../info'
 
+export const metadata = {
+  title: 'Indie Week - FAQ',
+  description: 'Founded by independents, for independents, A2IM Indie Week is a four-day conference for the independent music community in the United States.',
+}
+
 export default function FAQ() {
   return (
     <div className="bggradient pt-8">
-      <title>Indie Week - Program</title>
-      <meta
-          name="description"
-          content="Founded by independents, for independents, A2IM Indie Week is a four-day conference for the independent music community in the United States."
-          key="desc"
-        />
       <div className="">
         <JumpTo/>
         <GetFAQ Category='GENERAL'/>

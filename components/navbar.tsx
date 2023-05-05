@@ -74,7 +74,7 @@ export default function MyNavbar() {
             </div>
           </div>
           <div>
-            <div
+            <div ref={ref}
               className={`flex-1 py-10 md:py-0 justify-center md:block ${
                 navbar ? 'block' : 'hidden'
               }`}

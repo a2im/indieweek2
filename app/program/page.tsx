@@ -6,18 +6,17 @@ import InfoSegment from '../info';
 import Image from 'next/image';
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Indie Week - Program',
+  description: 'Founded by independents, for independents, A2IM Indie Week is a four-day conference for the independent music community in the United States.',
+}
+
 export default async function Program() {
   const data2021 = await Get2021Playlist()
   const data2022 = await Get2022Playlist()
   return (
     <>
     <div className="bggradient pt-8">
-          <title>Indie Week - Program</title>
-          <meta
-          name="description"
-          content="Founded by independents, for independents, A2IM Indie Week is a four-day conference for the independent music community in the United States."
-          key="desc"
-        />
                      <div className="max-w-5xl mx-auto">
     <div className="z-10 flex flex-col md:flex-row md:mt-10 items-center md:justify-around mx-autop-8">
       <div className="relative gap-10 items-center max-w-xl py-8 px-5">

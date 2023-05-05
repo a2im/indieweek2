@@ -11,6 +11,7 @@ export function Intro() {
       <div className="items-center justify-center flex flex-col md:flex-row gap-10 py-20">
           <AnimatePresence>
             <motion.div 
+            key={'iwlogomain'}
               initial= {{
                 scale: "0%",
                   }}
@@ -34,6 +35,7 @@ export function Intro() {
                 }} priority />
             </motion.div>
             <motion.div
+            key={'iwstars'}
               initial= {{
                   opacity: 0,
                   x:-2000,

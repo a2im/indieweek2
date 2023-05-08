@@ -8,6 +8,12 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm'
 import Playlist from '../../components/playlist';
 
+export const dynamic = 'force-dynamic',
+  dynamicParams = true,
+  revalidate = 0,
+  fetchCache = 'auto',
+  runtime = 'nodejs',
+  preferredRegion = 'auto'
 
 export const metadata = {
   title: 'Indie Week - Program',
@@ -18,8 +24,6 @@ export default async function Program() {
   const dataData = await getData()
   const helpData = await getHelp()
   const [data, help] = await Promise.all([dataData, helpData]);
-  
-
   const MyPlaylists = data.data.attributes.WatchPastYears
   const YTPlaylists = await Promise.all(MyPlaylists.map(async (WatchPastYears) => 
   getPlaylist(WatchPastYears?.PlaylistID)));

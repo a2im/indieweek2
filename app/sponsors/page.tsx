@@ -1,13 +1,11 @@
-import Footer from '../../components/footer'
+import Footer from '../footer'
 import SponsorForm from './sponsor-form'
 import type { Metadata } from 'next';
-
-export const dynamic = 'force-dynamic',
-  dynamicParams = true,
-  revalidate = 0,
-  fetchCache = 'auto',
-  runtime = 'nodejs',
-  preferredRegion = 'auto'
+export const dynamic = 'auto'
+export const revalidate = false
+export const fetchCache = 'auto'
+export const runtime = 'nodejs'
+export const preferredRegion = 'all'
 
 export const metadata: Metadata = {  
   title: 'Indie Week - Sponsors',

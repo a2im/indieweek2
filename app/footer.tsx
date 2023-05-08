@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from 'next/link'
 import React from "react";
-import Socials from "./socials";
-import AdBanner from "./ad-banner";
-import SponsorFooter from "./sponsors";
+import Socials from "../components/socials";
+import AdBanner from "../components/ad-banner";
+import SponsorFooter from "../components/sponsors";
 
 export default function Footer() {
   return (

@@ -10,8 +10,6 @@ import MyNavbar from '../components/navbar';
 config.autoAddCss = false
 library.add(fas)
 
-
-
 export default function RootLayout({
   children
 }: {
@@ -20,13 +18,13 @@ export default function RootLayout({
   
   return (
     <html lang="en" style={{scrollBehavior:'smooth'}}>
-<link
+      <link
         rel="apple-touch-icon"
         sizes="180x180"
         href="/favicon/apple-touch-icon-light.png"
         media="(prefers-color-scheme: light)"
       />
-            <link
+      <link
         rel="apple-touch-icon"
         sizes="180x180"
         href="/favicon/apple-touch-icon-dark.png"
@@ -39,7 +37,7 @@ export default function RootLayout({
         href="/favicon/A2IM-button-32x32-light.png"
         media="(prefers-color-scheme: light)"
       />
-            <link
+      <link
         rel="icon"
         type="image/png"
         sizes="32x32"

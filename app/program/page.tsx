@@ -1,20 +1,17 @@
 import Socials from '../../components/socials'
-import Footer from '../../components/footer'
+import Footer from '../footer'
 import { WatchPastYears } from '../../components/playlist';
-import HelpSection from '../../components/help-section';
+import HelpSection from '../help-section';
 import Image from 'next/image';
 import { getData, getHelp, getPlaylist} from '../get-data';
 import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm'
-import Playlist from '../../components/playlist';
 import type { Metadata } from 'next';
-
-export const dynamic = 'force-dynamic',
-  dynamicParams = true,
-  revalidate = 0,
-  fetchCache = 'auto',
-  runtime = 'nodejs',
-  preferredRegion = 'auto'
+export const dynamic = 'auto'
+export const revalidate = 0
+export const fetchCache = 'auto'
+export const runtime = 'nodejs'
+export const preferredRegion = 'all'
 
 export const metadata: Metadata = { 
   title: 'Indie Week - Program',

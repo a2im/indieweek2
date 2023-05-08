@@ -1,17 +1,14 @@
 import 'server-only';
-import Footer from '../../components/footer'
+import Footer from '../footer'
 import { MyTickets,HotelCard } from './tickets'
-import MyButton from '../../components/button';
 import { getData,getHelp } from '../get-data'
-import HelpSection from '../../components/help-section';
+import HelpSection from '../help-section';
 import type { Metadata } from 'next';
-
-export const dynamic = 'force-dynamic',
-  dynamicParams = true,
-  revalidate = 0,
-  fetchCache = 'auto',
-  runtime = 'nodejs',
-  preferredRegion = 'auto'
+export const dynamic = 'auto'
+export const revalidate = false
+export const fetchCache = 'auto'
+export const runtime = 'nodejs'
+export const preferredRegion = 'all'
 
   export const metadata: Metadata = {
   title: 'Indie Week - Tickets',

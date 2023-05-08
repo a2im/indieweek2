@@ -4,6 +4,7 @@ import { MyTickets,HotelCard } from './tickets'
 import MyButton from '../../components/button';
 import { getData,getHelp } from '../get-data'
 import HelpSection from '../../components/help-section';
+import type { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic',
   dynamicParams = true,
@@ -11,8 +12,8 @@ export const dynamic = 'force-dynamic',
   fetchCache = 'auto',
   runtime = 'nodejs',
   preferredRegion = 'auto'
- 
-export const metadata = {
+
+  export const metadata: Metadata = {
   title: 'Indie Week - Tickets',
   description: 'Founded by independents, for independents, A2IM Indie Week is a four-day conference for the independent music community in the United States.',
 }

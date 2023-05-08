@@ -1,4 +1,4 @@
-import MyButton from '../../components/my-button'
+import MyButton from '../../components/button'
 import Image from "next/image";
 
 export function MyTickets(){

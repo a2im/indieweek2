@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import MyButton from './my-button'
+import MyButton from './button'
 import { AnimatePresence, motion } from "framer-motion";
 
 export function Intro() {

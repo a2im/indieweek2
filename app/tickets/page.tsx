@@ -1,8 +1,8 @@
 import 'server-only';
 import Footer from '../../components/footer'
 import { MyTickets,HotelCard } from './tickets'
-import MyButton from '../../components/my-button';
-import { getData,getHelp } from '../../lib/REST/get-data'
+import MyButton from '../../components/button';
+import { getData,getHelp } from '../get-data'
 import HelpSection from '../../components/help-section';
 
 export const dynamic = 'force-dynamic',

@@ -1,4 +1,4 @@
-import MyButton from "./my-button"
+import MyButton from "./button"
 
 export default function HelpSection({data, help}){  
     if (data.data.attributes?.isActive === true) return (
@@ -15,14 +15,20 @@ export default function HelpSection({data, help}){
                       ))}
                 </div> 
                 : 
-                <div key={Help.id} className="px-10 py-5 rounded-3xl bg-black bg-opacity-75 border-4 border-white mx-auto ">
-                  <hr className="m-3 border-iwred mx-10"></hr>
+                <div key={Help.id} className="flex px-10 py-5 rounded-3xl bg-black bg-opacity-75 border-4 border-white mx-auto items-center justify-center">
+                  <div>
+
+                    <div className="grid grid-cols-0 items-center justify-center">
                       {Help.Button.map(Button => (
-                        <div key={Button.id}>
+                        <>
+                        <div key={Button.id} className="py-3">
                         <MyButton type='external' href={Button.URL}>{Button.Text}</MyButton>
-                        <hr className="m-3 border-iwred mx-10"></hr>
                         </div>
+                        <hr className="m-3 border-iwred mx-2 last:hidden"></hr>
+                        </>
                       ))}
+                      </div>
+                      </div>
                 </div>
                 )
                   

@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "next/image";
-import MyButton from "../../components/my-button"
+import MyButton from "../../components/button"
 
 export function About1 () {
     return (

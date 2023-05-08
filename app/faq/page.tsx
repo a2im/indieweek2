@@ -2,7 +2,7 @@ import 'server-only';
 import GetFAQ from './faq-categories'
 import { JumpTo } from './faq-categories'
 import Footer from '../../components/footer'
-import { getHelp, getData } from '../../lib/REST/get-data'
+import { getHelp, getData } from '../get-data'
 import HelpSection from '../../components/help-section';
 
 export const metadata = {

@@ -1,8 +1,7 @@
-import 'server-only';
+
 import AboutUS from './about-us'
 import Footer from '../../components/footer'
-import WatchPastYears from '../../components/watch-past-years'
-import { getData, getHelp } from '../../lib/REST/get-data';
+import { getData, getHelp } from '../get-data';
 import HelpSection from '../../components/help-section';
 
 export const dynamic = 'force-dynamic',
@@ -23,9 +22,7 @@ export default async function About() {
   return (
     <div className="bggradient2 pt-8">
           <AboutUS/>
-          {data.attributes.WatchPastYears.map(playlist => (
-          <WatchPastYears key={playlist.id} data={data} playlist={playlist.PlaylistID}/>
-        ))}
+          
           <HelpSection data={data} help={help}/>
           <div className=""></div>
           <Footer/>

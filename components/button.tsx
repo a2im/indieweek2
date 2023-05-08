@@ -9,7 +9,7 @@ export default function IWButton ({ children, href, type }) {
           target="_blank"
           rel="noopener noreferrer">
           <div className="drop-shadow-2xl max-h-21 justify-center leading-tight mx-auto">
-              <button className="hover:scale-105 rounded-full bg-white text-black px-6">
+              <button className="hover:scale-[1.01] rounded-full bg-white text-black px-6">
                 <h4 className="align-middle grow p-2 shrink font-normal leading-tight whitespace-nowrap uppercase">
                 {children}
                 </h4>
@@ -23,7 +23,7 @@ export default function IWButton ({ children, href, type }) {
   return <div className="mx-auto text-center">
   <Link href={href}>
   <div className="drop-shadow-2xl max-h-21 justify-center leading-tight mx-auto">
-      <button className="hover:scale-105 rounded-full bg-white text-black px-6">
+      <button className="hover:scale-[1.01] rounded-full bg-white text-black px-6">
         <h4 className="align-middle grow p-2 shrink font-normal leading-tight whitespace-nowrap uppercase">
         {children}
         </h4>
@@ -36,7 +36,7 @@ export default function IWButton ({ children, href, type }) {
   return <div className="mx-auto text-center">
   <Link href={href} prefetch={false} replace passHref>
   <div className="drop-shadow-2xl max-h-21 justify-center leading-tight mx-auto">
-      <button className="hover:scale-105 rounded-full bg-white text-black px-6">
+      <button className="hover:scale-[1.01] rounded-full bg-white text-black px-6">
         <h4 className="align-middle p-2 shrink font-normal leading-tight whitespace-nowrap uppercase">
         {children}
         </h4>

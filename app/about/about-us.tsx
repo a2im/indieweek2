@@ -1,32 +1,6 @@
-'use client';
-
 import React from "react"
 import Image from "next/image";
-import Link from "next/link";
-import { IWButtonInternal, IWButtonExternal, IWButtonAnchor } from "../button";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import InfoSegment from "../info";
-
-const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3
-  },
-  desktop: {
-    breakpoint: { max: 1024, min: 728 },
-    items: 3
-  },
-  tablet: {
-    breakpoint: { max: 728, min: 640 },
-    items: 1
-  },
-  mobile: {
-    breakpoint: { max: 640, min: 0 },
-    items: 1
-  }
-};
+import MyButton from "../../components/my-button"
 
 export function About1 () {
     return (
@@ -36,7 +10,7 @@ export function About1 () {
                 <h2> WHAT IS A2IM INDIE WEEK?</h2>
                 <hr className="border-black my-5"></hr>
                 <h4 className="my-5">Running for over 15 years, and with over 1200 attendees, it&apos;s the largest independent music gathering in the world. Yearly, Indie Week hosts over 60 panels and workshops, 1800 curated business meetings, and countless opportunities tailor-made for the independent sector&apos;s unique needs.</h4>
-              <IWButtonInternal href='/tickets'>Buy Tickets</IWButtonInternal>
+              <MyButton type='internal' href='/tickets'>Buy Tickets</MyButton>
               </div>
               <div className="image-cropper m-7">
                 <Image
@@ -87,7 +61,7 @@ export function About2(){
                 </li>
               </ul>
               <div className="py-5">
-              <IWButtonInternal href='/program'>PAST PROGRAMMING</IWButtonInternal>
+              <MyButton type='internal' href='/program'>PAST PROGRAMMING</MyButton>
            </div> 
            </div>
           </div>

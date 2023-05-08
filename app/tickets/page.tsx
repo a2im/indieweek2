@@ -1,6 +1,16 @@
-import Footer from '../footer'
+import 'server-only';
+import Footer from '../../components/footer'
 import { MyTickets,HotelCard } from './tickets'
-import InfoSegment from '../info'
+import MyButton from '../../components/my-button';
+import { getData,getHelp } from '../../lib/REST/get-data'
+import HelpSection from '../../components/help-section';
+
+export const dynamic = 'force-dynamic',
+  dynamicParams = true,
+  revalidate = 0,
+  fetchCache = 'auto',
+  runtime = 'nodejs',
+  preferredRegion = 'auto'
  
 export const metadata = {
   title: 'Indie Week - Tickets',
@@ -8,12 +18,14 @@ export const metadata = {
 }
 
 export default async function Tickets() {
+  const data = await getData();
+  const help = await getHelp();
   return (
     <>
     <div className="bggradient pt-8">
           <MyTickets/>
           <HotelCard/>
-          <InfoSegment/>
+          <HelpSection data={data} help={help}/>
           <Footer/>
     </div>
     </>

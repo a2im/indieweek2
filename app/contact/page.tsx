@@ -1,6 +1,4 @@
-import { motion } from "framer-motion"
-import Link from 'next/link'
-import Footer from '../footer';
+import Footer from '../../components/footer';
 import ContactForm from "./contact-form";
 
 export const metadata = {

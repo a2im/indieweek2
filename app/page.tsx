@@ -1,4 +1,5 @@
-import Footer from './footer'
+import 'server-only';
+import Footer from '../components/footer'
 import MyIntro from '../components/intro'
 
 export const metadata = {

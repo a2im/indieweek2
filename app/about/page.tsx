@@ -1,8 +1,16 @@
+import 'server-only';
 import AboutUS from './about-us'
-import Footer from '../footer'
+import Footer from '../../components/footer'
 import WatchPastYears from '../../components/watch-past-years'
-import { Get2021Playlist, Get2022Playlist } from '../../components/YTplaylists';
-import InfoSegment from '../info';
+import { getData, getHelp } from '../../lib/REST/get-data';
+import HelpSection from '../../components/help-section';
+
+export const dynamic = 'force-dynamic',
+  dynamicParams = true,
+  revalidate = 0,
+  fetchCache = 'auto',
+  runtime = 'nodejs',
+  preferredRegion = 'auto'
 
 export const metadata = {
   title: 'Indie Week - About Us',
@@ -10,13 +18,15 @@ export const metadata = {
 }
 
 export default async function About() {
-  const data2021 = await Get2021Playlist()
-  const data2022 = await Get2022Playlist()
+  const data = await getData()
+  const help = await getHelp()
   return (
     <div className="bggradient2 pt-8">
           <AboutUS/>
-          <WatchPastYears data2021={data2021} data2022={data2022}/>
-          <InfoSegment/>
+          {data.attributes.WatchPastYears.map(playlist => (
+          <WatchPastYears key={playlist.id} data={data} playlist={playlist.PlaylistID}/>
+        ))}
+          <HelpSection data={data} help={help}/>
           <div className=""></div>
           <Footer/>
     </div>

@@ -5,7 +5,6 @@ import { useQuery } from '@apollo/client';
 import Link from "next/link";
 import Image from "next/image";
 
-
 export function SponsorTier1() {
     const { loading, error, data } = useQuery(GET_ALL_SPONSORS, { 
       variables: {

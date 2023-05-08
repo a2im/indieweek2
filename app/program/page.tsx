@@ -1,10 +1,12 @@
-import { SocialFollowWhite } from '../../components/SocialFollow'
-import Footer from '../footer'
+import Socials from '../../components/socials'
+import Footer from '../../components/footer'
 import WatchPastYears from '../../components/watch-past-years'
-import { Get2021Playlist, Get2022Playlist } from '../../components/YTplaylists';
-import InfoSegment from '../info';
+import HelpSection from '../../components/help-section';
 import Image from 'next/image';
-import Link from 'next/link';
+import { getData, getHelp, getPlaylist} from '../../lib/REST/get-data';
+import ReactMarkdown from "react-markdown";
+import remarkGfm from 'remark-gfm'
+
 
 export const metadata = {
   title: 'Indie Week - Program',
@@ -12,50 +14,58 @@ export const metadata = {
 }
 
 export default async function Program() {
-  const data2021 = await Get2021Playlist()
-  const data2022 = await Get2022Playlist()
+  const dataData = await getData()
+  const helpData = await getHelp()
+  const [data, help] = await Promise.all([dataData, helpData]);
   return (
     <>
     <div className="bggradient pt-8">
-                     <div className="max-w-5xl mx-auto">
-    <div className="z-10 flex flex-col md:flex-row md:mt-10 items-center md:justify-around mx-autop-8">
-      <div className="relative gap-10 items-center max-w-xl py-8 px-5">
-              <h3 className="font-bold text-3xl md:text-5xl mx-auto"> Introducing the A2IM Indie Week CLE series</h3>
+      <div className="max-w-5xl mx-auto">
+        <div className="z-10 flex md:mt-10 items-center mx-auto p-8">
+          {data?.data.attributes?.Info?.map(Info => (
+            <div key={Info.id} className="mx-auto justify-center grid grid-cols-0 md:grid-cols-2 relative items-center gap-10 py-8 px-5">
+            <div>
+              <h3 className="font-bold text-3xl md:text-5xl mx-auto"> {Info.Title}</h3>
               <hr className="border-black my-5"></hr>
               <h4 className="my-5">
-              This year we are proud to host the A2IM Indie Week 2023 Continuing Legal Education series, Presented by <span className="hover:scale-105"><Link href="https://www.covey.law/">CoveyLaw</Link></span>. Indie Week badge holders are welcome to join the 3 workshops, all of which grant credits.</h4>
-            </div>
-            <div className="md:m-20 m-10 px-10 relative">
-              <Link href="https://www.covey.law/">
+              {Info.Text}</h4>
+              </div>
+            <div className="w-64 h-64 relative justify-center mx-auto">
               <Image
                 className="hover:scale-105 mx-auto"
-                src="/logos/coveylaw logo-01.png"
-                alt='crowne-plaza'
-                width={361}
-                height={434}
+                src={Info.Image.data.attributes.url}
+                alt={Info.Image.data.attributes.alternativeText}
+                width={Info.Image.data.attributes.width}
+                height={Info.Image.data.attributes.height}
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
-              33vw" ></Image>
-              </Link>
+              33vw" >
+              </Image>
               </div>
+          
           </div>
+      ))}
+      
+      </div>
         </div>
             <div className='flex max-w-5xl mb-10 mx-auto gap-10 justify-center bg-black bg-opacity-75 rounded-3xl border-4 border-white'> 
               <div className='mx-auto pb-10 p-4'>
-                <h3 className="mb-6 font-bold text-center">
-                  2023 PROGRAM COMING SOON 
-                </h3>
-                <hr className="border-iwred my-5 mx-5"></hr>
-                <h4 className="text-center">Follow us on social media for the latest updates and subscribe
-to the Indie Week mailing list to hear first about program availability!</h4>
+              <ReactMarkdown className="line-break" remarkPlugins={[remarkGfm]}>{data.data.attributes.Program}</ReactMarkdown>
               <div className="max-w-lg pt-20 mx-auto">
-              <SocialFollowWhite/>
+              <Socials color='white'/>
               </div>
               </div>
               </div>
           </div>
-          <WatchPastYears data2021={data2021} data2022={data2022}/>
-          <InfoSegment/>
+        <div id="past-years" className="p-10 rounded-3xl bg-black bg-opacity-75 border-4 border-white mx-auto max-w-5xl pb-20">
+        <h3 className="font-bold mb-5">Watch Past Years</h3>
+        
+        
+        
+
+
+          </div>
+          <HelpSection data={data} help={help}/>
           <Footer/>
     </>
   )

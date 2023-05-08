@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
-import { IWButtonInternal, IWButtonAnchor } from "../app/button"
+import MyButton from './my-button'
 import { AnimatePresence, motion } from "framer-motion";
-
 
 export function Intro() {
   return (
@@ -88,9 +87,9 @@ export function Intro() {
       Founded by independents, for independents, A2IM Indie Week is a three-day conference for the independent music community in the United States.
       </h4>
         <div className="flex flex-col md:flex-row justify-between content-center max-w-5xl mx-auto pb-10 gap-5">
-          <IWButtonInternal href="/about" >LEARN MORE</IWButtonInternal>
-          <IWButtonInternal href="/tickets" >GET TICKETS</IWButtonInternal>
-          <IWButtonAnchor href="/tickets#hotels">BOOK YOUR STAY</IWButtonAnchor>
+          <MyButton type='internal' href="/about" >LEARN MORE</MyButton>
+          <MyButton type='internal' href="/tickets" >GET TICKETS</MyButton>
+          <MyButton type='anchor' href="/tickets#hotels">BOOK YOUR STAY</MyButton>
         </div>
     </div>
   </>
@@ -110,7 +109,7 @@ export function Intro2 () {
             DSPs, agencies and more, participants can
             expect 3 days of insightful discussions and
             fruitful networking.</h4>
-          <IWButtonInternal href='/about'>LEARN MORE</IWButtonInternal>
+          <MyButton type='internal' href='/about'>LEARN MORE</MyButton>
         </div>
         <div className="image-cropper m-7">
           <Image
@@ -162,7 +161,7 @@ return (
             topics in music. Subjects covered have included
             touring, marketing, sync licensing, industry
             predictions, DSP workshops, and many more.</h4>
-          <IWButtonAnchor href='/program#past-years'>PAST PROGRAMMING</IWButtonAnchor>
+          <MyButton type='anchor' href='/program#past-years'>PAST PROGRAMMING</MyButton>
         </div>
     </div>
   </div>

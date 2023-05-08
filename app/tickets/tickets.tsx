@@ -1,6 +1,4 @@
-"use client";
-
-import { IWButtonInternal, IWButtonExternal } from "../button"
+import MyButton from '../../components/my-button'
 import Image from "next/image";
 
 export function MyTickets(){
@@ -74,7 +72,7 @@ export function MyTickets(){
               </ul>
               </div>
               <div className="py-5">
-              <IWButtonExternal href='https://membership.a2im.org/events/Details/a2im-indie-week-2023-791437?sourceTypeId=Hub'>Buy Now</IWButtonExternal>
+              <MyButton type='external' href='https://membership.a2im.org/events/Details/a2im-indie-week-2023-791437?sourceTypeId=Hub'>Buy Now</MyButton>
             </div>
             </div>
             <div className="flex flex-col grow content-between justify-between border-4 border-white bg-black bg-opacity-50 rounded-3xl">
@@ -116,7 +114,7 @@ export function MyTickets(){
               </ul>
               </div>
               <div className="py-5 bottom-0">
-              <IWButtonExternal href='https://membership.a2im.org/events/Details/a2im-indie-week-2023-791437?sourceTypeId=Hub'>Buy Now</IWButtonExternal>
+              <MyButton type='external' href='https://membership.a2im.org/events/Details/a2im-indie-week-2023-791437?sourceTypeId=Hub'>Buy Now</MyButton>
             </div>
             </div>
           </div>
@@ -150,7 +148,7 @@ export function HotelCard(){
               <h3 className="text-xl">$309 +tax</h3>
               <hr className="border-iwred mx-10 mt-5"></hr>
               <div className="py-5 bottom-0">
-              <IWButtonExternal href="https://www.ihg.com/intercontinental/hotels/us/en/find-hotels/select-roomrate?qDest=300%20West%2044th%20Street,%20New%20York,%20NY,%20US&qPt=CASH&qCiD=12&qCoD=16&qCiMy=52023&qCoMy=52023&qAdlt=1&qChld=0&qRms=1&qIta=99801505&qRtP=6CBARC&qGrpCd=ZBA&qSlH=NYCHC&srb_u=1&qSrt=sBR&qBrs=6c.hi.ex.sb.ul.ic.cp.cw.in.vn.cv.rs.ki.ma.sp.va.sp.re.vx.nd.ii.sx.we.lx&qWch=0&qSmP=0&qRad=30&qRdU=mi&setPMCookies=false" >Book Now!</IWButtonExternal>
+              <MyButton type='external' href="https://www.ihg.com/intercontinental/hotels/us/en/find-hotels/select-roomrate?qDest=300%20West%2044th%20Street,%20New%20York,%20NY,%20US&qPt=CASH&qCiD=12&qCoD=16&qCiMy=52023&qCoMy=52023&qAdlt=1&qChld=0&qRms=1&qIta=99801505&qRtP=6CBARC&qGrpCd=ZBA&qSlH=NYCHC&srb_u=1&qSrt=sBR&qBrs=6c.hi.ex.sb.ul.ic.cp.cw.in.vn.cv.rs.ki.ma.sp.va.sp.re.vx.nd.ii.sx.we.lx&qWch=0&qSmP=0&qRad=30&qRdU=mi&setPMCookies=false" >Book Now!</MyButton>
             </div>
             </div>
             <div className="pt-5 my-5 text-3xl border-solid border-4 border-white rounded-2xl bg-black bg-opacity-75">
@@ -158,7 +156,7 @@ export function HotelCard(){
             <h3 className="text-xl">$329 +tax</h3>
             <hr className="border-iwred mx-10 mt-5"></hr>
             <div className="py-5 bottom-0">
-              <IWButtonExternal href="https://www.ihg.com/intercontinental/hotels/us/en/find-hotels/select-roomrate?qDest=300%20West%2044th%20Street,%20New%20York,%20NY,%20US&qPt=CASH&qCiD=12&qCoD=16&qCiMy=52023&qCoMy=52023&qAdlt=1&qChld=0&qRms=1&qIta=99801505&qRtP=6CBARC&qGrpCd=ZBA&qSlH=NYCHC&srb_u=1&qSrt=sBR&qBrs=6c.hi.ex.sb.ul.ic.cp.cw.in.vn.cv.rs.ki.ma.sp.va.sp.re.vx.nd.ii.sx.we.lx&qWch=0&qSmP=0&qRad=30&qRdU=mi&setPMCookies=false">Book Now!</IWButtonExternal>
+              <MyButton type='external' href="https://www.ihg.com/intercontinental/hotels/us/en/find-hotels/select-roomrate?qDest=300%20West%2044th%20Street,%20New%20York,%20NY,%20US&qPt=CASH&qCiD=12&qCoD=16&qCiMy=52023&qCoMy=52023&qAdlt=1&qChld=0&qRms=1&qIta=99801505&qRtP=6CBARC&qGrpCd=ZBA&qSlH=NYCHC&srb_u=1&qSrt=sBR&qBrs=6c.hi.ex.sb.ul.ic.cp.cw.in.vn.cv.rs.ki.ma.sp.va.sp.re.vx.nd.ii.sx.we.lx&qWch=0&qSmP=0&qRad=30&qRdU=mi&setPMCookies=false">Book Now!</MyButton>
             </div>
             </div>
     </div>

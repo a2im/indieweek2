@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from 'next/link'
 import React from "react";
-import { SocialFollowWhite } from "../components/SocialFollow";
-import AdBanner from "../components/ad-banner";
-import SponsorFooter from "../components/sponsors";
+import Socials from "./socials";
+import AdBanner from "./ad-banner";
+import SponsorFooter from "./sponsors";
 
 export default function Footer() {
   return (
@@ -25,7 +25,7 @@ export default function Footer() {
                   height: "auto"
                 }} />
             </Link>
-            <SocialFollowWhite />
+            <Socials color='white' />
             </div>
         </div>
     </footer>

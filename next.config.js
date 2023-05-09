@@ -83,6 +83,12 @@ module.exports = {
       },
       {
         protocol: 'https',
+        hostname: 'www.indieweek.xyz',
+        port: '443',
+        pathname: '/***',
+      },
+      {
+        protocol: 'https',
         hostname: 'a2im-strapi-cms-images.s3.amazonaws.com',
         port: '443',
         pathname: '/***',

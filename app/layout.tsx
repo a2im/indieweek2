@@ -70,6 +70,7 @@ export default function RootLayout({
         />
       <link rel="manifest" href="/favicon/site.webmanifest" />
       <Script
+        id="google-tag"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
         strategy="afterInteractive"
       />

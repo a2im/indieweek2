@@ -56,8 +56,8 @@ export default function MyModal (){
                 <Image
                 src="/logos/A2IM-logos/A2IM-button-white.png"
                 alt="a2im button"
-                width={75}
-                height={75}
+                width={100}
+                height={100}
                 style={{
                   maxWidth: "100%",
                   height: "auto",

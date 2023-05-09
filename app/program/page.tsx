@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { getData, getHelp, getPlaylist} from '../get-data';
 import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm'
+import remarkBreaks from 'remark-breaks'
 import type { Metadata } from 'next';
 export const dynamic = 'auto'
 export const revalidate = false
@@ -62,7 +63,7 @@ export default async function Program() {
         </div>
             <div className='flex max-w-5xl mb-10 mx-auto gap-10 justify-center bg-black bg-opacity-75 rounded-3xl border-4 border-white'> 
               <div className='mx-auto pb-10 p-4'>
-              <ReactMarkdown className="line-break" remarkPlugins={[remarkGfm]}>{data.data.attributes.Program}</ReactMarkdown>
+              <ReactMarkdown className="paragraph" remarkPlugins={[remarkGfm, remarkBreaks]}>{data.data.attributes.Program}</ReactMarkdown>
               <div className="max-w-lg pt-20 mx-auto">
               <Socials color='white'/>
               </div>

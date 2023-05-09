@@ -143,6 +143,16 @@
     html::-webkit-scrollbar {
       display: none;
     }
+  .paragraph h3 { 
+    margin-top: 40px;
+    margin-bottom: 20px; }
+  .paragraph ul {
+    margin-left: 1em;
+    list-style-type: disc;
+  }
+  .paragraph li {
+    padding-bottom: 1em;
+  }
 }
 
 

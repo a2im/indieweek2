@@ -1,3 +1,4 @@
+import 'server-only';
 import Footer from '../footer'
 import { MyTickets,HotelCard } from './tickets'
 import { getData,getHelp } from '../get-data'

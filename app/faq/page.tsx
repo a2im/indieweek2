@@ -1,3 +1,4 @@
+import 'server-only';
 import GetFAQ from './faq-categories'
 import { JumpTo } from './faq-categories'
 import Footer from '../footer'

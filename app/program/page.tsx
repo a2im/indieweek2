@@ -1,3 +1,4 @@
+import 'server-only';
 import Socials from '../../components/socials'
 import Footer from '../footer'
 import { WatchPastYears } from '../../components/playlist';

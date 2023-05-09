@@ -1,3 +1,4 @@
+import 'server-only';
 import AboutUS from './about-us'
 import Footer from '../footer'
 import { getData, getHelp } from '../get-data';

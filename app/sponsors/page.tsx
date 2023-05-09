@@ -1,3 +1,4 @@
+import 'server-only';
 import Footer from '../footer'
 import SponsorForm from './sponsor-form'
 import type { Metadata } from 'next';

@@ -26,7 +26,7 @@ export function Intro() {
               <Image
                 height={496}
                 width={1747}
-                src="/logos/Indie Week 23 Logo_White-01 .png"
+                src="/logos/Indie Week 23 Logo_White-01 .webp"
                 alt="Indie Week Logo"
                 style={{
                   maxWidth: "100%",

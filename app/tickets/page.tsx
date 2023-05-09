@@ -4,7 +4,7 @@ import { MyTickets,HotelCard } from './tickets'
 import { getData,getHelp } from '../get-data'
 import HelpSection from '../help-section';
 import type { Metadata } from 'next';
-export const dynamic = 'auto'
+export const dynamic = 'force-dynamic'
 export const dynamicParams = true
 export const revalidate = false
 export const fetchCache = 'auto'

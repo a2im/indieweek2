@@ -9,7 +9,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm'
 import remarkBreaks from 'remark-breaks'
 import type { Metadata } from 'next';
-export const dynamic = 'auto'
+export const dynamic = 'force-dynamic'
 export const dynamicParams = true
 export const revalidate = false
 export const fetchCache = 'auto'

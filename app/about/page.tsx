@@ -20,7 +20,6 @@ export default async function About() {
   return (
     <div className="bggradient2 pt-8">
           <AboutUS/>
-          
           <HelpSection data={data} help={help}/>
           <div className=""></div>
           <Footer/>

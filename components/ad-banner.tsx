@@ -1,5 +1,4 @@
 'use client';
-
 import { GET_ALL_ADS } from "../lib/gql/queries";
 import { useQuery } from '@apollo/client';
 import Link from "next/link"

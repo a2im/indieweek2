@@ -1,3 +1,4 @@
+import 'server-only';
 import GetFAQ from './faq-categories'
 import { JumpTo } from './faq-categories'
 import Footer from '../footer'
@@ -8,7 +9,7 @@ export const dynamic = 'auto'
 export const revalidate = false
 export const fetchCache = 'auto'
 export const runtime = 'nodejs'
-export const preferredRegion = 'all'
+
 export const metadata: Metadata = { 
   title: 'Indie Week - FAQ',
   description: 'Founded by independents, for independents, A2IM Indie Week is a four-day conference for the independent music community in the United States.',

@@ -1,3 +1,4 @@
+import 'server-only';
 import Socials from '../../components/socials'
 import Footer from '../footer'
 import { WatchPastYears } from '../../components/playlist';
@@ -8,10 +9,10 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm'
 import type { Metadata } from 'next';
 export const dynamic = 'auto'
-export const revalidate = 0
+export const revalidate = false
 export const fetchCache = 'auto'
 export const runtime = 'nodejs'
-export const preferredRegion = 'all'
+
 
 export const metadata: Metadata = { 
   title: 'Indie Week - Program',
@@ -22,7 +23,12 @@ export default async function Program() {
   const dataData = await getData()
   const helpData = await getHelp()
   const [data, help] = await Promise.all([dataData, helpData]);
-
+  const MyPlaylists = data.data.attributes.WatchPastYears
+  const YTPlaylists = await Promise.all(data.data.attributes.WatchPastYears.map(async (WatchPastYears) => 
+  getPlaylist(WatchPastYears?.PlaylistID)));
+  for (let i = 0; i < YTPlaylists.length; i++) {
+    MyPlaylists[i].Data = YTPlaylists[i];
+}
   return (
     <>
     <div className="bggradient pt-8">
@@ -65,11 +71,10 @@ export default async function Program() {
           </div>
         <div id="past-years" className="p-10 rounded-3xl bg-black bg-opacity-75 border-4 border-white mx-auto max-w-5xl">
         <h3 className="font-bold mb-5">Watch Past Years</h3>
-
+        <WatchPastYears MyPlaylists={MyPlaylists}/>
           </div>
           <HelpSection data={data} help={help}/>
           <Footer/>
     </>
   )
 }
-

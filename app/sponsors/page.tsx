@@ -5,7 +5,6 @@ export const dynamic = 'auto'
 export const revalidate = false
 export const fetchCache = 'auto'
 export const runtime = 'nodejs'
-export const preferredRegion = 'all'
 
 export const metadata: Metadata = {  
   title: 'Indie Week - Sponsors',

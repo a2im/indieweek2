@@ -1,5 +1,4 @@
 'use client';
-
 import React from "react"
 import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
@@ -9,12 +8,11 @@ import { useQuery } from "@apollo/client";
 import { GET_INFO_BUTTON } from "../lib/gql/queries";
 import Image from "next/image";
 
-
 export default function MyModal (){
     const ref = useRef();
     const [isModalOpen, setModalOpen] = useState(false)
-    const close = () => setModalOpen(false);
-    useOnClickOutside(ref, () => setModalOpen(false));
+    const closed = () => setModalOpen(false);
+    useOnClickOutside(ref, closed);
     const dropIn = {
         hidden: {
             opacity: 0,

@@ -10,7 +10,7 @@ export const dynamic = 'auto'
 export const revalidate = false
 export const fetchCache = 'auto'
 export const runtime = 'nodejs'
-export const preferredRegion = 'all'
+
 export default function Home() {
   return (
     <div className="bggradient2">

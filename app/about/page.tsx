@@ -1,3 +1,4 @@
+import 'server-only';
 import AboutUS from './about-us'
 import Footer from '../footer'
 import { getData, getHelp } from '../get-data';
@@ -7,7 +8,6 @@ export const dynamic = 'auto'
 export const revalidate = false
 export const fetchCache = 'auto'
 export const runtime = 'nodejs'
-export const preferredRegion = 'all'
 
 export const metadata: Metadata = { 
   title: 'Indie Week - About Us',

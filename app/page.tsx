@@ -1,6 +1,11 @@
 import Footer from './footer'
 import MyIntro from '../components/intro'
 import type { Metadata } from 'next';
+export const dynamic = 'auto'
+export const dynamicParams = true
+export const revalidate = false
+export const fetchCache = 'auto'
+export const runtime = 'nodejs'
 
 export const metadata: Metadata = {
   title: 'Indie Week - Home',

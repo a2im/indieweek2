@@ -8,6 +8,11 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm'
 import remarkBreaks from 'remark-breaks'
 import type { Metadata } from 'next';
+export const dynamic = 'auto'
+export const dynamicParams = true
+export const revalidate = false
+export const fetchCache = 'auto'
+export const runtime = 'nodejs'
 
 export const metadata: Metadata = { 
   title: 'Indie Week - Program',
@@ -38,7 +43,7 @@ export default async function Program() {
               {Info.Text}</h4>
               </div>
             <div className="w-64 h-64 relative justify-center mx-auto">
-            <ImageWithFallback className="hover:scale-105 mx-auto" src={Info.Image.data.attributes.url} alt={Info.Image.data.attributes.alternativeText} fallbackSrc={'/logos/A2IM-logos/A2IM-button-white.png'}/>
+            <ImageWithFallback className="hover:scale-105 mx-auto" src={Info.Image.data.attributes.url} alt={Info.Image.data.attributes.alternativeText} width={Info.Image.data.attributes.width} height={Info.Image.data.attributes.height} fallbackSrc={'/logos/A2IM-logos/A2IM-button-white.png'}/>
               </div>
           
           </div>

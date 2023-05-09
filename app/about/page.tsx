@@ -3,6 +3,11 @@ import Footer from '../footer'
 import { getData, getHelp } from '../get-data';
 import HelpSection from '../help-section';
 import type { Metadata } from 'next';
+export const dynamic = 'auto'
+export const dynamicParams = true
+export const revalidate = false
+export const fetchCache = 'auto'
+export const runtime = 'nodejs'
 
 export const metadata: Metadata = { 
   title: 'Indie Week - About Us',

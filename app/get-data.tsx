@@ -1,4 +1,4 @@
-import 'server-only';
+
 const YT = process.env.YOUTUBE_API_KEY
 
 export async function getPlaylist (PlaylistID){

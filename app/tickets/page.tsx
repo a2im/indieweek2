@@ -1,13 +1,8 @@
-import 'server-only';
 import Footer from '../footer'
 import { MyTickets,HotelCard } from './tickets'
 import { getData,getHelp } from '../get-data'
 import HelpSection from '../help-section';
 import type { Metadata } from 'next';
-export const dynamic = 'auto'
-export const revalidate = false
-export const fetchCache = 'auto'
-export const runtime = 'nodejs'
 
   export const metadata: Metadata = {
   title: 'Indie Week - Tickets',

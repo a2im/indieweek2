@@ -1,4 +1,3 @@
-import "server-only";
 import Footer from './footer'
 import MyIntro from '../components/intro'
 import type { Metadata } from 'next';

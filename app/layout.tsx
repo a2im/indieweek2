@@ -1,4 +1,3 @@
-import 'server-only'
 import './globals.css'
 import Script from 'next/script';
 import MyModal from "../components/modal"

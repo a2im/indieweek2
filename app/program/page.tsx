@@ -1,4 +1,3 @@
-import 'server-only';
 import Socials from '../../components/socials'
 import Footer from '../footer'
 import { WatchPastYears } from '../../components/playlist';
@@ -9,10 +8,6 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm'
 import remarkBreaks from 'remark-breaks'
 import type { Metadata } from 'next';
-export const dynamic = 'auto'
-export const revalidate = false
-export const fetchCache = 'auto'
-export const runtime = 'nodejs'
 
 export const metadata: Metadata = { 
   title: 'Indie Week - Program',

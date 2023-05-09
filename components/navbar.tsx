@@ -9,7 +9,9 @@ import { useQuery } from '@apollo/client';
 export default function MyNavbar() {
   const ref = useRef();
   const [navbar, setNavbar] = useState(false);
-  useOnClickOutside(ref, () => setNavbar(false));
+  const open = () => setNavbar(true)
+  const closed = () => setNavbar(false)
+  useOnClickOutside(ref, closed)
   return (
     <>
       <nav className="bg-black w-full fixed z-50">

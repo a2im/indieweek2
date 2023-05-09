@@ -145,16 +145,6 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
-  li > ul { display: inline; }
-  li:hover > ul { display: inline; }
-  .lvl1 li { display: relative; position:relative; }
-  .lvl2 { position: absolute; }
-  .lvl2 li { position: relative; }
-  html::-webkit-scrollbar {
-    display: none;
-  }
-}
 
 @font-face {
   font-family: 'Inter';

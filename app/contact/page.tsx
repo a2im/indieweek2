@@ -4,7 +4,7 @@ import ContactForm from "./contact-form";
 import type { Metadata } from 'next';
 export const dynamic = 'auto'
 export const dynamicParams = true
-export const revalidate = false
+export const revalidate = 0
 export const fetchCache = 'auto'
 export const runtime = 'nodejs'
 export const metadata: Metadata = { 

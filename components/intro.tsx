@@ -2,6 +2,7 @@
 import Image from "next/image";
 import MyButton from "../app/button"
 import { AnimatePresence, motion } from "framer-motion";
+import ImageWithFallback from "./image-handler";
 
 export function Intro() {
   return (
@@ -23,15 +24,8 @@ export function Intro() {
                   duration: 0.5, 
                 }}}
               className="p-3 min-w-2xl max-w-4xl">
-              <Image
-                height={256}
-                width={900}
-                src="/logos/Indie Week 23 Logo_White-01 .webp"
-                alt="Indie Week Logo"
-                style={{
-                  maxWidth: "100%",
-                  height: "auto"
-                }} priority />
+                <ImageWithFallback src="/logos/Indie Week 23 Logo_White-01 .webp" height={256}
+                width={900} alt="Indie Week Logo" fallbackSrc={'/logos/A2IM-logos/A2IM-button-white.png'}/>
             </motion.div>
             <motion.div
             key={'stars'}
@@ -67,16 +61,8 @@ export function Intro() {
                     }}
                 whileTap={{scale: 0.9}}
                 className="md:w-32 collapse md:visible">
-                  <Image
-                  src="/images/sparkle-white.png"
-                  width={100}
-                  height={100}
-                  sizes="100vw"
-                  alt="sparkle shape"
-                  style={{
-                    width: "100%",
-                    height: "auto"
-                  }}/>
+                                  <ImageWithFallback src="/images/sparkle-white.png" width={100}
+                  height={100} alt="sparkle shape" fallbackSrc={'/logos/A2IM-logos/A2IM-button-white.png'}/>
               </motion.div>
             </motion.div>
           </AnimatePresence>

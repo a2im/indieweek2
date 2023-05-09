@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "next/image";
+import ImageWithFallback from "../../components/image-handler"
 import MyButton from "../button"
 
 export function About1 () {
@@ -13,17 +13,7 @@ export function About1 () {
               <MyButton type='internal' href='/tickets'>Buy Tickets</MyButton>
               </div>
               <div className="image-cropper m-7">
-                <Image
-                  className="roundedimage"
-                  src="/images/opening-reception-sq.jpg"
-                  alt='indie week opening reception'
-                  width={500}
-                  height={500}
-                  sizes="100vw"
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                  }} priority />
+              <ImageWithFallback className="roundedimage" src="/images/opening-reception-sq.jpg" width={500} height={500}  alt='indie week opening reception' fallbackSrc={'/logos/A2IM-logos/A2IM-button-white.png'}/>
               </div>
             </div>
           </div>
@@ -36,15 +26,7 @@ export function About2(){
     <div className="max-w-5xl mx-auto pb-20">
     <div className="grid grid-cols-0 md:grid-cols-2 items-center md:justify-around mx-auto gap-10 p-5">
           <div className="image-cropper m-7">
-              <Image
-                className="roundedimage"
-                src="/images/ABOUT_sq.jpg"
-                alt='indie week meeting room'
-                width={500}
-                height={500}
-                sizes="(max-width: 768px) 100vw,
-                    (max-width: 1200px) 50vw,
-                    33vw" />
+          <ImageWithFallback className="roundedimage" src="/images/ABOUT_sq.jpg" width={500} height={500} alt='indie week meeting room' fallbackSrc={'/logos/A2IM-logos/A2IM-button-white.png'}/>
             </div>
             <div className="flex-initial py-8 relative max-w-xl text-right">
               <h2>WHO ATTENDS A2IM INDIE WEEK?</h2>

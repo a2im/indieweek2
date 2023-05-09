@@ -3,7 +3,7 @@ import Socials from '../../components/socials'
 import Footer from '../footer'
 import { WatchPastYears } from '../../components/playlist';
 import HelpSection from '../help-section';
-import Image from 'next/image';
+import ImageWithFallback from '../../components/image-handler';
 import { getData, getHelp, getPlaylist} from '../get-data';
 import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm'
@@ -44,16 +44,7 @@ export default async function Program() {
               {Info.Text}</h4>
               </div>
             <div className="w-64 h-64 relative justify-center mx-auto">
-              <Image
-                className="hover:scale-105 mx-auto"
-                src={Info.Image.data.attributes.url}
-                alt={Info.Image.data.attributes.alternativeText}
-                width={Info.Image.data.attributes.width}
-                height={Info.Image.data.attributes.height}
-                sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw" >
-              </Image>
+            <ImageWithFallback className="hover:scale-105 mx-auto" src={Info.Image.data.attributes.url} alt={Info.Image.data.attributes.alternativeText} fallbackSrc={'/logos/A2IM-logos/A2IM-button-white.png'}/>
               </div>
           
           </div>

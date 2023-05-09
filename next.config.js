@@ -16,7 +16,7 @@ module.exports = {
       'secure.gravatar.com',
       'images.a2imindieweek.org',
       'a2imindieweek.org',
-      'indieweek.a2im.xyz',
+      'indieweek.xyz',
       'a2im-strapi-cms-images.s3.amazonaws.com',
       'i.ytimg.com',
     ],
@@ -41,9 +41,9 @@ module.exports = {
       },
       {
         protocol: 'https',
-        hostname: 'indieweek.a2im.xyz',
+        hostname: 'indieweek.xyz',
         port: '80',
-        pathname: '/wp-content/uploads/***',
+        pathname: '/***',
       },
       {
         protocol: 'https',

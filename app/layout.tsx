@@ -1,3 +1,4 @@
+import 'server-only'
 import './globals.css'
 import Script from 'next/script';
 import MyModal from "../components/modal"
@@ -9,6 +10,13 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import MyNavbar from '../components/navbar';
 config.autoAddCss = false
 library.add(fas)
+
+export const metadata = {
+  title: {
+    default: 'Indie Week',
+    template: 'Indie Week | %s',
+  },
+}
 
 export default function RootLayout({
   children
@@ -68,7 +76,6 @@ export default function RootLayout({
         href="/favicon/a2im-favicon-light.ico" 
         media="(prefers-color-scheme: light)"
         />
-      <link rel="manifest" href="/favicon/site.webmanifest" />
       <Script
         id="google-tag"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}

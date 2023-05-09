@@ -1,3 +1,4 @@
+import "server-only";
 import Footer from '../footer';
 import ContactForm from "./contact-form";
 import type { Metadata } from 'next';

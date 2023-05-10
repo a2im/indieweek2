@@ -20,7 +20,7 @@ export default function MyNavbar() {
             <div className="flex items-center justify-between md:block">
               <Link href={"/"} legacyBehavior>
               <a>
-              <div className="flex justify-center gap-10 grid-cols-2">
+              <div className="flex justify-center gap-5 grid-cols-2">
               <div className="a2imbuttonbox ml-2 w-10">
                 <Image
                   src="/logos/A2IM-logos/A2IM-button-white.png"
@@ -39,13 +39,13 @@ export default function MyNavbar() {
               </Link>
               <div className="md:hidden">
                 <button
-                  className="pr-2 mr-2 pl-2 text-white rounded-md outline-none focus:border-white focus:border"
+                  className="z-60 pr-2 mr-2 pl-2 text-white rounded-md outline-none focus:border-white focus:border"
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6 text-white"
+                      className="w-6 h-6 text-white right-0"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                     >

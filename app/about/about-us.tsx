@@ -1,6 +1,8 @@
 import React from "react"
 import ImageWithFallback from "../../components/image-handler"
 import MyButton from "../button"
+import InfoCard from "../info-card"
+import { FooterDisclaimer } from "../../components/disclaimer"
 
 export function About1 () {
     return (
@@ -51,27 +53,17 @@ export function About2(){
   )
 }
 
-export function FooterDisclaimer(){
-  return(
-<>
-  <div className="p-10 rounded-3xl bg-black bg-opacity-75 border-4 border-white mx-auto max-w-5xl">
-    <h2>ABOUT A2IM</h2>
-    <hr className="border-iwred my-5"></hr>
-    <h4>The American Association of Independent Music (A2IM) is a 501(c)(6) not-for-profit trade organization that serves as a central voice for a diverse community of over 600 independently owned record labels operating within the United States. A2IM  represents their interests in the marketplace, in the media, on Capitol Hill, and as part of the global music community.
-
-As an organization, A2IM is committed to protecting the value of independent musical contributions and influence on a policy level.
-</h4>
-</div>
-    </>
-  );
-}
-
-export default function AboutUS(){
+export default function AboutUS({data}){
   return (
     <div className="flex flex-col gap-20">
-    <About1/>
-    <FooterDisclaimer/>
-    <About2/>
+    <InfoCard Info={data.data.attributes.TopInfo}/>
+    <FooterDisclaimer data={data.data.attributes.Disclaimer}/>
+    {data.data.attributes.Info.map(info => (
+            <div key={info.id}>
+                <InfoCard Info={info}/>
+            </div>
+          )
+          )}
     </div>
   )
 }

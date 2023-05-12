@@ -11,7 +11,7 @@ export async function getPlaylist (PlaylistID){
   }
 
 
-export async function getData (){
+export async function getProgram (){
   const res = await fetch(`${process.env.NEXT_PUBLIC_A2IMCMS_API_URL}/IW-Program?populate[0]=Info.Image&populate[1]=Info.Button&populate[2]=Help.Button&populate[3]=WatchPastYears&populate[4]=isActive&populate[5]=ad`, { next: { revalidate: 60 } })
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
@@ -20,8 +20,8 @@ export async function getData (){
   return res.json();
 } 
 
-export async function getHelp (){
-  const res = await fetch(`${process.env.NEXT_PUBLIC_A2IMCMS_API_URL}/IW-Program?populate[0]=Help.Button`, { next: { revalidate: 60 } })
+export async function getHome (){
+  const res = await fetch(`${process.env.NEXT_PUBLIC_A2IMCMS_API_URL}/IW-Home?populate[0]=Header.Button&populate[1]=Header.Image&populate[2]=Info.Image&populate[3]=Info.Button`, { next: { revalidate: 60 } })
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch help');
@@ -29,8 +29,8 @@ export async function getHelp (){
   return res.json();
 } 
 
-export async function getHome (){
-  const res = await fetch(`${process.env.NEXT_PUBLIC_A2IMCMS_API_URL}/IW-Home?populate[0]=Header.Button&populate[1]=Header.Image&populate[2]=Info.Image&populate[3]=Info.Button`, { next: { revalidate: 60 } })
+export async function getInfo (){
+  const res = await fetch(`${process.env.NEXT_PUBLIC_A2IMCMS_API_URL}/IW-Info?populate[0]=TopInfo.Button&populate[1]=TopInfo.Image&populate[2]=Info.Image&populate[3]=Info.Button&populate[4]=Disclaimer&populate[5]=WatchPastYears`, { next: { revalidate: 60 } })
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch help');

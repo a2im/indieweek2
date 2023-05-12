@@ -4,7 +4,7 @@ import Footer from '../footer'
 import { WatchPastYears } from '../../components/playlist';
 import HelpSection from '../help-section';
 import ImageWithFallback from '../../components/image-handler';
-import { getData, getHelp, getPlaylist} from '../get-data';
+import { getProgram, getPlaylist} from '../get-data';
 import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm'
 import remarkBreaks from 'remark-breaks'
@@ -15,9 +15,7 @@ export const fetchCache = 'auto'
 export const runtime = 'nodejs'
 
 export default async function Program() {
-  const dataData = await getData()
-  const helpData = await getHelp()
-  const [data, help] = await Promise.all([dataData, helpData]);
+  const data = await getProgram()
   const MyPlaylists = data.data.attributes.WatchPastYears
   const YTPlaylists = await Promise.all(data.data.attributes.WatchPastYears.map(async (WatchPastYears) => 
   getPlaylist(WatchPastYears?.PlaylistID)));
@@ -60,7 +58,7 @@ export default async function Program() {
         <h3 className="font-bold mb-5">Watch Past Years</h3>
         <WatchPastYears MyPlaylists={MyPlaylists}/>
           </div>
-          <HelpSection data={data} help={help}/>
+          <HelpSection help={data.data.attributes.Help}/>
           <Footer/>
     </>
   )

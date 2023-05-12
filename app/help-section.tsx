@@ -10,7 +10,7 @@ export default function HelpSection({data, help}){
                   <h4 className="mx-auto text-center mb-5">{Help.Text}</h4>
                       {Help.Button.map(Button => (
                         <div key={Button.id}>
-                        <MyButton type='external' href={Button.URL}>{Button.Text}</MyButton>
+                        <MyButton type={Button.NavType} href={Button.URL}>{Button.Text}</MyButton>
                         </div>
                       ))}
                 </div> 
@@ -22,7 +22,7 @@ export default function HelpSection({data, help}){
                       {Help.Button.map(Button => (
                         <>
                         <div key={Button.id} className="py-3">
-                        <MyButton type='external' href={Button.URL}>{Button.Text}</MyButton>
+                        <MyButton type={Button.NavType} href={Button.URL}>{Button.Text}</MyButton>
                         </div>
                         <hr className="m-3 border-iwred mx-2 last:hidden"></hr>
                         </>

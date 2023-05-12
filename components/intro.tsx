@@ -3,8 +3,9 @@ import Image from "next/image";
 import MyButton from "../app/button"
 import { AnimatePresence, motion } from "framer-motion";
 import ImageWithFallback from "./image-handler";
+import InfoCard from "../app/info-card";
 
-export function Intro() {
+export function Intro({data}) {
   return (
     <>
     <div className="bggradient2">
@@ -24,8 +25,12 @@ export function Intro() {
                   duration: 0.5, 
                 }}}
               className="p-3 min-w-2xl max-w-4xl">
-                <ImageWithFallback src="/logos/Indie Week 23 Logo_White-01 .webp" height={256}
-                width={900} alt="Indie Week Logo" fallbackSrc={'/logos/A2IM-logos/A2IM-button-white.png'}/>
+                <ImageWithFallback 
+                src={data.data.attributes.Header.Image.data.attributes.url} 
+                height={data.data.attributes.Header.Image.data.attributes.height}
+                width={data.data.attributes.Header.Image.data.attributes.width} 
+                alt={data.data.attributes.Header.Image.data.attributes.alternativeText} 
+                fallbackSrc={'/logos/A2IM-logos/A2IM-button-white.png'}/>
             </motion.div>
             <motion.div
             key={'stars'}
@@ -70,96 +75,31 @@ export function Intro() {
       </div>
       <div className="mx-auto -mt-64 md:-mt-32">
       <h4 className="max-w-3xl text-center mx-auto p-5 md:my-10">
-      Founded by independents, for independents, A2IM Indie Week is a three-day conference for the independent music community in the United States.
+      {data.data.attributes.Header.Text}
       </h4>
         <div className="flex flex-col md:flex-row justify-between content-center max-w-5xl mx-auto pb-10 gap-5">
-          <MyButton type='internal' href="/about" >LEARN MORE</MyButton>
-          <MyButton type='internal' href="/tickets" >GET TICKETS</MyButton>
-          <MyButton type='anchor' href="/tickets#hotels">BOOK YOUR STAY</MyButton>
+          {data.data.attributes.Header.Button.map(button => (
+            <div key={button.id}>
+            <MyButton type={button.NavType} href={button.URL} >{button.Text}</MyButton>
+            </div>
+          ))}
         </div>
     </div>
   </>
   );
 }
 
-export function Intro2 () {
-  return (
-    <div className="max-w-5xl mx-auto">
-      <div className="grid grid-cols-0 md:grid-cols-2 md:mt-10 items-center md:justify-around mx-auto gap-10 p-5">
-        <div className="py-8 flex-initial relative items-center max-w-xl order-last md:order-first">
-          <h2> INDEPENDENT MUSIC&apos;S LARGEST CONFERENCE</h2>
-          <hr className="border-iwred my-5"></hr>
-          <h4 className="my-5">Held annually in New York City, A2IM Indie Week
-            is the largest gathering of the independent
-            music community. Drawing labels, distributors,
-            DSPs, agencies and more, participants can
-            expect 3 days of insightful discussions and
-            fruitful networking.</h4>
-          <MyButton type='internal' href='/about'>LEARN MORE</MyButton>
-        </div>
-        <div className="image-cropper m-7">
-          <Image
-          className="roundedimage"
-          src="/images/iwmeetings-sq-2.jpg"
-          alt='indie week opening reception'
-          width={500}
-          height={500}
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
-          style={{
-            width: "100%",
-            height: "auto",
-          }} />
-        </div>
-      </div>
-    </div>
-  );
-}
 
-
-
-export function Intro3 () {
-return (
-  <div className="max-w-5xl mx-auto z-40">
-  <div className="grid grid-cols-0 md:grid-cols-2 md:mt-10 items-center md:justify-around mx-auto gap-10 p-5">
-        <div className="image-cropper m-7">
-          <Image
-          className="roundedimage"
-          src="/images/HOMEPAGE_2_sm.jpg"
-          alt='indie week meeting room'
-          width={500}
-          height={500}
-          sizes="100vw"
-          style={{
-            width: "100%",
-            height: "auto",
-          }} />
-        </div>
-        <div className="py-8 relative max-w-xl text-right">
-          <h3><span><h2>FOLLOW A2IM </h2></span>TO
-            STAY UP TO DATE ON
-            PROGRAMMING
-            & TICKET SALES</h3>
-            <hr className="border-iwred my-5"></hr>
-          <h4 className="my-5">Each year we carefully curate our lineup of
-            expert speakers to discuss the most precient
-            topics in music. Subjects covered have included
-            touring, marketing, sync licensing, industry
-            predictions, DSP workshops, and many more.</h4>
-          <MyButton type='anchor' href='/program#past-years'>PAST PROGRAMMING</MyButton>
-        </div>
-    </div>
-  </div>
-);
-}
-
-export default function MyIntro () {
+export default function HomeInfo ({data}) {
   return (
     <div className="flex flex-col gap-20 pb-96 md:pb-28">
-          <Intro />
-          <Intro2 />
-          <Intro3 />
+          <Intro data={data} />
+          {data.data.attributes.Info.map(info => (
+            <div key={info.id}>
+                <InfoCard Info={info}/>
+            </div>
+          )
+          )}
         </div>
   )
 }

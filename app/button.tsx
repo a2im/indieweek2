@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 
 export default function IWButton ({ children, href, type }) {
-  if (type === 'external')
+  if (type === 'External')
   return <div className="mx-auto text-center">
         <Link
           href={href}
@@ -20,7 +20,7 @@ export default function IWButton ({ children, href, type }) {
         </Link>
     </div>
 
-  else if (type === 'internal')
+  else if (type === 'Internal')
   return <div className="mx-auto text-center">
   <Link href={href}>
   <div className="drop-shadow-2xl max-h-21 justify-center leading-tight mx-auto">
@@ -33,7 +33,7 @@ export default function IWButton ({ children, href, type }) {
   </Link>
   </div>
 
-  else if (type === 'anchor')
+  else if (type === 'Anchor')
   return <div className="mx-auto text-center">
   <Link href={href} prefetch={false} replace passHref>
   <div className="drop-shadow-2xl max-h-21 justify-center leading-tight mx-auto">

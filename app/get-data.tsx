@@ -28,3 +28,12 @@ export async function getHelp (){
   }
   return res.json();
 } 
+
+export async function getHome (){
+  const res = await fetch(`${process.env.NEXT_PUBLIC_A2IMCMS_API_URL}/IW-Home?populate[0]=Header.Button&populate[1]=Header.Image&populate[2]=Info.Image&populate[3]=Info.Button`, { next: { revalidate: 60 } })
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch help');
+  }
+  return res.json();
+} 

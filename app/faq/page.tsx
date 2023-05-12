@@ -4,23 +4,18 @@ import { JumpTo } from './faq-categories'
 import Footer from '../footer'
 import { getHelp, getData } from '../get-data'
 import HelpSection from '../help-section';
-import type { Metadata } from 'next';
 export const dynamic = 'force-dynamic'
 export const dynamicParams = true
 export const revalidate = 0
 export const fetchCache = 'auto'
 export const runtime = 'nodejs'
 
-export const metadata: Metadata = { 
-  title: 'Indie Week - FAQ',
-  description: 'Founded by independents, for independents, A2IM Indie Week is a four-day conference for the independent music community in the United States.',
-}
-
 export default async function FAQ() {
   const data = await getData()
   const help = await getHelp()
   return (
     <div className="bggradient pt-8">
+      <title>Indie Week - FAQ</title>
       <div className="">
         <JumpTo/>
         <GetFAQ Category='GENERAL'/>

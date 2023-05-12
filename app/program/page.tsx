@@ -8,17 +8,11 @@ import { getData, getHelp, getPlaylist} from '../get-data';
 import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm'
 import remarkBreaks from 'remark-breaks'
-import type { Metadata } from 'next';
 export const dynamic = 'force-dynamic'
 export const dynamicParams = true
 export const revalidate = 0
 export const fetchCache = 'auto'
 export const runtime = 'nodejs'
-
-export const metadata: Metadata = { 
-  title: 'Indie Week - Program',
-  description: 'Founded by independents, for independents, A2IM Indie Week is a four-day conference for the independent music community in the United States.',
-}
 
 export default async function Program() {
   const dataData = await getData()
@@ -33,6 +27,7 @@ export default async function Program() {
   return (
     <>
     <div className="bggradient pt-8">
+      <title>Indie Week - Program</title>
       <div className="max-w-5xl mx-auto">
         <div className="z-10 flex md:mt-10 items-center mx-auto p-8">
           {data?.data.attributes?.Info?.map(Info => (

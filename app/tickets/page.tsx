@@ -1,7 +1,7 @@
 import 'server-only';
 import Footer from '../footer'
-import { MyTickets,HotelCard } from './tickets'
-import { getProgram } from '../get-data'
+import { MyTickets,Accommodations } from './tickets'
+import { getProgram, getTickets } from '../get-data'
 import HelpSection from '../help-section';
 export const dynamic = 'force-dynamic'
 export const dynamicParams = true
@@ -10,14 +10,15 @@ export const fetchCache = 'auto'
 export const runtime = 'nodejs'
 
 export default async function Tickets() {
-  const data = await getProgram();
+  const help = await getProgram();
+  const data = await getTickets();
   return (
     <>
     <div className="bggradient pt-8">
       <title>Indie Week - Tickets</title>
-          <MyTickets/>
-          <HotelCard/>
-          <HelpSection help={data.data.attributes.Help}/>
+          <MyTickets data={data}/>
+          <Accommodations accommodations={data.data.attributes.Accommodation}/>
+          <HelpSection help={help.data.attributes.Help}/>
           <Footer/>
     </div>
     </>

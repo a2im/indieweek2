@@ -2,7 +2,7 @@ import 'server-only';
 import GetFAQ from './faq-categories'
 import { JumpTo } from './faq-categories'
 import Footer from '../footer'
-import { getHelp, getData } from '../get-data'
+import { getProgram } from '../get-data'
 import HelpSection from '../help-section';
 export const dynamic = 'force-dynamic'
 export const dynamicParams = true
@@ -11,8 +11,7 @@ export const fetchCache = 'auto'
 export const runtime = 'nodejs'
 
 export default async function FAQ() {
-  const data = await getData()
-  const help = await getHelp()
+  const help = await getProgram()
   return (
     <div className="bggradient pt-8">
       <title>Indie Week - FAQ</title>
@@ -23,7 +22,7 @@ export default async function FAQ() {
         <GetFAQ Category='ACCESSIBILITY'/>
         <GetFAQ Category='ACCOMMODATIONS'/>
         <GetFAQ Category='PRESS'/>
-        <HelpSection data={data} help={help}/>
+        <HelpSection help={help.data.attributes.Help}/>
         </div>
         <Footer/>
     </div>

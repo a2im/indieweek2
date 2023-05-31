@@ -124,7 +124,7 @@ export function SponsorTier3() {
       </div>
       if (error) return <p>Error</p>
     return (
-        <div className="relative pb-20 py-5 flex flex-col md:flex-row gap-10 mx-auto">
+        <div className="relative pb-20 py-5 flex flex-col md:flex-row flex-wrap gap-16 mx-auto px-10">
         {/* Map through the data */}
         {data?.sponsors?.data.map(sponsors => (
                 <div key={sponsors.id} className="mx-auto relative hover:scale-105 w-[128px] h-[128px]">

@@ -50,7 +50,7 @@ export function SponsorTier1() {
                               </div>
       if (error) return <p>Error</p>
     return (
-        <div className="max-w-4xl relative py-3 grid grid-cols-0 md:grid-cols-2 mx-auto justify-evenly gap-10">
+        <div className="max-w-4xl relative py-3 grid grid-cols-0 md:grid-cols-2 mx-auto justify-evenly gap-10 px-10">
         {/* Map through the data */}
         {data?.sponsors.data.map(sponsors => (
                 <div key={sponsors.id} className="flex relative hover:scale-105 justify-evenly">
@@ -87,10 +87,10 @@ export function SponsorTier2() {
       </div>
       if (error) return <p>Error</p>
     return (
-        <div className="max-w-4xl relative flex flex-col md:flex-row mx-auto gap-5">
+        <div className="max-w-4xl relative flex flex-col md:flex-row flex-wrap mx-auto gap-16 px-10">
         {/* Map through the data */}
         {data.sponsors.data.map(sponsors => (
-                <div key={sponsors.id} className="flex relative hover:scale-105 p-4 grow shrink mx-auto">
+                <div key={sponsors.id} className="flex relative hover:scale-105 p-4 grow shrink mx-auto ">
                   <Link className="relative" href={sponsors.attributes?.URL} target="_blank" rel="noopener noreferrer">
                   <div className="relative w-[175px] h-[175px] mx-auto justify-evenly">
                   <Image
